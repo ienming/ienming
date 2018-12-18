@@ -51,19 +51,83 @@
             transform: translate3d(0, 0, 0);
         }
 
-        #topBar{
+        .topBar {
             position: fixed;
             top: 0;
             left: 0;
+            height: 60px;
+            width: 100%;
+            z-index: 99;
+            background-color: white;
+            border-color: #333;
+        }
+
+        #logo {
+            height: 6vh;
+            position: relative;
+            top: 1.5vh;
+            left: 2vh;
+            cursor: pointer;
+        }
+
+        .nav nav {
+            display: inline-block;
+            position: absolute;
+            top: 1.5vh;
+            right: 2vh;
+        }
+
+        .container {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
         }
     </style>
 
 </head>
 
-<body height: 100%;>
-    <!-- <h1>ienming</h1> -->
+<body>
+    <header class="topBar">
+        <div class="nav">
+            <a href="index.html">
+                <img id="logo" src="img/logo.jpg" alt="ienMing">
+            </a>
+            <nav role="navigation">
+                <div class="container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <div id="indexFlow">
-        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000"
+            data-pause="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="img/img019.jpg" alt="First slide">
@@ -78,14 +142,8 @@
         </div>
     </div>
 
-    <div id="topBar">
-        <div id="logo">
-            <img src="img/logo.jpg" alt="ienMing">
-        </div>
-        <div id="hamburger">
 
-        </div>
-    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -95,6 +153,13 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+    <!-- menu animated -->
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
 </body>
 
 </html>
