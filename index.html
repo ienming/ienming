@@ -58,7 +58,7 @@
             height: 60px;
             width: 100%;
             z-index: 99;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.45);
             border-color: #333;
         }
 
@@ -68,6 +68,10 @@
             top: 1.5vh;
             left: 2vh;
             cursor: pointer;
+        }
+
+        .nav {
+            height: 60px;
         }
 
         .nav nav {
@@ -112,6 +116,41 @@
                 display: none;
             }
         }
+
+        .menu {
+            position: absolute;
+            top: 18px;
+            right: 12vh;
+        }
+
+        .menu ul {
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .menu li {
+            list-style-type: none;
+            display: inline;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            margin: 0 auto;
+            margin-right: 10px;
+        }
+
+        .menu li:hover{
+            color: white;
+            cursor: pointer;
+            transition-duration: 1;
+            transition-timing-function: ease-in-out;
+        }
+
+        /* 手機藏global navigation */
+        @media only screen and (max-width: 768px) {
+            .nav .menu {
+                display: none;
+            }
+        }
     </style>
 
 </head>
@@ -121,12 +160,21 @@
         <header class="topBar">
             <div class="nav">
                 <a href="index.html">
-                    <img id="logo" src="img/logo.jpg" alt="ienMing">
+                    <img id="logo" src="img/logo.png" alt="ienMing">
                 </a>
+                <div class="contactBtn">
+                    <!-- contact button -->
+                </div>
                 <div class="menu">
-                    <ul class="menu">
+                    <ul>
+                        <li>
+                            <a>Bio</a>
+                        </li>
                         <li>
                             <a>Fine Art</a>
+                        </li>
+                        <li>
+                            <a>Projects</a>
                         </li>
                     </ul>
                 </div>
