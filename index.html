@@ -74,16 +74,14 @@
             height: 60px;
         }
 
-        .nav nav {
-            display: inline-block;
+        .hamburger {
             position: absolute;
             top: 1.5vh;
             right: 2vh;
         }
 
-        .container {
+        .nav nav {
             display: inline-block;
-            cursor: pointer;
         }
 
         .bar1,
@@ -96,7 +94,7 @@
             transition: 0.4s;
         }
 
-        .change .bar1 {
+        /* .change .bar1 {
             -webkit-transform: rotate(-45deg) translate(-9px, 6px);
             transform: rotate(-45deg) translate(-9px, 6px);
         }
@@ -108,11 +106,51 @@
         .change .bar3 {
             -webkit-transform: rotate(45deg) translate(-8px, -8px);
             transform: rotate(45deg) translate(-8px, -8px);
+        } */
+
+        /* #drawerItems.change {
+            font-size: 50px;
+            margin: 0 auto;
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            position: relative;
+            top: 150px;
+        } */
+
+        /*drawer*/
+        .drawer {
+            position: fixed;
+            top: 60px;
+            left: 100vw/2-(55.75)/2;
+            z-index: 1;
+            color: white;
+            background-color: rgb(90, 90, 90, 0.7);
+            width: 100vw;
+            /*flex container*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*先藏起來*/
+            display: none;
+        }
+
+        #drawerItems {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .open {
+            display: flex;
         }
 
         /* 電腦版藏hamburger */
         @media only screen and (min-width: 768px) {
-            .nav .mobileMenu {
+            .nav .hamburger {
                 display: none;
             }
         }
@@ -136,13 +174,13 @@
             color: #333;
             margin: 0 auto;
             margin-right: 10px;
+            transition-duration: .3;
+            transition-timing-function: ease-in-out;
         }
 
-        .menu li:hover{
+        .menu li:hover {
             color: white;
             cursor: pointer;
-            transition-duration: 1;
-            transition-timing-function: ease-in-out;
         }
 
         /* 手機藏global navigation */
@@ -158,14 +196,15 @@
 <body>
     <article>
         <header class="topBar">
-            <div class="nav">
+            <div class="nav" role="navigation">
                 <a href="index.html">
                     <img id="logo" src="img/logo.png" alt="ienMing">
                 </a>
                 <div class="contactBtn">
                     <!-- contact button -->
                 </div>
-                <div class="menu">
+                <!-- deskMenu -->
+                <nav class="menu">
                     <ul>
                         <li>
                             <a>Bio</a>
@@ -177,18 +216,30 @@
                             <a>Projects</a>
                         </li>
                     </ul>
-                </div>
-                <div class="mobileMenu">
-                    <nav role="navigation">
-                        <div class="container" onclick="myFunction(this)">
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
-                            <div class="bar3"></div>
-                        </div>
-                    </nav>
-                </div>
+                </nav>
+                <!-- mobilehamburger -->
+                <nav>
+                    <button class="hamburger">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </button>
+                </nav>
             </div>
         </header>
+        <nav class="drawer">
+            <ul id="drawerItems">
+                <li class="drawerItem">
+                    <a>Bio</a>
+                </li>
+                <li class="drawerItem">
+                    <a>Fine Art</a>
+                </li>
+                <li class="drawerItem">
+                    <a>Projects</a>
+                </li>
+            </ul>
+        </nav>
 
         <div id="indexFlow">
             <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000"
@@ -202,6 +253,12 @@
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="img/img021.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/5-colorFin.jpg" alt="Fourth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/9-color.jpg" alt="Fifth slide">
                     </div>
                 </div>
             </div>
@@ -221,8 +278,31 @@
 
         <!-- menu animated -->
         <script>
-            function myFunction(x) {
-                x.classList.toggle("change");
+            // function myFunction(x) {
+            //     x.classList.toggle("change");
+            //     var drawerItems = document.getElementById("drawerItems");
+            //     drawerItems.classList.toggle("change");
+            //     var drawer = document.querySelector('drawer');
+            //     drawer.classList.add('open');
+            // }
+
+            var hamburgerBtn = document.querySelector('.hamburger');
+            var drawer = document.querySelector('.drawer');
+            var opened = false;
+
+            function openDrawer() {
+                drawer.classList.add('open');
+                opened = true;
+            }
+
+            function closeDrawer() {
+                drawer.classList.remove('open');
+                opened = false;
+            }
+
+            hamburgerBtn.addEventListener('click', openDrawer);
+            if (opened == true) {
+                hamburgerBtn.addEventListener('click', closeDrawer);
             }
         </script>
     </article>
