@@ -278,31 +278,21 @@
 
         <!-- menu animated -->
         <script>
-            // function myFunction(x) {
-            //     x.classList.toggle("change");
-            //     var drawerItems = document.getElementById("drawerItems");
-            //     drawerItems.classList.toggle("change");
-            //     var drawer = document.querySelector('drawer');
-            //     drawer.classList.add('open');
-            // }
-
             var hamburgerBtn = document.querySelector('.hamburger');
             var drawer = document.querySelector('.drawer');
-            var opened = false;
+            var i = 1;
 
-            function openDrawer() {
-                drawer.classList.add('open');
-                opened = true;
-            }
+            hamburgerBtn.addEventListener('click', trigger);
+            /* 判斷按鈕按下的狀態*/
+            function trigger() {
+                if (i % 2 == 0) {
+                    drawer.classList.add('open');
+                }
 
-            function closeDrawer() {
-                drawer.classList.remove('open');
-                opened = false;
-            }
-
-            hamburgerBtn.addEventListener('click', openDrawer);
-            if (opened == true) {
-                hamburgerBtn.addEventListener('click', closeDrawer);
+                if (i % 2 == 1) {
+                    drawer.classList.remove('open');
+                }
+                i++;
             }
         </script>
     </article>
