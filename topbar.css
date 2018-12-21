@@ -5,9 +5,9 @@
     height: 60px;
     width: 100%;
     z-index: 99;
-    background-color: rgba(235, 235, 235);
+    background-color: rgb(245, 245, 245);
     border-bottom: solid;
-    border-color:black;
+    border-color:rgb(205, 205, 205);
     border-width: .75px;
 }
 
@@ -66,7 +66,7 @@
     left: 100vw/2-(55.75)/2;
     z-index: 1;
     color: #333;
-    background-color: rgb(255, 255, 255, 0.45);
+    background-color: rgb(245, 245, 245);
     width: 100vw;
     /*flex container*/
     display: flex;
@@ -90,7 +90,6 @@
 }
 
 #drawerItem :visited {
-    color: white;
     cursor: pointer;
 }
 
