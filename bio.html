@@ -17,6 +17,40 @@
         body {
             background-color: rgb(220, 220, 220);
         }
+
+        .mainCard {
+            position: absolute;
+            top: 90px;
+            left: 5vw;
+            /* margin: 0 auto; */
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: coral;
+            padding: 31px;
+            padding-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 25px 1px blueviolet;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .bio {
+            width: 310px;
+            height: 310px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .bioText {
+            /* width: 310px; */
+            word-break: keep-all;
+            font-size: 1.5rem;
+        }
     </style>
 </head>
 
@@ -73,6 +107,18 @@
                 </li>
             </ul>
         </nav>
+        <div class="mainCard">
+            <div class="bio">
+                <img class="bio" src="img/img019.jpg">
+            </div>
+            <div class="bioText">
+                <p>I'm a visual creator from Poland making my own art and freelancing out of my studio in Kanagawa,
+                    Japan
+                    along with my wife Kana. Please, have a look around and also visit my YouTube channel!</p>
+            </div>
+            <!-- 撐開父的高度 -->
+            <div class="clear"></div>
+        </div>
     </article>
     <footer>
 
