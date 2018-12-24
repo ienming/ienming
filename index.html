@@ -12,6 +12,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <!-- carousel swipe -->
+    <script src="dist/bootstrap-swipe-carousel.min.js"></script>
     <!-- topbar CSS -->
     <link rel=stylesheet type="text/css" href="topbar.css">
     <style>
@@ -126,7 +128,7 @@
     <!-- 主頁article -->
     <article>
         <div id="indexFlow">
-            <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000"
+            <div id="carousel" class="carousel slide carousel-fade my-carousel" data-ride="carousel" data-interval="5000"
                 data-pause="false">
                 <!-- indicators -->
                 <ol class="carousel-indicators" style="padding-bottom: 20px;">
@@ -221,16 +223,9 @@
             i++;
         }
 
-        $(".carousel").swipe({
-
-            swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-
-                if (direction == 'left') $(this).carousel('next');
-                if (direction == 'right') $(this).carousel('prev');
-
-            },
-            allowPageScroll: "vertical"
-
+        $('.my-carousel').carousel().swipeCarousel({
+            // low, medium or high
+            sensitivity: 'high'
         });
     </script>
     </article>
