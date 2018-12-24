@@ -2,13 +2,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 300px;
+    height: 100px;
     width: 100%;
     z-index: 1;
     background-color: rgb(245, 245, 245,0);
-    border-bottom: solid;
+    /* border-bottom: solid;
     border-color:rgb(205, 205, 205,0);
-    border-width: .75px;
+    border-width: .75px; */
+    /* border-style: none; */
 }
 
 #logo {
@@ -18,7 +19,7 @@
 }
 
 .nav {
-    height: 300px;
+    height: 100px;
     display: flex;
 align-items: center;
 }
@@ -39,7 +40,6 @@ align-items: center;
 .hamburger {
     position: absolute;
     top: 25px;
-    /* right: 2vh; */
     right: 25px;
     border: none;
     background-color: rgb(0,0,0,0);
