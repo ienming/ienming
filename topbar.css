@@ -77,8 +77,9 @@ align-items: center;
 .drawer {
     position: fixed;
     top: 100px;
+    /* left: 100vw/2-(55.75)/2; */
     right: 0;
-    z-index: 1;
+    z-index: 2;
     color: #333;
     background-color: rgb(245, 245, 245);
     width: 50vw;
@@ -101,10 +102,6 @@ align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 2rem;
-}
-
-#drawerItem :visited {
-    cursor: pointer;
 }
 
 .open {
