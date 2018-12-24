@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 60px;
+    height: 100px;
     width: 100%;
     z-index: 99;
     background-color: rgb(245, 245, 245);
@@ -12,15 +12,28 @@
 }
 
 #logo {
-    height: 6vh;
-    position: relative;
-    top: 1.5vh;
-    left: 2vh;
+    height: 80px;
     cursor: pointer;
+    margin-left: 10vw;
 }
 
 .nav {
-    height: 60px;
+    height: 100px;
+    display: flex;
+align-items: center;
+}
+
+/* 手機top變扁 */
+@media only screen and (max-width: 768px) {
+    .topBar{
+        height: 60px;
+    }
+    #logo{
+        height: 50px;
+    }
+    .nav{
+        height: 60px;
+    }
 }
 
 .hamburger {
@@ -113,8 +126,8 @@
 /* deskMenu */
 .menu {
     position: absolute;
-    top: 18px;
-    right: 12vh;
+    top: 38px;
+    right: 40vh;
 }
 
 .menu ul {
@@ -126,16 +139,16 @@
     list-style-type: none;
     display: inline;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     color: #333;
     margin: 0 auto;
-    margin-right: 10px;
+    margin-right: 20px;
     transition-duration: .3;
     transition-timing-function: ease-in-out;
 }
 
 .menu li:hover {
-    color: white;
+    color: cornflowerblue;
     cursor: pointer;
 }
 
