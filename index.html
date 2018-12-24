@@ -202,7 +202,8 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <!-- <script src="/script/jquery.mobile.custom.zip"></script> -->
-    <script src=”jquery.mobile.custom.min.js”></script>  
+    <!-- <script src=”jquery.mobile.custom.min.js”></script>   -->
+    <script src="jquery.bcSwipe.js"></script>
 
     <!-- menu animated -->
     <script>
@@ -228,14 +229,15 @@
 
     <!-- swipe -->
     <script>
-        $(document).ready(function () {
-            $("#carousel").swiperight(function () {
-                $("#carousel").carousel('prev');
-            });
-            $("#carousel").swipeleft(function () {
-                $("#carousel").carousel('next');
-            });
-        });  
+        // $(document).ready(function () {
+        //     $("#carousel").swiperight(function () {
+        //         $("#carousel").carousel('prev');
+        //     });
+        //     $("#carousel").swipeleft(function () {
+        //         $("#carousel").carousel('next');
+        //     });
+        // });  
+        $('.carousel').bcSwipe({ threshold: 50 });
     </script>
 </body>
 
