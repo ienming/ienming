@@ -2,12 +2,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 100px;
+    height: 300px;
     width: 100%;
     z-index: 99;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(245, 245, 245,0);
     border-bottom: solid;
-    border-color:rgb(205, 205, 205);
+    border-color:rgb(205, 205, 205,0);
     border-width: .75px;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .nav {
-    height: 100px;
+    height: 300px;
     display: flex;
 align-items: center;
 }
@@ -38,8 +38,9 @@ align-items: center;
 
 .hamburger {
     position: absolute;
-    top: 1.5vh;
-    right: 2vh;
+    top: 25px;
+    /* right: 2vh; */
+    right: 25px;
     border: none;
     background-color: rgb(0,0,0,0);
 }
@@ -76,11 +77,11 @@ align-items: center;
 .drawer {
     position: fixed;
     top: 100px;
-    left: 100vw/2-(55.75)/2;
+    right: 0;
     z-index: 1;
     color: #333;
     background-color: rgb(245, 245, 245);
-    width: 100vw;
+    width: 50vw;
     /*flex container*/
     display: flex;
     /* justify-content: center; */
@@ -88,8 +89,8 @@ align-items: center;
     /* text-align: center; */
     /*先藏起來*/
     /* display: none; */
-    /* 先推到螢幕上面 */
-    transform: translateY(-150%);
+    /* 先推到螢幕右邊 */
+    transform: translateX(150%);
     transition: transform .7s ease-in-out;
 }
 
@@ -109,7 +110,7 @@ align-items: center;
 .open {
     /* display: flex; */
     /* 再推回來 */
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 /* 電腦版藏hamburger */
