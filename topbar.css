@@ -14,7 +14,7 @@
 #logo {
     height: 80px;
     cursor: pointer;
-    margin-left: 10vw;
+    margin-left: 5vw;
 }
 
 .nav {
@@ -24,7 +24,7 @@ align-items: center;
 }
 
 /* 手機top變扁 */
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .topBar{
         height: 60px;
     }
@@ -34,7 +34,7 @@ align-items: center;
     .nav{
         height: 60px;
     }
-}
+} */
 
 .hamburger {
     position: absolute;
@@ -75,7 +75,7 @@ align-items: center;
 /*drawer*/
 .drawer {
     position: fixed;
-    top: 60px;
+    top: 100px;
     left: 100vw/2-(55.75)/2;
     z-index: 1;
     color: #333;
@@ -83,9 +83,9 @@ align-items: center;
     width: 100vw;
     /*flex container*/
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
     /*先藏起來*/
     /* display: none; */
     /* 先推到螢幕上面 */
@@ -96,7 +96,7 @@ align-items: center;
 #drawerItems {
     list-style: none;
     padding: 0;
-    margin: 0 auto;
+    margin-left: 5vw;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 2rem;
