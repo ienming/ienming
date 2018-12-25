@@ -148,6 +148,10 @@ align-items: center;
     transition-timing-function: ease-in-out;
 }
 
+.menu li a{
+    text-decoration-line: none;
+}
+
 .menu li:hover {
     color: cornflowerblue;
     cursor: pointer;
