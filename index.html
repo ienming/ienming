@@ -55,11 +55,25 @@
             transform: translate3d(0, 0, 0);
         }
 
+        /* 手機版indicators拉長 */
+        @media only screen and (max-width: 768px) {
+            .carousel-indicators {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            .carousel-indicators>li {
+                margin-left: 0;
+                margin-right: 0;
+                width: calc(100vw/5);
+            }
+        }
+
         #footer {
             position: relative;
             margin-top: -25px;
             word-break: keep-all;
-            text-align: center;
+            text-align: left;
             color: white;
             font-size: .75rem;
         }
@@ -74,7 +88,7 @@
     <header class="topBar">
         <div class="nav" role="navigation">
             <a href="index.html">
-                <img id="logo" src="img/logo_mobile.png" alt="ienMing">
+                <img id="logo" src="img/logo.png" alt="ienMing">
             </a>
             <div class="contactBtn">
                 <!-- contact button -->
@@ -128,8 +142,7 @@
     <!-- 主頁article -->
     <article>
         <div id="indexFlow">
-            <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000"
-                data-pause="false">
+            <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="false">
                 <!-- indicators -->
                 <ol class="carousel-indicators" style="padding-bottom: 20px;">
                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
