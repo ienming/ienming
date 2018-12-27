@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <!-- topbar CSS -->
-    <link rel=stylesheet type="text/css" href="topbar.css">
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "Person",
-          }
-        }
-        </script>
+    <link rel=stylesheet type="text/css" href="css/topbar.css">
+    <!-- JSON-LD 結構化資料-->
+    <!-- flexSlider -->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(window).load(function () {
+            $('.flexslider').flexslider();
+        });
+    </script>
     <style>
         body {
             background-color: rgb(250, 250, 250);
@@ -33,9 +35,6 @@
         .mainCard {
             width: 100%;
             display: flex;
-            /* flex-direction: column; */
-            /* justify-content: center;
-            align-items: center; */
             padding: 22px;
             padding-top: 64px;
         }
@@ -53,12 +52,11 @@
 
         .bio {
             width: 100%;
-            max-width: 600px;
             object-fit: cover;
             margin-bottom: 20px;
         }
 
-        .bio>img {
+        .bio>ul>li>img {
             width: 100%;
         }
 
@@ -70,7 +68,8 @@
         }
 
         .side {
-            margin-top: 116px;
+            margin-top: 26px;
+            margin-left:  2.5vh;
             padding-left: 0;
             padding-top: 0;
             background-color: rgb(250, 250, 250);
@@ -89,8 +88,9 @@
             }
         }
 
+        /* 手機板隱藏邊攔 */
         @media only screen and (max-width: 768px) {
-            .breadcrumb {
+            .side {
                 display: none;
             }
         }
@@ -167,9 +167,23 @@
             <section class="bioText">
                 <p>intrduction.</p>
             </section>
-            <div class="bio">
-                <img src="img/sable閃.gif">
+            <!-- 圖片輪播 -->
+            <div class="flexslider bio">
+                <ul class="slides">
+                    <li>
+                        <img src="img/sable閃.gif">
+                    </li>
+                    <li>
+                        <img src="img/5-colorFin.jpg" />
+                    </li>
+                    <li>
+                        <img src="img/9-color.jpg" />
+                    </li>
+                </ul>
             </div>
+            <!-- <div class="bio">
+                <img src="img/sable閃.gif">
+            </div> -->
             <section class="bioText">
                 <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre
                     l’homme
@@ -186,7 +200,7 @@
                     qui l’a recueilli</p>
             </section>
         </section>
-        
+
         <!-- 邊攔 -->
         <section class="side">
             <!-- 麵包屑 -->
@@ -228,6 +242,13 @@
             }
             i++;
         }
+    </script>
+
+    <!-- flieslide interval change-->
+    <script>
+        $(".flexslider").flexslider({
+            slideshowSpeed: 3500
+        });
     </script>
 </body>
 

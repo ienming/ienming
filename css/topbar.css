@@ -4,7 +4,7 @@
     left: 0;
     height: 100px;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     background-color: rgb(245, 245, 245, 0);
     /* border-bottom: solid;
     border-color:rgb(205, 205, 205,0);
@@ -116,7 +116,7 @@ align-items: center;
 .menu {
     position: absolute;
     top: 38px;
-    right: 40vh;
+    right: 38vh;
 }
 
 .menu ul {
