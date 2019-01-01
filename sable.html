@@ -87,6 +87,10 @@
             .content {
                 width: calc(100vw - (5vw + 280.3px + 42vh));
             }
+
+            .metaMobile {
+                display: none;
+            }
         }
 
         /* 手機板隱藏邊攔 */
@@ -113,6 +117,13 @@
         .metadata>span,
         .metadata>p {
             font-style: italic;
+        }
+
+        .metaMobile {
+            border-right: 4px solid #333;
+            background-color: rgb(240, 240, 240);
+            margin-bottom: 35px;
+            padding-left: 8px;
         }
     </style>
 </head>
@@ -180,6 +191,11 @@
         <div style="height: 50px;"></div>
         <section class="content">
             <h1><strong>Sable</strong></h1>
+            <!-- 手機作品metadata -->
+            <section class="metaMobile">
+                <p>illustration art, picture book</p>
+                <span>2017. June</span>
+            </section>
             <section class="bioText">
                 <p>intrduction.</p>
             </section>
