@@ -192,8 +192,13 @@ align-items: center;
     font-weight: 700;
 }
 
+/* 手機版 */
 @media only screen and (max-width: 768px){
     #goTopMobile{
         display: block;
+    }
+    #goTop{
+        right: 25px;
+        transform: translateX(200%);
     }
 }
