@@ -27,10 +27,6 @@
 
         .mainCard {
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* justify-content: center;
-            align-items: center; */
             padding: 22px;
             padding-top: 64px;
         }
@@ -39,6 +35,7 @@
         @media only screen and (min-width: 768px) {
             .mainCard {
                 padding-left: 5vw;
+                width: calc(100vw - (5vw + 280.3px + 42vh));
             }
         }
 
@@ -47,8 +44,7 @@
         }
 
         .bio {
-            width: 100%;
-            max-width: 600px;
+            width: calc(100vw - (5vw + 280.3px + 42vh));
             object-fit: cover;
             margin-bottom: 20px;
         }
@@ -66,7 +62,7 @@
 
         @media only screen and (min-width: 768px) {
             .bioText {
-                width: 50vw;
+                width: calc(100vw - (5vw + 280.3px + 42vh));
             }
         }
     </style>
@@ -161,7 +157,7 @@
         <div class="clear"></div>
     </article>
     <!-- goTop -->
-    <div id="goTop"></div>
+    <div id="goTop">TOP</div>
 
     <!-- 版權footer -->
     <footer id="footer">
@@ -204,6 +200,12 @@
                 $("#goTop").hide("slow");
             }
             console.log($(window).scrollTop());
+        })
+
+        //捲到最上面
+        $("#goTop").click(function () {
+            var body = $("html, body");
+            body.stop().animate({ scrollTop: 0 }, 500, 'swing');
         })
     </script>
 </body>

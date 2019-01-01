@@ -81,6 +81,7 @@ align-items: center;
     transform: translateX(150%);
     transition: transform .7s ease-in-out;
     box-shadow: 0px 0px 15px 3px rgba(50, 50, 50, 0.2);
+    z-index: 4;
 }
 
 #drawerItems {
@@ -166,9 +167,33 @@ align-items: center;
 #goTop {
     width: 30px;
     height: 30px;
-    background-color: blueviolet;
     position: fixed;
     right: 38vh;
     bottom: 50px;
     display: none;
+    color: #333;
+    text-decoration: underline;
+}
+
+#goTop:hover{
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#goTopMobile{
+    display: none;
+    width: 30px;
+    height: 30px;
+    color: #333;
+    text-decoration: underline;
+    margin-left: 5vw;
+    margin-bottom: 30px;
+    font-size: 13pt;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px){
+    #goTopMobile{
+        display: block;
+    }
 }

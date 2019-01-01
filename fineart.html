@@ -267,7 +267,7 @@
         <div class="clear"></div>
     </article>
     <!-- goTop -->
-    <div id="goTop"></div>
+    <div id="goTop">TOP</div>
 
     <!-- 版權footer -->
     <footer id="footer">
@@ -310,6 +310,12 @@
                 $("#goTop").hide("slow");
             }
             console.log($(window).scrollTop());
+        })
+
+        //捲到最上面
+        $("#goTop").click(function () {
+            var body = $("html, body");
+            body.stop().animate({ scrollTop: 0 }, 500, 'swing');
         })
     </script>
 </body>
