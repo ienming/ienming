@@ -11,8 +11,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <!-- topbar CSS -->
-    <link rel=stylesheet type="text/css" href="css/topbar.css">
+    <!-- commonUse CSS -->
+    <link rel=stylesheet type="text/css" href="css/commonUse_topBar+footer+goTop.css">
     <!-- JSON-LD 結構化資料-->
     <!-- flexSlider -->
     <link rel="stylesheet" href="css/flexslider.css" type="text/css">
@@ -113,6 +113,13 @@
         .metadata>span,
         .metadata>p {
             font-style: italic;
+        }
+
+        /* 手機板調整內文寬度*/
+        @media only screen and (max-width: 768px) {
+            .mainCard {
+                padding-right: 20vw;
+            }
         }
     </style>
 </head>
@@ -241,6 +248,7 @@
     </article>
     <!-- goTop -->
     <div id="goTop">TOP</div>
+    <div id="goTopMobile">TOP</div>
 
     <!-- 版權footer -->
     <footer id="footer">
@@ -293,6 +301,10 @@
 
         //捲到最上面
         $("#goTop").click(function () {
+            var body = $("html, body");
+            body.stop().animate({ scrollTop: 0 }, 500, 'swing');
+        })
+        $("#goTopMobile").click(function () {
             var body = $("html, body");
             body.stop().animate({ scrollTop: 0 }, 500, 'swing');
         })

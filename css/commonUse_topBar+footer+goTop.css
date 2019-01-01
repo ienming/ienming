@@ -1,3 +1,9 @@
+/* 反白顏色 */
+::selection {
+    background-color: #333;
+    color: white;
+}
+
 .topBar {
     position: fixed;
     top: 0;
