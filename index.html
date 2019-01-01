@@ -55,6 +55,37 @@
             transform: translate3d(0, 0, 0);
         }
 
+        /* 電腦版調整indicator、caption */
+        @media only screen and (min-width: 768px) {
+            .carousel-caption {
+                right: 0;
+                left: 5vw;
+                text-align: left;
+                background-color: rgb(0, 0, 0, .45);
+                padding: 0;
+                width: 120px;
+                margin-bottom: 20px;
+            }
+
+            .carousel-caption>p {
+                word-wrap: break-word;
+            }
+
+            .carousel-indicators {
+                left: 5vw;
+                bottom: 50%;
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .carousel-indicators>li {
+                margin-bottom: 15px;
+                width: 33px;
+                height: 33px;
+            }
+        }
+
         /* 手機版indicators拉長 */
         @media only screen and (max-width: 768px) {
             .carousel-indicators {
@@ -156,7 +187,7 @@
                         <img class="d-block w-100" src="img/img019.jpg" alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>PIC1</h5>
-                            <p>XDDDDDDD</p>
+                            <p>XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
                         </div>
                     </div>
                     <div class="carousel-item">
