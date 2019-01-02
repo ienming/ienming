@@ -58,14 +58,15 @@
         /* 電腦版調整indicator、caption */
         @media only screen and (min-width: 768px) {
             .carousel-caption {
-                top: 120px;
-                bottom: auto;
+                top: 0px;
                 right: 0;
-                left: 5vw;
+                left: 4vw;
+                width: calc(150px - 1vw);
+                height: 100vh;
                 text-align: left;
-                background-color: rgb(0, 0, 0, .45);
-                padding: 0;
-                width: 120px;
+                background-color: rgb(151, 151, 151, .45);
+                padding: 1vw;
+                padding-top: 120px;
                 margin-bottom: 20px;
             }
 
@@ -75,16 +76,49 @@
 
             .carousel-indicators {
                 left: 5vw;
-                bottom: 50%;
+                right: auto;
+                bottom: 5%;
                 margin: 0;
                 display: flex;
                 flex-direction: row;
             }
 
             .carousel-indicators>li {
-                margin-bottom: 15px;
-                width: 33px;
-                height: 33px;
+                width: 17px;
+                height: 17px;
+                background-color: #333;
+            }
+
+            .carousel-indicators>li:hover {
+                cursor: pointer;
+                background-color: rgb(151, 151, 151);
+            }
+
+            .carousel-control {
+                position: absolute;
+                bottom: 90px;
+                height: 20px;
+                width: 115px;
+                margin-left: 5vw;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 20px;
+                height: 20px;
+                position: unset;
+            }
+
+            .carousel-control-pause {
+                color: white;
+            }
+
+            .carousel-control-pause:hover {
+                color: #333;
+                text-decoration: none;
             }
         }
 
@@ -222,14 +256,20 @@
                     </div>
                 </div>
                 <!-- control prev next -->
-                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class="carousel-control">
+                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-pause" href="#carousel" role="button">
+                        <span class="carousel-control-pause" aria-hidden="true">Pause</span>
+                        <span class="sr-only">Pause</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
         </div>
     </article>
@@ -283,6 +323,27 @@
 
         // Swipe functions for Bootstrap Carousel
         $('.carousel').bcSwipe({ threshold: 50 });
+    </script>
+
+    <!-- carousel pause & play btn -->
+    <script>
+        var pause = 0;
+        $(".carousel-control-pause").click(function () {
+            pause += 1;
+            if (pause % 2 == 1) {
+                $("#carousel").carousel('pause');
+                console.log(pause);
+                console.log('pause');
+                $(".carousel-control-pause").text("Play");
+            }
+            if (pause % 2 == 0 && pause !== 2) {
+                $("#carousel").carousel('next');
+                $("#carousel").carousel('cycle');
+                console.log(pause);
+                console.log('play next');
+                $(".carousel-control-pause").text("Pause");
+            }
+        })
     </script>
 </body>
 
