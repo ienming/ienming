@@ -126,7 +126,7 @@
             }
         }
 
-        /* 手機版indicators拉長、pause關掉 */
+        /* 手機版indicators拉長、pause關掉、顯示caption */
         @media only screen and (max-width: 768px) {
             .carousel-indicators {
                 margin-left: 0px;
@@ -143,6 +143,18 @@
             .carousel-control-next,
             .carousel-control-prev {
                 display: none;
+            }
+
+            .carousel-caption{
+                display: block !important;
+                left: 0;
+                bottom: 50px;
+                width: 100%;
+                padding-left: 5vw;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                text-align: left;
+                background-color: rgb(151, 151, 151, .45);
             }
         }
 
