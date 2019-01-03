@@ -228,38 +228,38 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>TITLE</h5>
+                        <h5>PIC1</h5>
                         <span>description</span>
                     </div>
-                    <div class="carousel-item active">
+                    <div id="1" class="carousel-item active">
                         <img class="d-block w-100" src="./img/img019.jpg" alt="First slide">
                         <!-- <div class="carousel-caption d-none d-md-block">
                             <h5>PIC1</h5>
                             <p>XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
                         </div> -->
                     </div>
-                    <div class="carousel-item">
+                    <div id="2" class="carousel-item">
                         <img class="d-block w-100" src="./img/img020.jpg" alt="Second slide">
                         <!-- <div class="carousel-caption d-none d-md-block">
                             <h5>PIC2</h5>
                             <p>XDDDDDDD</p>
                         </div> -->
                     </div>
-                    <div class="carousel-item">
+                    <div id="3" class="carousel-item">
                         <img class="d-block w-100" src="./img/img021.jpg" alt="Third slide">
                         <!-- <div class="carousel-caption d-none d-md-block">
                             <h5>PIC3</h5>
                             <p>XDDDDDDD</p>
                         </div> -->
                     </div>
-                    <div class="carousel-item">
+                    <div id="4" class="carousel-item">
                         <img class="d-block w-100" src="./img/6-color.jpg" alt="Fourth slide">
                         <!-- <div class="carousel-caption d-none d-md-block">
                             <h5>PIC4</h5>
                             <p>XDDDDDDD</p>
                         </div> -->
                     </div>
-                    <div class="carousel-item">
+                    <div id="5" class="carousel-item">
                         <img class="d-block w-100" src="./img/king001.jpg" alt="Fifth slide">
                         <!-- <div class="carousel-caption d-none d-md-block">
                             <h5>PIC5</h5>
@@ -355,9 +355,35 @@
     </script>
 
     <script>
-        var slideTwo = $()
-        var whichSlide = $(".carousel-indicators li:visible").attr("data-slide-to");
-        console.log(whichSlide);
+        // 偵測滑動事件
+        $("#carousel").on('slid.bs.carousel', function (e) {
+            console.log('slid event!');
+
+            // 全部取得display的value
+            var sho1 = $("#1").css("display"),
+                sho2 = $("#2").css("display"),
+                sho3 = $("#3").css("display"),
+                sho4 = $("#4").css("display"),
+                sho5 = $("#5").css("display");
+            console.log("slide1 display: " + sho1);
+            console.log("slide2 display: " + sho2);
+            console.log("slide3 display: " + sho3);
+            console.log("slide4 display: " + sho4);
+            console.log("slide5 display: " + sho5);
+
+            // 偵測目前是誰顯示
+            if (sho1 == "block") {
+                $(".carousel-caption h5").text("PIC1");
+            } else if (sho2 == "block") {
+                $(".carousel-caption h5").text("PIC2");
+            } else if (sho3 == "block") {
+                $(".carousel-caption h5").text("PIC3");
+            } else if (sho4 == "block") {
+                $(".carousel-caption h5").text("PIC4");
+            } else if (sho5 == "block") {
+                $(".carousel-caption h5").text("PIC5");
+            }
+        });
     </script>
 </body>
 
