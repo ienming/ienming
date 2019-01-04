@@ -145,7 +145,7 @@
                 display: none;
             }
 
-            .carousel-caption{
+            .carousel-caption {
                 display: block !important;
                 left: 0;
                 bottom: 50px;
@@ -327,81 +327,85 @@
 
     <!-- carousel pause & play btn -->
     <script>
-        var pause = 0;
-        $(".carousel-control-pause").click(function () {
-            pause += 1;
-            if (pause % 2 == 1) {
-                $("#carousel").carousel('pause');
-                console.log(pause);
-                console.log('pause');
-                $(".carousel-control-pause").text("Play");
-            }
-            if (pause % 2 == 0 && pause !== 2) {
-                $("#carousel").carousel('next');
-                $("#carousel").carousel('cycle');
-                console.log(pause);
-                console.log('play next');
-                $(".carousel-control-pause").text("Pause");
-            }
+        $(window).ready(function () {
+            var pause = 0;
+            $(".carousel-control-pause").click(function () {
+                pause += 1;
+                if (pause % 2 == 1) {
+                    $("#carousel").carousel('pause');
+                    console.log(pause);
+                    console.log('pause');
+                    $(".carousel-control-pause").text("Play");
+                }
+                if (pause % 2 == 0 && pause !== 2) {
+                    $("#carousel").carousel('next');
+                    $("#carousel").carousel('cycle');
+                    console.log(pause);
+                    console.log('play next');
+                    $(".carousel-control-pause").text("Pause");
+                }
+            })
         })
     </script>
 
     <script>
-        // 偵測圖片輪播事件
-        $("#carousel").on('slid.bs.carousel', function (e) {
-            console.log('slid event!');
+        $(window).ready(function () {
+            // 偵測圖片輪播事件
+            $("#carousel").on('slid.bs.carousel', function (e) {
+                console.log('slid event!');
 
-            // 全部取得display的value
-            var sho1 = $("#1").css("display"),
-                sho2 = $("#2").css("display"),
-                sho3 = $("#3").css("display"),
-                sho4 = $("#4").css("display"),
-                sho5 = $("#5").css("display");
-            console.log("slide1 display: " + sho1);
-            console.log("slide2 display: " + sho2);
-            console.log("slide3 display: " + sho3);
-            console.log("slide4 display: " + sho4);
-            console.log("slide5 display: " + sho5);
+                // 全部取得display的value
+                var sho1 = $("#1").css("display"),
+                    sho2 = $("#2").css("display"),
+                    sho3 = $("#3").css("display"),
+                    sho4 = $("#4").css("display"),
+                    sho5 = $("#5").css("display");
+                console.log("slide1 display: " + sho1);
+                console.log("slide2 display: " + sho2);
+                console.log("slide3 display: " + sho3);
+                console.log("slide4 display: " + sho4);
+                console.log("slide5 display: " + sho5);
 
-            // 偵測目前是誰顯示
-            if (sho1 == "block") {
-                // 先fadeOut現在的文字，然後把新的fadeIn進去
-                $(".carousel-caption h5").fadeOut(function () {
-                    $(this).text("PIC1").fadeIn();
-                });
-                $(".carousel-caption span").fadeOut(function () {
-                    $(this).text("pic1Descrip").fadeIn();
-                });
-            } else if (sho2 == "block") {
-                $(".carousel-caption h5").fadeOut(function () {
-                    $(this).text("PIC2").fadeIn();
-                });
-                $(".carousel-caption span").fadeOut(function () {
-                    $(this).text("pic2Descrip").fadeIn();
-                });
-            } else if (sho3 == "block") {
-                $(".carousel-caption h5").fadeOut(function () {
-                    $(this).text("PIC3").fadeIn();
-                });
-                $(".carousel-caption span").fadeOut(function () {
-                    $(this).text("pic3Descrip").fadeIn();
-                });
-            } else if (sho4 == "block") {
-                $(".carousel-caption h5").fadeOut(function () {
-                    $(this).text("Sable").fadeIn();
-                });
-                $(".carousel-caption span").fadeOut(function () {
-                    $(this).text("the story in Paris, in fiction").fadeIn();
-                });
-            } else if (sho5 == "block") {
-                $(".carousel-caption h5").fadeOut(function () {
-                    $(this).text("PIC5").fadeIn();
-                });
-                $(".carousel-caption span").fadeOut(function () {
-                    $(this).text("pic5Descrip").fadeIn();
-                });
-            }
-        });
+                // 偵測目前是誰顯示
+                if (sho1 == "block") {
+                    // 先fadeOut現在的文字，然後把新的fadeIn進去
+                    $(".carousel-caption h5").fadeOut(function () {
+                        $(this).text("PIC1").fadeIn();
+                    });
+                    $(".carousel-caption span").fadeOut(function () {
+                        $(this).text("pic1Descrip").fadeIn();
+                    });
+                } else if (sho2 == "block") {
+                    $(".carousel-caption h5").fadeOut(function () {
+                        $(this).text("PIC2").fadeIn();
+                    });
+                    $(".carousel-caption span").fadeOut(function () {
+                        $(this).text("pic2Descrip").fadeIn();
+                    });
+                } else if (sho3 == "block") {
+                    $(".carousel-caption h5").fadeOut(function () {
+                        $(this).text("PIC3").fadeIn();
+                    });
+                    $(".carousel-caption span").fadeOut(function () {
+                        $(this).text("pic3Descrip").fadeIn();
+                    });
+                } else if (sho4 == "block") {
+                    $(".carousel-caption h5").fadeOut(function () {
+                        $(this).text("Sable").fadeIn();
+                    });
+                    $(".carousel-caption span").fadeOut(function () {
+                        $(this).text("the story in Paris, in fiction").fadeIn();
+                    });
+                } else if (sho5 == "block") {
+                    $(".carousel-caption h5").fadeOut(function () {
+                        $(this).text("PIC5").fadeIn();
+                    });
+                    $(".carousel-caption span").fadeOut(function () {
+                        $(this).text("pic5Descrip").fadeIn();
+                    });
+                }
+            });
+        })
     </script>
 </body>
 

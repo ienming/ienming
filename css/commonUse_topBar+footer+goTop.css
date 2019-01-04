@@ -1,3 +1,9 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri',
+    'Trebuchet MS','Helvetiac', 'Arial', 'LiHei Pro', '微軟正黑體',
+    sans-serif;
+}
+
 /* 反白顏色 */
 ::selection {
     background-color: #333;
@@ -86,7 +92,7 @@ align-items: center;
     /* 先推到螢幕右邊 */
     transform: translateX(150%);
     transition: transform .7s ease-in-out;
-    box-shadow: 0px 0px 15px 3px rgba(50, 50, 50, 0.2);
+    box-shadow: 0px 0px 25px 3px rgba(50, 50, 50, 0.2);
     z-index: 4;
 }
 
