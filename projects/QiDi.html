@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ien ming</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- google search console -->
+    <meta name="google-site-verification" content="6JguI8U151lezHi3D6EgF42fAPQvHmnEaw_6lDXzL3c" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- commonUse CSS -->
+    <link rel=stylesheet type="text/css" href="../css/commonUse_topBar+footer+goTop.css">
+    <!-- JSON-LD 結構化資料-->
+    <!-- flexSlider -->
+    <link rel="stylesheet" href="../css/flexslider.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="../js/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(window).load(function () {
+            $('.flexslider').flexslider();
+        });
+    </script>
+    <style>
+        body {
+            background-color: rgb(250, 250, 250);
+        }
+
+        .heightadjust {
+            height: 60px;
+        }
+
+        .mainCard {
+            width: 100%;
+            display: flex;
+            padding: 22px;
+            padding-top: 64px;
+        }
+
+        /* 電腦版mainCard左padding調整 */
+        @media only screen and (min-width: 768px) {
+            .mainCard {
+                padding-left: 5vw;
+            }
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .bio {
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .bio>ul>li>img {
+            width: 100%;
+        }
+
+        .bioText {
+            word-break: keep-all;
+            text-align: left;
+            font-size: 1rem;
+            padding-right: 27px;
+        }
+
+        .side {
+            max-width: 230px;
+            margin-top: 26px;
+            margin-left: 2.5vh;
+            padding-left: 0;
+            padding-top: 0;
+            background-color: rgb(250, 250, 250);
+        }
+
+        .side>nav>ol {
+            padding: 0;
+            font-size: .75rem;
+            background-color: rgb(250, 250, 250);
+        }
+
+        /* 電腦版content寬度和breadcrumb */
+        @media only screen and (min-width: 768px) {
+            .content {
+                width: calc(100vw - (5vw + 280.3px + 42vh));
+            }
+
+            .metaMobile {
+                display: none;
+            }
+        }
+
+        /* 手機板隱藏邊攔 */
+        @media only screen and (max-width: 768px) {
+            .side {
+                display: none;
+            }
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .container>img {
+            width: 100%;
+        }
+
+        .metadata>span,
+        .metadata>p {
+            font-style: italic;
+        }
+
+        .metaMobile {
+            border-left: 4px solid #333;
+            background-color: rgb(240, 240, 240);
+            margin-bottom: 35px;
+            padding-left: 8px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topBar">
+        <div class="nav" role="navigation">
+            <a href="../index.html">
+                <img id="logo" src="../img/logo.png" alt="ienMing">
+            </a>
+            <div class="contactBtn">
+                <!-- contact button -->
+            </div>
+            <!-- deskMenu -->
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="../bio.html">About</a>
+                    </li>
+                    <li>
+                        <a href="./projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="../finearts/fineart.html">Fine Art</a>
+                    </li>
+
+                    <li>
+                        <a>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- mobilehamburger -->
+            <nav>
+                <button class="hamburger">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <nav class="drawer">
+        <ul id="drawerItems">
+            <li class="drawerItem">
+                <a href="../bio.html">About</a>
+            </li>
+            <li class="drawerItem">
+                <a href="./projects.html">Projects</a>
+            </li>
+            <li class="drawerItem">
+                <a href="../finearts/fineart.html">Fine Art</a>
+            </li>
+
+            <li class="drawerItem">
+                <a>Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- 把主頁從topbar擠下去 -->
+    <div class="heightadjust"></div>
+
+    <!-- 主內容article -->
+    <article class="mainCard">
+        <div style="height: 50px;"></div>
+        <section class="content">
+            <h1><strong>基地影像設計</strong></h1>
+            <!-- 手機作品metadata -->
+            <section class="metaMobile">
+                <p>VI design, graphic, logo design</p>
+                <span>2017. June</span>
+            </section>
+            <section class="bioText">
+                <p>intrduction.</p>
+            </section>
+            <!-- 圖片輪播 -->
+            <div class="flexslider bio">
+                <ul class="slides">
+                    <li>
+                        <img src="./img/基地影像設計/基地影像_大頭-01.png">
+                    </li>
+                    <li>
+                        <img src="./img/基地影像設計/基地影像display.jpg" />
+                    </li>
+                    <li>
+                        <img src="./img/基地影像設計/基地影像display_01.jpg" />
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="bio">
+                <img src="img/sable閃.gif">
+            </div> -->
+            <section class="bioText">
+                <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre
+                    l’homme
+                    qui l’a recueilli</p>
+                <br>
+                <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre
+                    l’homme
+                    qui l’a recueilli</p>
+                <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre
+                    l’homme
+                    qui l’a recueilli</p>
+                <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre
+                    l’homme
+                    qui l’a recueilli</p>
+            </section>
+        </section>
+
+        <!-- 邊攔 -->
+        <section class="side">
+            <!-- 麵包屑 -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">ienMing</a></li>
+                    <li class="breadcrumb-item"><a href="./projects.html">projects</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Sable</li>
+                </ol>
+            </nav>
+            <!-- 作品metadata -->
+            <section class="metadata" style="margin-top: 100px;">
+                <p>illustration art, picture book</p>
+                <span>2017. June</span>
+                <div class="container">
+                    <img src="./img/基地影像設計/基地影像_大頭-01.png" />
+                </div>
+            </section>
+        </section>
+        <!-- 撐開父的高度 -->
+        <div class="clear"></div>
+    </article>
+    <!-- goTop -->
+    <div id="goTop">TOP</div>
+    <div id="goTopMobile">TOP</div>
+
+    <!-- 版權footer -->
+    <footer id="footer">
+        <p>Copyright © 2018 ienMing. All rights reserved</p>
+    </footer>
+
+    <!-- menu animated -->
+    <script>
+        var hamburgerBtn = document.querySelector('.hamburger');
+        var drawer = document.querySelector('.drawer');
+        var i = 0;
+
+        hamburgerBtn.addEventListener('click', trigger);
+        /* 判斷按鈕按下的狀態*/
+        function trigger() {
+            if (i % 2 == 0) {
+                drawer.classList.add('open');
+                hamburgerBtn.classList.toggle('change');
+            }
+
+            if (i % 2 == 1) {
+                drawer.classList.remove('open');
+                hamburgerBtn.classList.toggle('change');
+            }
+            i++;
+        }
+    </script>
+
+    <!-- flieslide interval change-->
+    <script>
+        $(".flexslider").flexslider({
+            slideshowSpeed: 3500
+        });
+    </script>
+
+    <!-- swipe this worked-->
+    <script>
+        // Thanks to Maaaaark - https://github.com/maaaaark/bcSwipe/blob/master/jquery.bcSwipe.min.js
+        !function (t) { t.fn.bcSwipe = function (e) { var n = { threshold: 50 }; return e && t.extend(n, e), this.each(function () { function e(t) { 1 == t.touches.length && (u = t.touches[0].pageX, c = !0, this.addEventListener("touchmove", o, !1)) } function o(e) { if (c) { var o = e.touches[0].pageX, i = u - o; Math.abs(i) >= n.threshold && (h(), t(this).flexslider(i > 0 ? "next" : "prev")) } } function h() { this.removeEventListener("touchmove", o), u = null, c = !1 } var u, c = !1; "ontouchstart" in document.documentElement && this.addEventListener("touchstart", e, !1) }), this } }(jQuery);
+
+        // Swipe functions for Bootstrap Flexslider
+        $(".flexslider").bcSwipe({ threshold: 300 });
+    </script>
+
+    <!-- scroll偵測 -->
+    <script>
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 120) {
+                // topBarMask
+                $("header").addClass("topBarMask", 500, "swing");
+                //goTop
+                $("#goTop").show("slow");
+            } else {
+                $("header").removeClass("topBarMask", 500, "easeInBack");
+                $("#goTop").hide("slow");
+            }
+            console.log($(window).scrollTop());
+        })
+
+        //捲到最上面
+        $("#goTop").click(function () {
+            var body = $("html, body");
+            body.stop().animate({ scrollTop: 0 }, 500, 'swing');
+        })
+        $("#goTopMobile").click(function () {
+            var body = $("html, body");
+            body.stop().animate({ scrollTop: 0 }, 500, 'swing');
+        })
+    </script>
+</body>
+
+</html>
