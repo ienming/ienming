@@ -194,7 +194,6 @@ align-items: center;
 
 /* goTop */
 #goTop {
-    width: 30px;
     height: 30px;
     position: fixed;
     right: 38vh;
