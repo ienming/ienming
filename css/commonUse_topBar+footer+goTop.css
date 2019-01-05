@@ -175,6 +175,23 @@ align-items: center;
     padding-left: 5vw;
 }
 
+#footer img{
+    width: 35px;
+}
+
+#footer img:hover{
+    cursor: pointer;
+}
+
+#footer .email{
+    font-size: 1.05rem;
+}
+
+#footer span{
+    line-height: 2rem;
+    margin-bottom: 30px;
+}
+
 /* goTop */
 #goTop {
     width: 30px;
