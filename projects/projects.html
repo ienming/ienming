@@ -147,18 +147,17 @@
                 <!-- contact button -->
             </div>
             <!-- deskMenu -->
+            <div id="menuHoverBox">
+                <div class="menuHover" style="width: 57.2px;" onclick="window.location='../bio.html'"></div>
+                <div class="menuHover" style="width: 71.5px;" onclick="window.location='../projects/projects.html'"></div>
+                <div class="menuHover" style="width: 71.5px;" onclick="window.location='../finearts/fineart.html'"></div>
+                <div class="menuHover" style="width: 65.78px;"></div>
+            </div>
             <nav class="menu">
                 <ul>
-                    <li>
-                        <a href="../bio.html">About</a>
-                    </li>
-                    <li>
-                        <a href="../projects/projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a href="../finearts/fineart.html">Fine Art</a>
-                    </li>
-
+                    <li> About</li>
+                    <li> Projects</li>
+                    <li> Fine Art </li>
                     <li>
                         <a>Contact</a>
                     </li>
@@ -306,6 +305,15 @@
             }
             i++;
         }
+    </script>
+    <script>
+        $(".menuHover").hover(
+            function () {
+                $(this).addClass("menuHoverOn", 125, "swing");
+            }, function () {
+                $(this).removeClass("menuHoverOn", 200, "swing");
+            }
+        );
     </script>
 
     <!-- scroll偵測 -->

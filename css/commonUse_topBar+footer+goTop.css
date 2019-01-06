@@ -140,14 +140,10 @@ align-items: center;
 }
 
 .menuHover{
-    background-color: rgba(66, 66, 66, 0.45);
+    background-color: rgba(194, 194, 194, 0.45);
+    z-index: 1;
     opacity: 0;
 }
-
-/* .menuHover:hover{
-    opacity: 1;
-    cursor: copy;
-} */
 
 .menuHoverOn{
     opacity: 1;
@@ -175,17 +171,7 @@ align-items: center;
     margin-right: 10px;
     transition-duration: .3;
     transition-timing-function: ease-in-out;
-    color: #333;
-}
-
-.menu li a{
-    text-decoration: none;
-    color: #333;
-}
-
-.menu li a:hover {
-    color: blue;
-    cursor: pointer;
+    color: black;
 }
 
 /* 手機藏global navigation */
