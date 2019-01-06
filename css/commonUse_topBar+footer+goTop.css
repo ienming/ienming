@@ -185,11 +185,11 @@ align-items: center;
 
 #footer .email{
     font-size: 1.05rem;
+    margin-bottom: 0;
 }
 
 #footer span{
-    line-height: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 /* goTop */

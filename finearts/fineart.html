@@ -13,6 +13,8 @@
         crossorigin="anonymous">
     <!-- commonUse CSS -->
     <link rel=stylesheet type="text/css" href="../css/commonUse_topBar+footer+goTop.css">
+    <!-- fancyBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
     <!-- jQuery -->
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/jquery-ui.js"></script>
@@ -196,7 +198,9 @@
     <article class="mainCard">
         <div class="projects">
             <div class="container">
-                <a href="sable.html"><img class="coverImg" src="./img/sable閃.gif" /></a>
+                <a href="./img/Aesthetics_2_scale_b.jpg" data-fancybox="gallery1" data-caption="Caption #1">
+                    <img class="coverImg" src="./img/Aesthetics_2_scale_b.jpg">
+                </a>
             </div>
             <div class="description">
                 <a href="sable.html">
@@ -210,7 +214,9 @@
 
         <div class="projects">
             <div class="container">
-                <img class="coverImg" src="./img/king001.jpg">
+                <a href="./img/king001.jpg" data-fancybox="gallery2" >
+                    <img class="coverImg" src="./img/king001.jpg">
+                </a>
             </div>
             <div class="description">
                 <p class="title">King</p>
@@ -280,6 +286,9 @@
     </footer>
 
 
+    <!-- fancyBox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
     <!-- menu animated -->
     <script>
         var hamburgerBtn = document.querySelector('.hamburger');
@@ -301,6 +310,7 @@
             i++;
         }
     </script>
+
 
     <!-- scroll偵測 -->
     <script>
