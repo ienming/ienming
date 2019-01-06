@@ -13,10 +13,13 @@
         crossorigin="anonymous">
     <!-- commonUse CSS -->
     <link rel=stylesheet type="text/css" href="../css/commonUse_topBar+footer+goTop.css">
+    <!-- fancyBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
     <!-- JSON-LD 結構化資料-->
+    <!-- jQuery -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
     <!-- flexSlider -->
     <link rel="stylesheet" href="../css/flexslider.css" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="../js/jquery.flexslider.js"></script>
     <script type="text/javascript" charset="utf-8">
         $(window).load(function () {
@@ -220,11 +223,17 @@
                 <div class="flexslider bio">
                     <ul class="slides">
                         <li>
-                            <img src="./img/基地影像設計/基地_branding_display.jpg" />
+                            <a href="./img/基地影像設計/基地_branding_display.jpg" data-fancybox="gallery1" data-caption="Caption #1">
+                                <img class="coverImg" src="./img/基地影像設計/基地_branding_display.jpg">
+                            </a>
+                            <!-- <img src="./img/基地影像設計/基地_branding_display.jpg" /> -->
                             <p class="flex-caption">Adventurer Cheesecake Brownie</p>
                         </li>
                         <li>
-                            <img src="./img/基地影像設計/基地_branding_display2.jpg" />
+                            <a href="./img/基地影像設計/基地_branding_display2.jpg" data-fancybox="gallery1" data-caption="Caption #1">
+                                <img class="coverImg" src="./img/基地影像設計/基地_branding_display2.jpg">
+                            </a>
+                            <!-- <img src="./img/基地影像設計/基地_branding_display2.jpg" /> -->
                             <p class="flex-caption">Adventurer Cheesecake Brownie</p>
                         </li>
                     </ul>
@@ -249,10 +258,22 @@
                     qui l’a recueilli</p>
             </section>
             <section class="bio">
-                <img src="img/基地影像設計/基地影像display-14.png" />
+                <a href="img/基地影像設計/基地影像display-14.png" data-fancybox="gallery2" data-caption="Caption #1">
+                    <img class="coverImg" src="img/基地影像設計/基地影像display-14.png">
+                </a>
+                <a href="img/基地影像設計/基地影像display-15.png" data-fancybox="gallery2" data-caption="Caption #1">
+                    <img class="coverImg" src="img/基地影像設計/基地影像display-15.png">
+                </a>
+                <a href="img/基地影像設計/基地_branding_display3.jpg" data-fancybox="gallery2" data-caption="Caption #1">
+                    <img class="coverImg" src="img/基地影像設計/基地_branding_display3.jpg">
+                </a>
+                <a href="img/基地影像設計/基地_branding_display4.jpg" data-fancybox="gallery2" data-caption="Caption #1">
+                    <img class="coverImg" src="img/基地影像設計/基地_branding_display4.jpg">
+                </a>
+                <!-- <img src="img/基地影像設計/基地影像display-14.png" />
                 <img src="img/基地影像設計/基地影像display-15.png" />
                 <img src="img/基地影像設計/基地_branding_display3.jpg" />
-                <img src="img/基地影像設計/基地_branding_display4.jpg" />
+                <img src="img/基地影像設計/基地_branding_display4.jpg" /> -->
             </section>
         </section>
 
@@ -293,6 +314,9 @@
     </footer>
 
 
+
+    <!-- fancyBox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
     <!-- menu animated -->
     <script>
         var hamburgerBtn = document.querySelector('.hamburger');
