@@ -179,6 +179,9 @@ align-items: center;
     .nav .menu {
         display: none;
     }
+    #menuHoverBox {
+        display: none;
+    }
 }
 
 
