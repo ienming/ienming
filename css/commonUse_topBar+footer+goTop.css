@@ -4,6 +4,10 @@ body{
     sans-serif;
 }
 
+a {
+    color:#333;
+}
+
 /* 反白顏色 */
 ::selection {
     background-color: #333;
@@ -126,6 +130,30 @@ align-items: center;
 }
 
 /* deskMenu */
+#menuHoverBox{
+    width: 266.64px;
+    height: 100px;
+    display: flex;
+    justify-content:center;
+    position: absolute;
+    right: 38vh;
+}
+
+.menuHover{
+    background-color: rgba(66, 66, 66, 0.45);
+    opacity: 0;
+}
+
+/* .menuHover:hover{
+    opacity: 1;
+    cursor: copy;
+} */
+
+.menuHoverOn{
+    opacity: 1;
+    cursor: pointer;
+}
+
 .menu {
     position: absolute;
     top: 38px;
@@ -142,19 +170,21 @@ align-items: center;
     display: inline;
     text-align: center;
     font-size: 14px;
-    color: #333;
     margin: 0 auto;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     transition-duration: .3;
     transition-timing-function: ease-in-out;
+    color: #333;
 }
 
 .menu li a{
-    text-decoration-line: none;
+    text-decoration: none;
+    color: #333;
 }
 
-.menu li:hover {
-    color: cornflowerblue;
+.menu li a:hover {
+    color: blue;
     cursor: pointer;
 }
 

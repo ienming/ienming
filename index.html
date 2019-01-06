@@ -183,6 +183,12 @@
                 <!-- contact button -->
             </div>
             <!-- deskMenu -->
+            <div id="menuHoverBox">
+                <div class="menuHover" style="width: 57.2px;"></div>
+                <div class="menuHover" style="width: 71.5px;"></div>
+                <div class="menuHover" style="width: 71.5px;"></div>
+                <div class="menuHover" style="width: 65.78px;"></div>
+            </div>
             <nav class="menu">
                 <ul>
                     <li>
@@ -406,6 +412,16 @@
                 }
             });
         })
+    </script>
+
+    <script>
+        $(".menuHover").hover(
+            function () {
+                $(this).addClass("menuHoverOn", 500, "swing");
+            }, function () {
+                $(this).removeClass("menuHoverOn", 2000, "swing");
+            }
+        );
     </script>
 </body>
 
