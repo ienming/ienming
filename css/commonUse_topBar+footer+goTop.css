@@ -1,5 +1,5 @@
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri',
+    font-family: 'Calibri',
     'Trebuchet MS','Helvetiac', 'Arial', 'LiHei Pro', '微軟正黑體',
     sans-serif;
 }
@@ -25,7 +25,7 @@ a {
 }
 
 .topBarMask{
-    background-color: rgb(245, 245, 245, .45);
+    background-color: rgb(245, 245, 245, .85);
 }
 
 #logo {
