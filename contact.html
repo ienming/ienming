@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>ien ming contact</title>
+    <title>ien ming</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Required meta tags -->
@@ -94,20 +94,20 @@
                 <!-- contact button -->
             </div>
             <!-- deskMenu -->
-            <div id="menuHoverBox">
-                <div class="menuHover" style="width: 57.2px;" onclick="window.location='./bio.html'"></div>
-                <div class="menuHover" style="width: 71.5px;" onclick="window.location='./projects/projects.html'"></div>
-                <div class="menuHover" style="width: 71.5px;" onclick="window.location='./finearts/fineart.html'"></div>
-                <div class="menuHover" style="width: 65.78px;"></div>
-            </div>
             <nav class="menu">
                 <ul>
-                    <li> About</li>
-                    <li> Projects</li>
-                    <li> Fine Art </li>
-                    <li>
-                        <a>Contact</a>
-                    </li>
+                    <a href="bio.html">
+                        <li class="menuHover"> About</li>
+                    </a>
+                    <a href="projects/projects.html">
+                        <li class="menuHover"> Projects</li>
+                    </a>
+                    <a href="finearts/fineart.html">
+                        <li class="menuHover"> Fine Art </li>
+                    </a>
+                    <a href="contact.html">
+                        <li class="menuHover"> Contact </li>
+                    </a>
                 </ul>
             </nav>
             <!-- mobilehamburger -->
@@ -187,7 +187,7 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="form_need">Please specify your need *</label>
                                         <select id="form_need" name="need" class="form-control" required="required"
@@ -200,7 +200,7 @@
                                         </select>
                                         <div class="help-block with-errors"></div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
@@ -241,7 +241,7 @@
 
     <!-- 版權footer -->
     <footer id="footer">
-        <p>Copyright © 2018 ienMing. All rights reserved</p>
+        <p>Copyright © 2019 ienMing. All rights reserved</p>
     </footer>
 
 
@@ -253,63 +253,9 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8="
         crossorigin="anonymous"></script>
-    <script src="contact.js"></script>
-    <!-- menu animated -->
-    <script>
-        var hamburgerBtn = document.querySelector('.hamburger');
-        var drawer = document.querySelector('.drawer');
-        var i = 0;
-
-        hamburgerBtn.addEventListener('click', trigger);
-        /* 判斷按鈕按下的狀態*/
-        function trigger() {
-            if (i % 2 == 0) {
-                drawer.classList.add('open');
-                hamburgerBtn.classList.toggle('change');
-            }
-
-            if (i % 2 == 1) {
-                drawer.classList.remove('open');
-                hamburgerBtn.classList.toggle('change');
-            }
-            i++;
-        }
-    </script>
-    <script>
-        $(".menuHover").hover(
-            function () {
-                $(this).addClass("menuHoverOn", 125, "swing");
-            }, function () {
-                $(this).removeClass("menuHoverOn", 200, "swing");
-            }
-        );
-    </script>
-
-    <!-- scroll偵測 -->
-    <script>
-        $(window).scroll(function () {
-            if ($(window).scrollTop() >= 120) {
-                // topBarMask
-                $("header").addClass("topBarMask", 500, "swing");
-                //goTop
-                $("#goTop").show("slow");
-            } else {
-                $("header").removeClass("topBarMask", 500, "easeInBack");
-                $("#goTop").hide("slow");
-            }
-            console.log($(window).scrollTop());
-        })
-
-        //捲到最上面
-        $("#goTop").click(function () {
-            var body = $("html, body");
-            body.stop().animate({ scrollTop: 0 }, 500, 'swing');
-        })
-        $("#goTopMobile").click(function () {
-            var body = $("html, body");
-            body.stop().animate({ scrollTop: 0 }, 500, 'swing');
-        })
-    </script>
+    <script src="js/contact.js"></script>
+    <!-- custom JS -->
+    <script src="js/menu_drawer_scroll.js"></script>
 </body>
 
 </html>
