@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ien ming contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- google search console -->
+    <meta name="google-site-verification" content="6JguI8U151lezHi3D6EgF42fAPQvHmnEaw_6lDXzL3c" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='./contactForm/custom.css' rel='stylesheet' type='text/css'>
+    <!-- commonUse CSS -->
+    <link rel=stylesheet type="text/css" href="./css/commonUse_topBar+footer+goTop.css">
+    <!-- jQuery -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <style>
+        body {
+            background-color: rgb(250, 250, 250);
+        }
+
+        .heightadjust {
+            height: 60px;
+        }
+
+        .mainCard {
+            width: 100%;
+            padding: 22px;
+            padding-top: 64px;
+        }
+
+        /* 電腦版mainCard左padding調整 */
+        @media only screen and (min-width: 768px) {
+            .mainCard {
+                padding-left: 5vw;
+                width: calc(100vw - (5vw + 280.3px + 42vh));
+            }
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .bio {
+            width: calc(100vw - (5vw + 280.3px + 42vh));
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .bio>img {
+            width: 100%;
+        }
+
+        .bioText {
+            word-break: keep-all;
+            text-align: left;
+            font-size: 1 rem;
+            padding-right: 27px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .bioText {
+                width: calc(100vw - (5vw + 280.3px + 42vh));
+            }
+        }
+
+        /* 手機板圖片寬度、內文內縮調整 */
+        @media only screen and (max-width: 768px) {
+            .bio {
+                width: 100%;
+            }
+
+            .bioText {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topBar">
+        <div class="nav" role="navigation">
+            <a href="index.html">
+                <img id="logo" src="img/logo.png" alt="ienMing">
+            </a>
+            <div class="contactBtn">
+                <!-- contact button -->
+            </div>
+            <!-- deskMenu -->
+            <div id="menuHoverBox">
+                <div class="menuHover" style="width: 57.2px;" onclick="window.location='./bio.html'"></div>
+                <div class="menuHover" style="width: 71.5px;" onclick="window.location='./projects/projects.html'"></div>
+                <div class="menuHover" style="width: 71.5px;" onclick="window.location='./finearts/fineart.html'"></div>
+                <div class="menuHover" style="width: 65.78px;"></div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li> About</li>
+                    <li> Projects</li>
+                    <li> Fine Art </li>
+                    <li>
+                        <a>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- mobilehamburger -->
+            <nav>
+                <button class="hamburger">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <nav class="drawer">
+        <ul id="drawerItems">
+            <li class="drawerItem">
+                <a href="bio.html">About</a>
+            </li>
+            <li class="drawerItem">
+                <a href="./projects/projects.html">Projects</a>
+            </li>
+            <li class="drawerItem">
+                <a href="./finearts/fineart.html">Fine Art</a>
+            </li>
+
+            <li class="drawerItem">
+                <a>Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- 把主頁從topbar擠下去 -->
+    <div class="heightadjust"></div>
+
+    <!-- 主內容article -->
+    <article class="mainCard">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xl-8 offset-xl-2 py-5">
+
+                    <h1>Contact form Tutorial from <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>
+
+                    <p class="lead">This is a demo for our tutorial dedicated to crafting working Bootstrap contact
+                        form with PHP and AJAX background.</p>
+
+                    <!-- We're going to place the form here in the next step -->
+                    <form id="contact-form" method="post" action="contact.php" role="form">
+
+                        <div class="messages"></div>
+
+                        <div class="controls">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Firstname *</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *"
+                                            required="required" data-error="Firstname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_lastname">Lastname *</label>
+                                        <input id="form_lastname" type="text" name="surname" class="form-control"
+                                            placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_email">Email *</label>
+                                        <input id="form_email" type="email" name="email" class="form-control"
+                                            placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_need">Please specify your need *</label>
+                                        <select id="form_need" name="need" class="form-control" required="required"
+                                            data-error="Please specify your need.">
+                                            <option value=""></option>
+                                            <option value="Request quotation">Request quotation</option>
+                                            <option value="Request order status">Request order status</option>
+                                            <option value="Request copy of an invoice">Request copy of an invoice</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_message">Message *</label>
+                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *"
+                                            rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-success btn-send" value="Send message">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-muted">
+                                        <strong>*</strong> These fields are required. Contact form template by
+                                        <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form"
+                                            target="_blank">Bootstrapious</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- 撐開父的高度 -->
+        <div class="clear"></div>
+    </article>
+    <!-- goTop -->
+    <div id="goTop">TOP</div>
+    <div id="goTopMobile">TOP</div>
+
+    <!-- 版權footer -->
+    <footer id="footer">
+        <p>Copyright © 2018 ienMing. All rights reserved</p>
+    </footer>
+
+
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8="
+        crossorigin="anonymous"></script>
+    <script src="contact.js"></script>
+    <!-- menu animated -->
+    <script>
+        var hamburgerBtn = document.querySelector('.hamburger');
+        var drawer = document.querySelector('.drawer');
+        var i = 0;
+
+        hamburgerBtn.addEventListener('click', trigger);
+        /* 判斷按鈕按下的狀態*/
+        function trigger() {
+            if (i % 2 == 0) {
+                drawer.classList.add('open');
+                hamburgerBtn.classList.toggle('change');
+            }
+
+            if (i % 2 == 1) {
+                drawer.classList.remove('open');
+                hamburgerBtn.classList.toggle('change');
+            }
+            i++;
+        }
+    </script>
+    <script>
+        $(".menuHover").hover(
+            function () {
+                $(this).addClass("menuHoverOn", 125, "swing");
+            }, function () {
+                $(this).removeClass("menuHoverOn", 200, "swing");
+            }
+        );
+    </script>
+
+    <!-- scroll偵測 -->
+    <script>
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 120) {
+                // topBarMask
+                $("header").addClass("topBarMask", 500, "swing");
+                //goTop
+                $("#goTop").show("slow");
+            } else {
+                $("header").removeClass("topBarMask", 500, "easeInBack");
+                $("#goTop").hide("slow");
+            }
+            console.log($(window).scrollTop());
+        })
+
+        //捲到最上面
+        $("#goTop").click(function () {
+            var body = $("html, body");
+            body.stop().animate({ scrollTop: 0 }, 500, 'swing');
+        })
+        $("#goTopMobile").click(function () {
+            var body = $("html, body");
+            body.stop().animate({ scrollTop: 0 }, 500, 'swing');
+        })
+    </script>
+</body>
+
+</html>
