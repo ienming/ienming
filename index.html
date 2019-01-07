@@ -67,7 +67,7 @@
                 width: calc(150px - .5vw);
                 height: 100vh;
                 text-align: left;
-                background-color: rgb(0,0,0, .5);
+                background-color: rgb(0, 0, 0, .5);
                 padding: 1vw;
                 padding-top: 120px;
                 margin-bottom: 20px;
@@ -155,14 +155,14 @@
                 padding-top: 5px;
                 padding-bottom: 5px;
                 text-align: left;
-                background-color: rgb(0,0,0, .5);
+                background-color: rgb(0, 0, 0, .5);
             }
 
-            .carousel-caption > h5{
+            .carousel-caption>h5 {
                 margin: 0;
             }
 
-            .carousel-caption > p{
+            .carousel-caption>p {
                 margin-bottom: 8px;
             }
         }
@@ -192,18 +192,12 @@
                 <!-- contact button -->
             </div>
             <!-- deskMenu -->
-            <div id="menuHoverBox">
-                <div class="menuHover" style="width: 57.2px;" onclick="window.location='./bio.html'"></div>
-                <div class="menuHover" style="width: 71.5px;" onclick="window.location='./projects/projects.html'"></div>
-                <div class="menuHover" style="width: 71.5px;" onclick="window.location='./finearts/fineart.html'"></div>
-                <div class="menuHover" style="width: 65.78px;"></div>
-            </div>
             <nav class="menu">
                 <ul>
-                    <li> About</li>
-                    <li> Projects</li>
-                    <li> Fine Art </li>
-                    <li>
+                    <li class="menuHover"> About</li>
+                    <li class="menuHover"> Projects</li>
+                    <li class="menuHover"> Fine Art </li>
+                    <li class="menuHover">
                         <a>Contact</a>
                     </li>
                 </ul>
@@ -327,9 +321,11 @@
     <script>
         $(".menuHover").hover(
             function () {
-                $(this).addClass("menuHoverOn", 125, "swing");
+                $(this).addClass("menuHoverOn", "swing");
+                $(this).css("color", "white");
             }, function () {
                 $(this).removeClass("menuHoverOn", 200, "swing");
+                $(this).css("color", "black");
             }
         );
     </script>
