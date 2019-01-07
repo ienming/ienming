@@ -242,8 +242,9 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>PIC1</h5>
-                        <span>description</span>
+                        <h5 style="font-size: 18px;">基地影像設計</h5>
+                        <p style="font-size: 16px;">Secret Base Video Studio</p>
+                        <span style="font-size: 16px;">Visual Identity, Logo Design</span>
                     </div>
                     <div id="1" class="carousel-item active">
                         <img class="d-block w-100" src="./projects/img/基地影像設計/基地_branding_display2.jpg" alt="First slide">
@@ -379,14 +380,20 @@
                 if (sho1 == "block") {
                     // 先fadeOut現在的文字，然後把新的fadeIn進去
                     $(".carousel-caption h5").fadeOut(function () {
-                        $(this).text("PIC1").fadeIn();
+                        $(this).text("基地影像設計").fadeIn();
+                    });
+                    $(".carousel-caption p").fadeOut(function () {
+                        $(this).text("Secret Base Video Studio").fadeIn();
                     });
                     $(".carousel-caption span").fadeOut(function () {
-                        $(this).text("pic1Descrip").fadeIn();
+                        $(this).text("Visual Identity, Logo Design").fadeIn();
                     });
                 } else if (sho2 == "block") {
                     $(".carousel-caption h5").fadeOut(function () {
                         $(this).text("PIC2").fadeIn();
+                    });
+                    $(".carousel-caption p").fadeOut(function () {
+                        $(this).text("2ENG").fadeIn();
                     });
                     $(".carousel-caption span").fadeOut(function () {
                         $(this).text("pic2Descrip").fadeIn();
@@ -395,6 +402,9 @@
                     $(".carousel-caption h5").fadeOut(function () {
                         $(this).text("PIC3").fadeIn();
                     });
+                    $(".carousel-caption p").fadeOut(function () {
+                        $(this).text("3ENG").fadeIn();
+                    });
                     $(".carousel-caption span").fadeOut(function () {
                         $(this).text("pic3Descrip").fadeIn();
                     });
@@ -402,12 +412,18 @@
                     $(".carousel-caption h5").fadeOut(function () {
                         $(this).text("Sable").fadeIn();
                     });
+                    $(".carousel-caption p").fadeOut(function () {
+                        $(this).text("4ENG").fadeIn();
+                    });
                     $(".carousel-caption span").fadeOut(function () {
                         $(this).text("the story in Paris, in fiction").fadeIn();
                     });
                 } else if (sho5 == "block") {
                     $(".carousel-caption h5").fadeOut(function () {
                         $(this).text("PIC5").fadeIn();
+                    });
+                    $(".carousel-caption p").fadeOut(function () {
+                        $(this).text("5ENG").fadeIn();
                     });
                     $(".carousel-caption span").fadeOut(function () {
                         $(this).text("pic5Descrip").fadeIn();
