@@ -194,12 +194,18 @@
             <!-- deskMenu -->
             <nav class="menu">
                 <ul>
-                    <li class="menuHover"> About</li>
-                    <li class="menuHover"> Projects</li>
-                    <li class="menuHover"> Fine Art </li>
-                    <li class="menuHover">
-                        <a>Contact</a>
-                    </li>
+                    <a href="bio.html">
+                        <li class="menuHover"> About</li>
+                    </a>
+                    <a href="projects/projects.html">
+                        <li class="menuHover"> Projects</li>
+                    </a>
+                    <a href="finearts/fineart.html">
+                        <li class="menuHover"> Fine Art </li>
+                    </a>
+                    <a href="contact.html">
+                        <li class="menuHover"> Contact </li>
+                    </a>
                 </ul>
             </nav>
             <!-- mobilehamburger -->
@@ -296,40 +302,8 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
-    <!-- menu animated -->
-    <script>
-        var hamburgerBtn = document.querySelector('.hamburger');
-        var drawer = document.querySelector('.drawer');
-        var i = 0;
-
-        hamburgerBtn.addEventListener('click', trigger);
-        /* 判斷按鈕按下的狀態*/
-        function trigger() {
-            if (i % 2 == 0) {
-                drawer.classList.add('open');
-                hamburgerBtn.classList.toggle('change');
-            }
-
-            if (i % 2 == 1) {
-                drawer.classList.remove('open');
-                hamburgerBtn.classList.toggle('change');
-            }
-            i++;
-        }
-    </script>
-    <script>
-        $(".menuHover").hover(
-            function () {
-                $(this).addClass("menuHoverOn", "swing");
-                $(this).css("color", "white");
-            }, function () {
-                $(this).removeClass("menuHoverOn", 200, "swing");
-                $(this).css("color", "black");
-            }
-        );
-    </script>
-
+    <!-- custom JS -->
+    <script src="js/menu_drawer_scroll.js"></script>
     <!-- swipe this worked-->
     <script>
         // Thanks to Maaaaark - https://github.com/maaaaark/bcSwipe/blob/master/jquery.bcSwipe.min.js
