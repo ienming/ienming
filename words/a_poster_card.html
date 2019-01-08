@@ -8,14 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- google search console -->
     <meta name="google-site-verification" content="6JguI8U151lezHi3D6EgF42fAPQvHmnEaw_6lDXzL3c" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
     <!-- commonUse CSS -->
-    <link rel=stylesheet type="text/css" href="./css/commonUse_topBar+footer+goTop.css">
+    <link rel=stylesheet type="text/css" href="../css/commonUse_topBar+footer+goTop.css">
+    <link rel=stylesheet href="../css/bookblock.css">
+    <link rel=stylesheet href="../css/default.css">
+    <link rel=stylesheet href="../css/demo4.css">
+    <!-- JSON-LD 結構化資料-->
     <!-- jQuery -->
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/jquery-ui.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/modernizr.custom.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-7243260-2']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
     <style>
         body {
             background-color: rgb(250, 250, 250);
@@ -82,7 +94,7 @@
             word-break: break-all;
             text-align: justify;
             text-indent: 1em;
-            font-size: 1rem;
+            font-size: 1.2rem;
             padding-right: 20vw;
         }
 
@@ -132,10 +144,6 @@
             h1 {
                 margin-bottom: 20px;
             }
-
-            .heightadjust {
-                height: 60px;
-            }
         }
 
         .container {
@@ -160,35 +168,51 @@
             padding-left: 8px;
             font-style: italic;
         }
+
+        #page1 {
+            background-color: pink;
+        }
+
+        #page2 {
+            background-color: green;
+        }
+
+        #page3 {
+            background-clip: violet;
+        }
+
+        #page4 {
+            background-color: orangered;
+        }
     </style>
 </head>
 
 <body>
     <header class="topBar">
         <div class="nav" role="navigation">
-            <a href="./index.html">
-                <img id="logo" src="./img/logo.png" alt="ienMing">
+            <a href="../index.html">
+                <img id="logo" src="../img/logo.png" alt="ienMing">
             </a>
             <!-- deskMenu -->
             <nav class="menu">
                 <ul>
-                    <a href="bio.html">
+                    <a href="../bio.html">
                         <li class="menuHover">About</li>
                     </a>
-                    <a href="projects.html">
+                    <a href="../projects.html">
                         <li class="menuHover">Projects</li>
                     </a>
                     <li id="fineArt" class="menuHover"> Paintings
                         <div class="dropdown-content">
-                            <div class="menuHover" onclick="location.href='comicIllustration.html';">
+                            <div class="menuHover" onclick="location.href='../comicIllustration.html';">
                                 comic, illustration
                             </div>
-                            <div class="menuHover" onclick="location.href='watercolor.html';">
+                            <div class="menuHover" onclick="location.href='../watercolor.html';">
                                 watercolor lifedrawing
                             </div>
                         </div>
                     </li>
-                    <a href="words.html">
+                    <a href="../words.html">
                         <li class="menuHover">Words</li>
                     </a>
                     <!-- <a href="contact.html">
@@ -209,19 +233,19 @@
     <nav class="drawer">
         <ul id="drawerItems">
             <li class="drawerItem">
-                <a href="bio.html">About</a>
+                <a href="../bio.html">About</a>
             </li>
             <li class="drawerItem">
-                <a href="projects.html">Projects</a>
+                <a href="../projects.html">Projects</a>
             </li>
             <li class="drawerItem">
-                <a href="comicIllustration.html">Illustration</a>
+                <a href="../comicIllustration.html">Illustration</a>
             </li>
             <li class="drawerItem">
-                <a href="watercolor.html">Lifedrawing</a>
+                <a href="../watercolor.html">Lifedrawing</a>
             </li>
             <li class="drawerItem">
-                <a href="words.html">Words</a>
+                <a href="../words.html">Words</a>
             </li>
             <!-- <li class="drawerItem">
                         <a>Contact</a>
@@ -229,34 +253,25 @@
         </ul>
     </nav>
 
-
     <!-- 把主頁從topbar擠下去 -->
     <div class="heightadjust"></div>
 
     <!-- 主內容article -->
-    <article class="mainCard">
-        <section class="content">
-            <h1><strong></strong>Biography</strong></h1>
-            <section class="bioText">
-                <p>哈哈哈 </p>
-                <p class="engText">HAHAHA</p>
-            </section>
-        </section>
-
-        <!-- 邊攔 -->
-        <section class="side">
-            <!-- 作品metadata -->
-            <section class="metadata">
-                <!-- <p>Visual Identity, Logo design</p>
-                <p>client: Secret Base Video Studio</p>
-                <span>2018. May</span> -->
-                <div class="container" style="margin-top: 25px;">
-                    <img src="img/ig logo.png" style="height: 125px; width: 125px;" />
-                </div>
-            </section>
-        </section>
-        <!-- 撐開父的高度 -->
-        <div class="clear"></div>
+    <article>
+        <div id="bb-bookblock" class="bb-bookblock">
+            <div class="bb-item" id="page1">
+                test
+            </div>
+            <div class="bb-item" id="page2">
+                test2
+            </div>
+            <div class="bb-item" id="page3">
+                test3
+            </div>
+            <div class="bb-item" id="page4">
+                test4
+            </div>
+        </div>
     </article>
     <!-- goTop -->
     <div id="goTop">TOP</div>
@@ -264,12 +279,46 @@
 
     <!-- 版權footer -->
     <footer id="footer">
+        <a href="https://www.instagram.com/ienming/?fbclid=IwAR1_fAR2z_XVRMx0ZeRDLRiOsMj4LFHFdu5LYqo7pnNeQUO2shqbahiaUyQ"><img
+                src="../img/ig logo.png" /></a>
+        <p class="email">hsieh.alan.0726@gmail.com</p>
+        <p>-</p>
         <p>Copyright © 2019 ienMing. All rights reserved</p>
     </footer>
 
 
     <!-- custom JS -->
-    <script src="js/menu_drawer_scroll.js"></script>
+    <script src="../js/menu_drawer_scroll.js"></script>
+    <!-- bookblock -->
+    <script src="../js/jquery.bookblock.js"></script>
+    <script src="../js/jquerypp.custom.js"></script>
+
+    <script>
+        $(function () {
+            $('#bb-bookblock').bookblock();s
+        });
+    </script>
+
+    <!-- flieslide interval change-->
+    <script>
+        $(".flexslider").flexslider({
+            slideshowSpeed: 3500
+        });
+        $(window).on(function () {
+            $('.flexslider').flexslider({
+                animation: "slide"
+            });
+        });
+    </script>
+
+    <!-- swipe this worked-->
+    <script>
+        // Thanks to Maaaaark - https://github.com/maaaaark/bcSwipe/blob/master/jquery.bcSwipe.min.js
+        !function (t) { t.fn.bcSwipe = function (e) { var n = { threshold: 50 }; return e && t.extend(n, e), this.each(function () { function e(t) { 1 == t.touches.length && (u = t.touches[0].pageX, c = !0, this.addEventListener("touchmove", o, !1)) } function o(e) { if (c) { var o = e.touches[0].pageX, i = u - o; Math.abs(i) >= n.threshold && (h(), t(this).flexslider(i > 0 ? "next" : "prev")) } } function h() { this.removeEventListener("touchmove", o), u = null, c = !1 } var u, c = !1; "ontouchstart" in document.documentElement && this.addEventListener("touchstart", e, !1) }), this } }(jQuery);
+
+        // Swipe functions for Bootstrap Flexslider
+        $(".flexslider").bcSwipe({ threshold: 300 });
+    </script>
 </body>
 
 </html>

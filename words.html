@@ -11,11 +11,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <!-- fancyBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
     <!-- commonUse CSS -->
-    <link rel=stylesheet type="text/css" href="./css/commonUse_topBar+footer+goTop.css">
+    <link rel=stylesheet type="text/css" href="css/commonUse_topBar+footer+goTop.css">
     <!-- jQuery -->
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/jquery-ui.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <style>
         body {
             background-color: rgb(250, 250, 250);
@@ -28,39 +30,22 @@
         .mainCard {
             width: 100%;
             display: flex;
-            padding: 22px;
+            flex-direction: column;
+            /* justify-content: center;
+            align-items: center; */
+            padding-bottom: 22px;
             padding-top: 64px;
+            padding-right: 5vw;
+            padding-left: 5vw;
         }
 
-        .flexslider {
-            border: 0;
-        }
-
-        .flex-caption {
-            width: 100%;
-            padding: 2%;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            background: rgba(107, 107, 107, 0.5);
-            color: #fff;
-            text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
-            font-size: 14px;
-            line-height: 18px;
-            margin: 0;
-        }
-
-        h1 {
-            font-weight: 100;
-            font-family: '微軟正黑體',
-                sans-serif;
-            margin-bottom: 45px;
-        }
-
-        /* 電腦版mainCard左padding調整 */
+        /* 電腦版橫著排 */
         @media only screen and (min-width: 768px) {
             .mainCard {
-                padding-left: 5vw;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding-right: calc(40vh + 280.3px);
             }
         }
 
@@ -68,93 +53,85 @@
             clear: both;
         }
 
-        .bio {
-            width: 100%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
-        .bio img {
-            width: 100%;
-        }
-
-        .bioText {
-            word-break: break-all;
-            text-align: justify;
-            text-indent: 1em;
-            font-size: 1.2rem;
-            padding-right: 20vw;
-        }
-
-        .engText {
-            word-break: keep-all;
-            text-indent: 0em;
-            font-size: 1.1rem;
-            text-align: left;
-        }
-
-        .side {
+        .projects {
             max-width: 230px;
-            margin-top: 93px;
-            margin-left: 2.5vh;
-            padding-left: 0;
-            padding-top: 0;
-            background-color: rgb(250, 250, 250);
-        }
-
-        .side>nav>ol {
-            padding: 0;
-            font-size: .75rem;
-            background-color: rgb(250, 250, 250);
-        }
-
-        /* 電腦版content寬度和breadcrumb */
-        @media only screen and (min-width: 768px) {
-            .content {
-                width: calc(100vw - (5vw + 280.3px + 42vh));
-            }
-
-            .metaMobile {
-                display: none;
-            }
-        }
-
-        /* 手機板隱藏邊攔、內文不縮 */
-        @media only screen and (max-width: 768px) {
-            .side {
-                display: none;
-            }
-
-            .bioText {
-                padding-right: 0;
-            }
-
-            h1 {
-                margin-bottom: 20px;
-            }
+            margin-bottom: 30px;
         }
 
         .container {
-            width: 100%;
+            height: 172.5px;
+            margin-bottom: 10px;
             padding: 0;
             overflow: hidden;
+            margin-left: 0;
+            margin-right: 0;
         }
 
-        .container>img {
-            width: 100%;
+        .coverImg {
+            width: 120%;
+            overflow: hidden;
+            margin-bottom: 10px;
+            transition: ease-in-out;
+            transition-duration: .5s;
         }
 
-        .metadata>span,
-        .metadata>p {
-            font-style: italic;
+        .coverImg:hover {
+            cursor: pointer;
+            transform: scale(1.5);
+            transition: ease-in-out;
+            transition-duration: .5s;
         }
 
-        .metaMobile {
-            border-left: 4px solid #333;
-            background-color: rgb(240, 240, 240);
-            margin-bottom: 35px;
-            padding-left: 8px;
-            font-style: italic;
+        /* 手機板 */
+        @media only screen and (max-width: 768px) {
+            .container {
+                height: auto;
+                max-height: 240px;
+            }
+
+            .projects {
+                max-width: 100%;
+            }
+
+            .projects>img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .description {
+            word-break: break-all;
+            text-align: left;
+        }
+
+        .description p {
+            margin-bottom: 0;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+            line-height: 20px;
+            text-decoration-line: underline;
+        }
+
+        .title:hover {
+            color: rgb(130, 130, 130);
+            cursor: pointer;
+        }
+
+        .type {
+            font-size: 1rem;
+            font-style: oblique;
+            line-height: 40px;
+        }
+
+        .media,
+        .date {
+            font-size: .75rem;
+            color: rgb(130, 130, 130);
+            line-height: 15px;
         }
     </style>
 </head>
@@ -188,8 +165,8 @@
                         <li class="menuHover">Words</li>
                     </a>
                     <!-- <a href="contact.html">
-                                <li class="menuHover"> Contact </li>
-                            </a> -->
+                                        <li class="menuHover"> Contact </li>
+                                    </a> -->
                 </ul>
             </nav>
             <!-- mobilehamburger -->
@@ -220,56 +197,62 @@
                 <a href="words.html">Words</a>
             </li>
             <!-- <li class="drawerItem">
-                        <a>Contact</a>
-                    </li> -->
+                                <a>Contact</a>
+                            </li> -->
         </ul>
     </nav>
-
 
     <!-- 把主頁從topbar擠下去 -->
     <div class="heightadjust"></div>
 
     <!-- 主內容article -->
     <article class="mainCard">
-        <section class="content">
-            <h1><strong></strong>XXX</strong></h1>
-            <!-- 手機作品metadata -->
-            <section class="metaMobile">
-                <p>VI design, logo</p>
-                <p>client: Secret Base Video Studio</p>
-                <span>2018, May</span>
-            </section>
-            <section class="bioText">
-                <p>Ｐ是一名鋼琴家，隨著年齡增長，時間的逼近讓他感到急躁和厭煩。對他而言，音樂理當是一切，但那種純粹的熱愛卻在不知不覺中被時間和現實壓榨地一點也不剩了。如今，Ｐ的生活只剩空殼，早起練琴到晚上在電腦前苦思的過程，像上班族打卡一樣規律。但Ｐ還是什麼都想不出來，每天都和昨天一樣。
-                </p>
-                <p>
-                    直到對街空了好幾年的房子搬來新鄰居之後，生活才悄悄改變。第一次，是Ｐ在練琴時感到頭部後方被什麼撞擊了一下。他轉頭一看，發現零星幾架紙飛機從窗外飛進來。起初Ｐ並沒有理會，只是把紙飛機丟到垃圾桶，回到電腦前思考旋律。只是當紙飛機第21次撞到他的頭，Ｐ才終於忍無可忍。
-                </p>
+        <div class="projects">
+            <div class="container">
+                <a href="img/watercolor/oldBarber.jpg" data-fancybox="gallery1" data-caption="Caption #1">
+                    <p>TEST</p>
+                </a>
+            </div>
+            <div class="description">
+                <a href="sable.html">
+                    <p class="title">Sable</p>
+                </a>
+                <p class="type">illustration, picture book</p>
+                <p class="media">pencil, charcoal, niddle pen</p>
+                <p class="date">2017/June</p>
+            </div>
+        </div>
+        <div class="projects">
+            <div class="container">
+                <a href="img/watercolor/oldBarber.jpg" data-fancybox="gallery1" data-caption="Caption #1">
+                    <img class="coverImg" src="img/watercolor/oldBarber.jpg">
+                </a>
+            </div>
+            <div class="description">
+                <a href="sable.html">
+                    <p class="title">Sable</p>
+                </a>
+                <p class="type">illustration, picture book</p>
+                <p class="media">pencil, charcoal, niddle pen</p>
+                <p class="date">2017/June</p>
+            </div>
+        </div>
 
-            </section>
-        </section>
-
-        <!-- 邊攔 -->
-        <section class="side">
-            <!-- 麵包屑 -->
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../index.html">ienMing</a></li>
-                    <li class="breadcrumb-item"><a href="../projects.html">projects</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Secret Base Video Studio</li>
-                </ol>
-            </nav>
-            <!-- 作品metadata -->
-            <section class="metadata">
-                <p>Visual Identity, Logo design</p>
-                <p>client: Secret Base Video Studio</p>
-                <span>2018. May</span>
-                <div class="container" style="margin-top: 25px;">
-                    <img src="../img/projects/基地影像設計/基地影像設計logo-01.png" style="height: 125px; width: 125px;" />
-                    <img src="../img/projects/基地影像設計/基地影像設計logo-04.png" style="width: 125px;" />
-                </div>
-            </section>
-        </section>
+        <div class="projects">
+            <div class="container">
+                <a href="img/watercolor/oldBarber.jpg" data-fancybox="gallery1" data-caption="Caption #1">
+                    <img class="coverImg" src="img/watercolor/oldBarber.jpg">
+                </a>
+            </div>
+            <div class="description">
+                <a href="sable.html">
+                    <p class="title">Sable</p>
+                </a>
+                <p class="type">illustration, picture book</p>
+                <p class="media">pencil, charcoal, niddle pen</p>
+                <p class="date">2017/June</p>
+            </div>
+        </div>
         <!-- 撐開父的高度 -->
         <div class="clear"></div>
     </article>
@@ -283,6 +266,8 @@
     </footer>
 
 
+    <!-- fancyBox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
     <!-- custom JS -->
     <script src="js/menu_drawer_scroll.js"></script>
 </body>
