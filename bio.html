@@ -22,20 +22,46 @@
         }
 
         .heightadjust {
-            height: 60px;
+            height: 140px;
         }
 
         .mainCard {
             width: 100%;
+            display: flex;
             padding: 22px;
             padding-top: 64px;
+        }
+
+        .flexslider {
+            border: 0;
+        }
+
+        .flex-caption {
+            width: 100%;
+            padding: 2%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: rgba(107, 107, 107, 0.5);
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+            font-size: 14px;
+            line-height: 18px;
+            margin: 0;
+        }
+
+        h1 {
+            height: 48px;
+            font-weight: 100;
+            font-family: '微軟正黑體',
+                sans-serif;
+            margin-bottom: 45px;
         }
 
         /* 電腦版mainCard左padding調整 */
         @media only screen and (min-width: 768px) {
             .mainCard {
                 padding-left: 5vw;
-                width: calc(100vw - (5vw + 280.3px + 42vh));
             }
         }
 
@@ -44,37 +70,92 @@
         }
 
         .bio {
-            width: calc(100vw - (5vw + 280.3px + 42vh));
+            width: 100%;
             object-fit: cover;
             margin-bottom: 20px;
         }
 
-        .bio>img {
+        .bio img {
             width: 100%;
         }
 
         .bioText {
-            word-break: keep-all;
-            text-align: left;
-            font-size: 1 rem;
-            padding-right: 27px;
+            word-break: break-all;
+            text-align: justify;
+            text-indent: 1em;
+            font-size: 1rem;
+            padding-right: 20vw;
         }
 
+        .engText {
+            word-break: keep-all;
+            text-indent: 0em;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        .side {
+            max-width: 230px;
+            margin-top: 93px;
+            margin-left: 2.5vh;
+            padding-left: 0;
+            padding-top: 0;
+            background-color: rgb(250, 250, 250);
+        }
+
+        .side>nav>ol {
+            padding: 0;
+            font-size: .75rem;
+            background-color: rgb(250, 250, 250);
+        }
+
+        /* 電腦版content寬度和breadcrumb */
         @media only screen and (min-width: 768px) {
-            .bioText {
+            .content {
                 width: calc(100vw - (5vw + 280.3px + 42vh));
             }
+
+            .metaMobile {
+                display: none;
+            }
         }
 
-        /* 手機板圖片寬度、內文內縮調整 */
+        /* 手機板隱藏邊攔、內文不縮 */
         @media only screen and (max-width: 768px) {
-            .bio {
-                width: 100%;
+            .side {
+                display: none;
             }
 
             .bioText {
-                padding: 0;
+                padding-right: 0;
             }
+
+            h1 {
+                margin-bottom: 120px;
+            }
+        }
+
+        .container {
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .container>img {
+            width: 100%;
+        }
+
+        .metadata>span,
+        .metadata>p {
+            font-style: italic;
+        }
+
+        .metaMobile {
+            border-left: 4px solid #333;
+            background-color: rgb(240, 240, 240);
+            margin-bottom: 35px;
+            padding-left: 8px;
+            font-style: italic;
         }
     </style>
 </head>
@@ -151,31 +232,34 @@
 
     <!-- 主內容article -->
     <article class="mainCard">
-        <div class="bioText">
-            <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre l’homme
-                qui l’a recueilli</p>
-            <br>
-            <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre l’homme
-                qui l’a recueilli</p>
-            <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre l’homme
-                qui l’a recueilli</p>
-            <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre l’homme
-                qui l’a recueilli</p>
-        </div>
-        <div class="bio">
-            <img src="img/comicIllustration/king001.jpg">
-        </div>
-        <div class="bioText">
-            <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre l’homme
-                qui l’a recueilli</p>
-            <br>
-            <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre l’homme
-                qui l’a recueilli</p>
-            <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre l’homme
-                qui l’a recueilli</p>
-            <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre l’homme
-                qui l’a recueilli</p>
-        </div>
+        <section class="content">
+            <h1><strong></strong>Biographie</strong></h1>
+            <!-- bioFoto -->
+            <section class="metaMobile">
+                <p>VI design, logo</p>
+                <p>client: Secret Base Video Studio</p>
+                <span>2018, May</span>
+            </section>
+            <section class="bioText">
+                <p>
+                    小時候喜歡繪畫，夢想當一名吟遊詩人；畫著從沒見過的海底世界，或寫些害臊的童年呻吟。因為課業，中學後便沒有再接觸繪畫與詩的語言，創作與表述自我從那時斷裂，直到大學。
+                    然而故事仍對我充滿吸引力，安靜傾聽與隨意、四處聯想的思考習慣，雖然讓我無法快速回應事物，卻也培養出運用其他符號表述思想的技藝。
+                </p>
+            </section>
+        </section>
+
+        <!-- 邊攔 -->
+        <section class="side">
+            <!-- 作品metadata -->
+            <section class="metadata">
+                <!-- <p>Visual Identity, Logo design</p>
+                <p>client: Secret Base Video Studio</p>
+                <span>2018. May</span> -->
+                <div class="container" style="margin-top: 25px;">
+                    <img src="img/ig logo.png" style="height: 125px; width: 125px;" />
+                </div>
+            </section>
+        </section>
         <!-- 撐開父的高度 -->
         <div class="clear"></div>
     </article>
