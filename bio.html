@@ -89,13 +89,23 @@
             <nav class="menu">
                 <ul>
                     <a href="bio.html">
-                        <li class="menuHover"> About</li>
+                        <li class="menuHover">About</li>
                     </a>
-                    <a href="projects/projects.html">
-                        <li class="menuHover"> Projects</li>
+                    <a href="projects.html">
+                        <li class="menuHover">Projects</li>
                     </a>
-                    <a href="finearts/fineart.html">
-                        <li class="menuHover"> Fine Art </li>
+                    <li id="fineArt" class="menuHover"> Paintings
+                        <div class="dropdown-content">
+                            <div class="menuHover" onclick="location.href='comicIllustration.html';">
+                                comic, illustration
+                            </div>
+                            <div class="menuHover" onclick="location.href='watercolor.html';">
+                                watercolor lifedrawing
+                            </div>
+                        </div>
+                    </li>
+                    <a href="words.html">
+                        <li class="menuHover">Words</li>
                     </a>
                     <!-- <a href="contact.html">
                                 <li class="menuHover"> Contact </li>
@@ -115,13 +125,19 @@
     <nav class="drawer">
         <ul id="drawerItems">
             <li class="drawerItem">
-                <a href="./bio.html">About</a>
+                <a href="bio.html">About</a>
             </li>
             <li class="drawerItem">
-                <a href="./projects/projects.html">Projects</a>
+                <a href="projects.html">Projects</a>
             </li>
             <li class="drawerItem">
-                <a href="./finearts/fineart.html">Fine Arts</a>
+                <a href="comicIllustration.html">Illustration</a>
+            </li>
+            <li class="drawerItem">
+                <a href="watercolor.html">Lifedrawing</a>
+            </li>
+            <li class="drawerItem">
+                <a href="words.html">Words</a>
             </li>
             <!-- <li class="drawerItem">
                         <a>Contact</a>
@@ -129,7 +145,7 @@
         </ul>
     </nav>
 
-    
+
     <!-- 把主頁從topbar擠下去 -->
     <div class="heightadjust"></div>
 
@@ -147,7 +163,7 @@
                 qui l’a recueilli</p>
         </div>
         <div class="bio">
-            <img src="img/img019.jpg">
+            <img src="img/comicIllustration/king001.jpg">
         </div>
         <div class="bioText">
             <p>On est en 1914, à la déclaration de guerre. Gwen a tout juste quatorze ans. Il vient de perdre l’homme
