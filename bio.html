@@ -13,6 +13,8 @@
         crossorigin="anonymous">
     <!-- commonUse CSS -->
     <link rel=stylesheet type="text/css" href="./css/commonUse_topBar+footer+goTop.css">
+    <!-- mainCard_sideBar CSS -->
+    <link rel=stylesheet type="text/css" href="./css/mainCard_sideBar.css">
     <!-- jQuery -->
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery-ui.js"></script>
@@ -25,139 +27,8 @@
             height: 140px;
         }
 
-        .mainCard {
-            width: 100%;
-            display: flex;
-            padding: 22px;
-            padding-top: 64px;
-        }
-
-        .flexslider {
-            border: 0;
-        }
-
-        .flex-caption {
-            width: 100%;
-            padding: 2%;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            background: rgba(107, 107, 107, 0.5);
-            color: #fff;
-            text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
-            font-size: 14px;
-            line-height: 18px;
-            margin: 0;
-        }
-
-        h1 {
-            font-weight: 100;
-            font-family: '微軟正黑體',
-                sans-serif;
-            margin-bottom: 45px;
-        }
-
-        /* 電腦版mainCard左padding調整 */
-        @media only screen and (min-width: 768px) {
-            .mainCard {
-                padding-left: 5vw;
-            }
-        }
-
-        .clear {
-            clear: both;
-        }
-
-        .bio {
-            width: 100%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
-        .bio img {
-            width: 100%;
-        }
-
-        .bioText {
-            word-break: break-all;
-            text-align: justify;
-            text-indent: 1em;
-            font-size: 1rem;
-            padding-right: 20vw;
-        }
-
         .engText {
-            text-indent: 0em;
-            font-size: 1.1rem;
-            text-align: left;
-        }
-
-        .side {
-            max-width: 230px;
-            margin-top: 93px;
-            margin-left: 2.5vh;
-            padding-left: 0;
-            padding-top: 0;
-            background-color: rgb(250, 250, 250);
-        }
-
-        .side>nav>ol {
-            padding: 0;
-            font-size: .75rem;
-            background-color: rgb(250, 250, 250);
-        }
-
-        /* 電腦版content寬度和breadcrumb */
-        @media only screen and (min-width: 768px) {
-            .content {
-                width: calc(100vw - (5vw + 280.3px + 42vh));
-            }
-
-            .metaMobile {
-                display: none;
-            }
-        }
-
-        /* 手機板隱藏邊攔、內文不縮 */
-        @media only screen and (max-width: 768px) {
-            .side {
-                display: none;
-            }
-
-            .bioText {
-                padding-right: 0;
-            }
-
-            h1 {
-                margin-bottom: 20px;
-            }
-
-            .heightadjust {
-                height: 60px;
-            }
-        }
-
-        .container {
-            width: 100%;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .container>img {
-            width: 100%;
-        }
-
-        .metadata>span,
-        .metadata>p {
-            font-style: italic;
-        }
-
-        .metaMobile {
-            border-left: 4px solid #333;
-            background-color: rgb(240, 240, 240);
-            margin-bottom: 35px;
-            padding-left: 8px;
-            font-style: italic;
+            word-break: unset;
         }
     </style>
 </head>
