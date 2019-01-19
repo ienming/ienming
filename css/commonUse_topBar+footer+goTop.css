@@ -8,6 +8,10 @@ a {
     color:#333;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 /* 反白顏色 */
 ::selection {
     background-color: #333;
@@ -163,6 +167,29 @@ align-items: center;
 
 .menu a{
     text-decoration: none;
+}
+
+/* menu hover underline animation */
+.menu li, .dropdown-content>div {
+    position: relative;
+    display: inline-block;
+}
+
+.menu li::before, .dropdown-content>div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    transform-origin: bottom left;
+    transition: transform 0.45s ease-in-out;
+}
+
+.menu li:hover::before, .dropdown-content>div:hover:before {
+    transform: scaleX(1);
 }
 
 /* menu dropdown */

@@ -16,6 +16,8 @@
     <!-- jQuery -->
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery-ui.js"></script>
+    <!-- scrollRebeal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <style>
         body {
             background-color: rgb(250, 250, 250);
@@ -108,12 +110,33 @@
             margin-bottom: 0;
         }
 
+        .description>a {
+            position: relative;
+            display: inline-block;
+        }
+
+        .description>a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            transform-origin: bottom left;
+            transition: transform 0.45s ease-in-out;
+        }
+
+        .description>a:hover::before {
+            transform: scaleX(1);
+        }
+
         .title {
             font-size: 1.35rem;
             font-weight: bold;
             color: #333;
-            line-height: 23px;
-            text-decoration-line: underline;
+            line-height: 26px;
         }
 
         .title:hover {
@@ -215,25 +238,27 @@
             </div>
             <div class="description">
                 <a href="projects/QiDi.html">
-                    <p class="title">基地影像設計</p>
+                    <p class="title">基地影像設計<br>
+                        Secret Base Video Studio
+                    </p>
                 </a>
-                <p class="type">Visual Identity, Logo</p>
-                <p class="media">Adobe Illustrator</p>
+                <p class="type">visual Identity, logo</p>
                 <p class="date">2018/ May</p>
             </div>
         </div>
 
         <div class="projects">
             <div class="container">
-                <a href="./sable.html"><img class="coverImg" src="img/projects/漁蠢-09.png" /></a>
+                <a href="./projects/YSF.html"><img class="coverImg" src="img/projects/AIESE YSF/前導巡迴論壇橫７８４.jpg" /></a>
             </div>
             <div class="description">
-                <a href="./sable.html">
-                    <p class="title">CutSugar</p>
+                <a href="./projects/YSF.html">
+                    <p class="title">青年影響力論壇<br>
+                        9th Youth Speak Forum
+                    </p>
                 </a>
-                <p class="type">illustration, picture book</p>
-                <p class="media">pencil, charcoal, niddle pen</p>
-                <p class="date">2017/June</p>
+                <p class="type">poster, brochure, ad, illustration</p>
+                <p class="date">2016/ Aug</p>
             </div>
         </div>
 
@@ -246,6 +271,78 @@
                 <p class="type">Logo, Identity design</p>
                 <p class="media">Adobe illustrator</p>
                 <p class="date">2018/June</p>
+            </div>
+        </div>
+
+        <div class="projects">
+            <div class="container">
+                <img class="coverImg" src="img/projects/漁蠢-09.png">
+            </div>
+            <div class="description">
+                <p class="title">STV</p>
+                <p class="type">illustration, picture book</p>
+                <p class="media">pencil, charcoal, niddle pen</p>
+                <p class="date">2017/June</p>
+            </div>
+        </div>
+
+        <div class="projects">
+            <div class="container">
+                <img class="coverImg" src="img/projects/漁蠢-09.png">
+            </div>
+            <div class="description">
+                <p class="title">YSF</p>
+                <p class="type">illustration, picture book</p>
+                <p class="media">pencil, charcoal, niddle pen</p>
+                <p class="date">2017/June</p>
+            </div>
+        </div>
+
+        <div class="projects">
+            <div class="container">
+                <img class="coverImg" src="img/projects/漁蠢-09.png">
+            </div>
+            <div class="description">
+                <p class="title">Sable</p>
+                <p class="type">illustration, picture book</p>
+                <p class="media">pencil, charcoal, niddle pen</p>
+                <p class="date">2017/June</p>
+            </div>
+        </div>
+
+        <div class="projects">
+            <div class="container">
+                <img class="coverImg" src="img/projects/漁蠢-09.png">
+            </div>
+            <div class="description">
+                <p class="title">STV</p>
+                <p class="type">illustration, picture book</p>
+                <p class="media">pencil, charcoal, niddle pen</p>
+                <p class="date">2017/June</p>
+            </div>
+        </div>
+
+        <div class="projects">
+            <div class="container">
+                <img class="coverImg" src="img/projects/漁蠢-09.png">
+            </div>
+            <div class="description">
+                <p class="title">YSF</p>
+                <p class="type">illustration, picture book</p>
+                <p class="media">pencil, charcoal, niddle pen</p>
+                <p class="date">2017/June</p>
+            </div>
+        </div>
+
+        <div class="projects">
+            <div class="container">
+                <img class="coverImg" src="img/projects/漁蠢-09.png">
+            </div>
+            <div class="description">
+                <p class="title">Sable</p>
+                <p class="type">illustration, picture book</p>
+                <p class="media">pencil, charcoal, niddle pen</p>
+                <p class="date">2017/June</p>
             </div>
         </div>
 
@@ -299,6 +396,10 @@
 
     <!-- custom JS -->
     <script src="js/menu_drawer_scroll.js"></script>
+    <!-- scrollReveal -->
+    <script>
+        ScrollReveal().reveal('.projects',{interval: 250} , { easing: 'cubic-bezier(.5,0,0,1)' });
+    </script>
 </body>
 
 </html>
