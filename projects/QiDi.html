@@ -259,9 +259,12 @@
 
     <script>
         $(document).ready(function () {
-            $("h1").delay(100).fadeTo("slow", 1);
-            $(".content").delay(450).fadeTo("slow", 1);
-            $(".side").delay(700).fadeTo("slow", 1);
+            $("h1").animate({
+                opacity: 1,
+                left: 0,
+            }, 800);
+            $(".content").delay(800).animate({ opacity: 1 }, 700);
+            $(".side").delay(900).animate({ opacity: 1 }, 700);
         })
 
         $(document).ready(function () {
