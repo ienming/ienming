@@ -1,8 +1,7 @@
 // spinner animated and window load
 $(document).ready(function () {
-    $("#spinner").delay(1000).fadeOut("slow");
-    $("#preload").delay(5000).css("zIndex", 1);
-    console.log("fade!");
+    $("#spinner").delay(1700).fadeOut("slow");
+    $("#preload").delay(2000).fadeOut("slow");
 });
 
 // menu animated

@@ -11,10 +11,10 @@
 	.st0{
 		stroke-dasharray: 800;
 		stroke-dashoffset: 0;
-		-webkit-animation: curse 2.5s linear forwards;
-		<!-- -o-animation: dash 2.5s linear forwards;
-		-moz-animation: dash 2.5s linear forwards;
-		animation: dash 2.5s linear forwards; -->
+		-webkit-animation: curse 1.5s linear forwards;
+		<!-- -o-animation: dash 1.5s linear forwards;
+		-moz-animation: dash 1.5s linear forwards;
+		animation: dash 1.5s linear forwards; -->
 	}
 
 	@-webkit-keyframes curse{
