@@ -16,7 +16,7 @@ body{
 }
 
 #spinner{
-    padding-top: 25vh;
+    padding-top: calc((100vh - 450px)/2);
 }
 
 a {
