@@ -267,11 +267,21 @@
             $(".side").delay(900).animate({ opacity: 1 }, 700);
         })
 
+
+        var bodyWidth = $("body").width();
+        // console.log(bodyWidth);
         $(document).ready(function () {
-            var bodyWidth = $("body").width();
-            // console.log(bodyWidth);
-            if (bodyWidth <= 768) {
+            if (bodyWidth < 768) {
                 $(".side").hide();
+            }
+        })
+
+        $(window).resize(function () {
+            if ($(window).width() < 768) {
+                $(".side").hide();
+            }
+            if ($(window).width() >= 768) {
+                $(".side").show();
             }
         })
     </script>

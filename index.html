@@ -63,7 +63,8 @@
             .carousel-caption {
                 top: 0px;
                 right: 0;
-                left: 4vw;
+                left: 0;
+                opacity: 0;
                 width: calc(150px - .5vw);
                 height: 100vh;
                 text-align: left;
@@ -421,6 +422,31 @@
                     });
                 }
             });
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            if ($(window).width() >= 768) {
+                $(".carousel-caption").animate({
+                    opacity: 1,
+                    left: "4vw",
+                }, 800);
+            }
+
+            $(window).resize(function () {
+                if ($(window).width() < 768) {
+                    $(".carousel-caption").animate({
+                        left: 0,
+                    }, 800);
+                }
+                if ($(window).width() >= 768) {
+                    $(".carousel-caption").animate({
+                        opacity: 1,
+                        left: "4vw",
+                    }, 800);
+                }
+            })
         })
     </script>
 </body>
