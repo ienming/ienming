@@ -9,11 +9,17 @@ function trigger() {
     if (i % 2 == 0) {
         drawer.classList.add('open');
         hamburgerBtn.classList.toggle('change');
+        $("article").toggleClass("articleLeft");
+        $("article").removeClass("articleRight");
+        $("#maskMain").fadeTo("fast", 1);
     }
 
     if (i % 2 == 1) {
         drawer.classList.remove('open');
         hamburgerBtn.classList.toggle('change');
+        $("article").toggleClass("articleRight");
+        $("article").removeClass("articleLeft");
+        $("#maskMain").fadeTo("slow", 0);
     }
     i++;
 }
