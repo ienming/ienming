@@ -4,6 +4,19 @@ body{
     sans-serif;
 }
 
+#preload{
+    text-align: center;
+    padding: 150px 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    z-index: 99;
+}
+
 a {
     color:#333;
 }

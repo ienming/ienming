@@ -1,3 +1,10 @@
+// spinner animated and window load
+$(document).ready(function () {
+    $("#spinner").delay(1000).fadeOut("slow");
+    $("#preload").delay(5000).css("zIndex", 1);
+    console.log("fade!");
+});
+
 // menu animated
 var hamburgerBtn = document.querySelector('.hamburger');
 var drawer = document.querySelector('.drawer');
