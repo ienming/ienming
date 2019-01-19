@@ -103,10 +103,10 @@
     <!-- 把主頁從topbar擠下去 -->
     <div class="heightadjust"></div>
 
+    <h1><strong></strong>Biography</strong></h1>
     <!-- 主內容article -->
     <article class="mainCard">
         <section class="content">
-            <h1><strong></strong>Biography</strong></h1>
             <section class="bioText">
                 <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
                     哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
@@ -146,6 +146,22 @@
 
     <!-- custom JS -->
     <script src="js/menu_drawer_scroll.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("h1").delay(200).fadeTo("slow", 1);
+            $(".content").delay(300).fadeTo("slow", 1);
+            $(".side").delay(450).fadeTo("slow", 1);
+        })
+
+        $(document).ready(function () {
+            var bodyWidth = $("body").width();
+            // console.log(bodyWidth);
+            if (bodyWidth <= 768) {
+                $(".side").hide();
+            }
+        })
+    </script>
 </body>
 
 </html>

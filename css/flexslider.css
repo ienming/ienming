@@ -219,7 +219,7 @@ html[xmlns] .flexslider .slides {
   height: 11px;
   display: block;
   /* background: #666; */
-  background: rgba(30, 30, 30);
+  background: grey;
   cursor: pointer;
   /* text-indent: -9999px; */
   font-size: 0px;
