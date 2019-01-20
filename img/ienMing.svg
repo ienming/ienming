@@ -16,7 +16,6 @@
 
 	@-webkit-keyframes anim{
 		from {
-			stroke-dashoffset: 2000;
 			fill: white;
 		}
 		to{

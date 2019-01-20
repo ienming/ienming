@@ -160,6 +160,13 @@
 </head>
 
 <body>
+    <!-- loading spinner -->
+    <div id="preload">
+        <object>
+            <embed src="./img/project_preload.svg" id="spinner" style="height: 450px;">
+        </object>
+    </div>
+    <!-- topBar -->
     <header class="topBar">
         <div class="nav" role="navigation">
             <a href="./index.html">
@@ -399,7 +406,12 @@
     <script src="js/menu_drawer_scroll.js"></script>
     <!-- scrollReveal -->
     <script>
-        ScrollReveal().reveal('.projects',{interval: 150} , { easing: 'cubic-bezier(.5,0,0,1)' });
+        ScrollReveal().reveal('.projects', { interval: 150 }, { easing: 'cubic-bezier(.5,0,0,1)' });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#preload").fadeOut("slow");
+        });
     </script>
 </body>
 

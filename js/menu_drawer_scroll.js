@@ -1,7 +1,7 @@
 // spinner animated and window load
 $(document).ready(function () {
     $("#spinner").delay(1700).fadeOut("slow");
-    $("#preload").delay(2000).fadeOut("slow");
+    $("#preload").delay(2200).fadeOut("slow");
 });
 
 // menu animated
