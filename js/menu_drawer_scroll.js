@@ -59,9 +59,9 @@ $(window).scroll(function () {
 //捲到最上面
 $("#goTop").click(function () {
     var body = $("html, body");
-    body.stop().animate({ scrollTop: 0 }, 500, 'swing');
+    body.stop().animate({ scrollTop: 0 }, 500, 'easeInOutCubic');
 })
 $("#goTopMobile").click(function () {
     var body = $("html, body");
-    body.stop().animate({ scrollTop: 0 }, 500, 'swing');
+    body.stop().animate({ scrollTop: 0 }, 500, 'easeInOutCubic');
 })
