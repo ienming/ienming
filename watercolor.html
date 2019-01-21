@@ -55,6 +55,10 @@
             margin: 0;
             border-bottom: #333 3px solid;
         }
+
+        #carousel li:hover{
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -83,12 +87,12 @@
                             </div>
                         </div>
                     </li>
-                    <a href="words.html">
+                    <!-- <a href="words.html">
                         <li class="menuHover">Words</li>
-                    </a>
+                    </a> -->
                     <!-- <a href="contact.html">
-                                        <li class="menuHover"> Contact </li>
-                                    </a> -->
+                        <li class="menuHover"> Contact </li>
+                    </a> -->
                 </ul>
             </nav>
             <!-- mobilehamburger -->
@@ -115,12 +119,12 @@
             <li class="drawerItem">
                 <a href="watercolor.html">Lifedrawing</a>
             </li>
-            <li class="drawerItem">
-                <a href="words.html">Words</a>
-            </li>
             <!-- <li class="drawerItem">
-                                <a>Contact</a>
-                            </li> -->
+                <a href="words.html">Words</a>
+            </li> -->
+            <!-- <li class="drawerItem">
+                <a>Contact</a>
+            </li> -->
         </ul>
     </nav>
 
@@ -136,20 +140,32 @@
                 <div id="slider" class="flexslider bio">
                     <ul class="slides">
                         <li>
-                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery">
-                                <img class="coverImg" src="./img/watercolor/綠.jpg">
+                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery" data-caption="My caption">
+                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
                             </a>
                             <p class="flex-caption">the Green, leaves.....</p>
                         </li>
                         <li>
-                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery">
-                                <img class="coverImg" src="./img/watercolor/綠.jpg">
+                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery" data-caption="My22 caption">
+                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
                             </a>
                             <p class="flex-caption">xxxxxx</p>
                         </li>
                         <li>
                             <a href="./img/watercolor/綠.jpg" data-fancybox="gallery">
-                                <img class="coverImg" src="./img/watercolor/綠.jpg">
+                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
+                            </a>
+                            <p class="flex-caption">xxxxxx</p>
+                        </li>
+                        <li>
+                            <a href="./img/watercolor/oldBarber.jpg" data-fancybox="gallery">
+                                <img class="coverImg" src="./img/watercolor/oldBarber.jpg" />
+                            </a>
+                            <p class="flex-caption">xxxxxx</p>
+                        </li>
+                        <li>
+                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery">
+                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
                             </a>
                             <p class="flex-caption">xxxxxx</p>
                         </li>
@@ -170,7 +186,9 @@
                         <li>
                             <img src="./img/watercolor/oldBarber.jpg" />
                         </li>
-                        <!-- items mirrored twice, total of 12 -->
+                        <li>
+                            <img src="./img/watercolor/綠.jpg" />
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -199,41 +217,32 @@
     <!-- custom JS -->
     <script src="js/menu_drawer_scroll.js"></script>
 
-    <!-- flieslide interval change-->
+
     <script>
-        // $(window).load(function () {
-        //     $("#carousel").flexslider({
-        //         animation: "slide",
-        //         controlNav: false,
-        //         animationLoop: false,
-        //         slideshow: false,
-        //         itemWidth: 210,
-        //         itemMargin: 5,
-        //         asNavFor: '#slider'
-        //     });
+        $(document).ready(function () {
+            // The slider being synced must be initialized first
+            $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: true,
+                itemWidth: 157.5,
+                itemMargin: 5,
+                asNavFor: '#slider'
+            });
 
-        //     $("#slider").flexslider({
-        //         animation: "slide",
-        //         controlNav: false,
-        //         animationLoop: false,
-        //         slideshow: false,
-        //         sync: "#carousel"
-        //     });
-        // });
-
-        $(".flexslider").flexslider({
-            slideshowSpeed: 3500
-        });
-        $(window).on(function () {
-            $('.flexslider').flexslider({
-                animation: "slide"
+            $('#slider').flexslider({
+                animation: "slide",
+                animationLoop: true,
+                controlNav: false,
+                sync: "#carousel"
             });
         });
-    </script>
 
-    <!-- scrollReveal -->
-    <script>
-        ScrollReveal().reveal('.projects', { interval: 150 }, { easing: 'cubic-bezier(.5,0,0,1)' });
+        // flieslide interval change
+        $("#slider").flexslider({
+            slideshowSpeed: 3500
+        });
     </script>
 </body>
 

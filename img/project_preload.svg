@@ -7,23 +7,24 @@
 
 	.st0{
 		animation-name: draw;
-		animation-duration: 5s;
-		animation-timing-function: ease-in;
+		animation-duration: 3s;
+		animation-timing-function: ease-in-out;
 		animation-iteration-count: infinite;
 		transform-origin: 50% 50%;
 	}
 
 	@keyframes draw{
 		from {
-			fill: white;
+			opacity: 0;
 			transform: rotate(0deg);
 		}
 		50%{
 			fill: #1B1B1B;
-			transform: rotate(180deg);
+			opacity: 1;
+			transform: rotate(90deg);
 		}
 		to{
-			fill: white;
+			opacity: 0;
 			transform: rotate(0deg);
 		}
 	}

@@ -8,10 +8,10 @@
 	.st0{
 		stroke-dasharray: 2000;
 		stroke-dashoffset: 2000;
-		-webkit-animation: anim 1.5s ease-in forwards;
-		<!-- -o-animation: dash 1.5s linear forwards;
-		-moz-animation: dash 1.5s linear forwards;
-		animation: dash 1.5s linear forwards; -->
+		-webkit-animation: anim 1s ease-in-out forwards;
+		-o-animation: anim 1s ease-in-out forwards;
+		-moz-animation: anim 1s ease-in-out forwards;
+		animation: anim 1s ease-in-out forwards;
 	}
 
 	@-webkit-keyframes anim{
