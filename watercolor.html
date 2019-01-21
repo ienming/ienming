@@ -56,7 +56,7 @@
             border-bottom: #333 3px solid;
         }
 
-        #carousel li:hover{
+        #carousel li:hover {
             cursor: pointer;
         }
     </style>
@@ -197,8 +197,8 @@
         </section>
     </article>
     <!-- goTop -->
-    <div id="goTop">send me to TOP</div>
-    <div id="goTopMobile">send me to TOP</div>
+    <div id="goTop">TOP</div>
+    <div id="goTopMobile">TOP</div>
 
     <!-- 版權footer -->
     <footer id="footer">
@@ -220,11 +220,16 @@
 
     <script>
         $(document).ready(function () {
+            // flieslide interval change
+            $("#slider").flexslider({
+                slideshowSpeed: 3500
+            });
+            
             // The slider being synced must be initialized first
             $('#carousel').flexslider({
                 animation: "slide",
                 controlNav: false,
-                animationLoop: false,
+                animationLoop: true,
                 slideshow: true,
                 itemWidth: 157.5,
                 itemMargin: 5,
@@ -237,11 +242,6 @@
                 controlNav: false,
                 sync: "#carousel"
             });
-        });
-
-        // flieslide interval change
-        $("#slider").flexslider({
-            slideshowSpeed: 3500
         });
     </script>
 </body>

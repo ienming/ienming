@@ -11,13 +11,23 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <!-- commonUse CSS -->
-    <link rel=stylesheet type="text/css" href="css/commonUse_topBar+footer+goTop.css">
     <!-- fancyBox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+    <!-- commonUse CSS -->
+    <link rel=stylesheet type="text/css" href="css/commonUse_topBar+footer+goTop.css">
+    <!-- mainCard_sideBar CSS -->
+    <link rel=stylesheet type="text/css" href="./css/mainCard_sideBar.css">
     <!-- jQuery -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
+    <!-- flexSlider -->
+    <link rel="stylesheet" href="./css/flexslider.css" type="text/css">
+    <script src="./js/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(window).on(function () {
+            $('.flexslider').flexslider();
+        });
+    </script>
     <!-- scrollRebeal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <style>
@@ -26,114 +36,28 @@
         }
 
         .heightadjust {
-            height: 60px;
+            height: 64px;
         }
 
-        .mainCard {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* justify-content: center;
-            align-items: center; */
-            padding-bottom: 22px;
-            padding-top: 64px;
-            padding-right: 5vw;
-            padding-left: 5vw;
+        .flexslider {
+            border: 0;
         }
 
-        /* 電腦版橫著排 */
-        @media only screen and (min-width: 768px) {
-            .mainCard {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                padding-right: calc(40vh + 280.3px);
-            }
-        }
-
-        .clear {
-            clear: both;
-        }
-
-        .projects {
-            max-width: 230px;
-            margin-bottom: 30px;
-        }
-
-        .container {
-            height: 172.5px;
-            margin-bottom: 10px;
-            padding: 0;
-            overflow: hidden;
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-        .coverImg {
-            width: 120%;
-            overflow: hidden;
-            margin-bottom: 10px;
-            transition: ease-in-out;
-            transition-duration: .5s;
-        }
-
-        .coverImg:hover {
-            cursor: pointer;
-            transform: scale(1.5);
-            transition: ease-in-out;
-            transition-duration: .5s;
-        }
-
-        /* 手機板 */
-        @media only screen and (max-width: 768px) {
-            .container {
-                height: auto;
-                max-height: 240px;
-            }
-
-            .projects {
-                max-width: 100%;
-            }
-
-            .projects>img {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        .description {
-            word-break: break-all;
-            text-align: left;
-        }
-
-        .description p {
-            margin-bottom: 0;
-        }
-
-        .title {
-            font-size: 1.8rem;
-            font-weight: bold;
+        .flex-caption {
+            width: 80%;
+            padding: 5px;
+            position: absolute;
+            left: 0;
+            bottom: -33.13px;
             color: #333;
-            line-height: 20px;
-            text-decoration-line: underline;
+            font-size: 14px;
+            line-height: 18px;
+            margin: 0;
+            border-bottom: #333 3px solid;
         }
 
-        .title:hover {
-            color: rgb(130, 130, 130);
+        #carousel li:hover {
             cursor: pointer;
-        }
-
-        .type {
-            font-size: 1rem;
-            font-style: oblique;
-            line-height: 40px;
-        }
-
-        .media,
-        .date {
-            font-size: .75rem;
-            color: rgb(130, 130, 130);
-            line-height: 15px;
         }
     </style>
 </head>
@@ -167,8 +91,8 @@
                         <li class="menuHover">Words</li>
                     </a> -->
                     <!-- <a href="contact.html">
-                                <li class="menuHover"> Contact </li>
-                            </a> -->
+                        <li class="menuHover"> Contact </li>
+                    </a> -->
                 </ul>
             </nav>
             <!-- mobilehamburger -->
@@ -199,8 +123,8 @@
                 <a href="words.html">Words</a>
             </li> -->
             <!-- <li class="drawerItem">
-                        <a>Contact</a>
-                    </li> -->
+                <a>Contact</a>
+            </li> -->
         </ul>
     </nav>
 
@@ -210,93 +134,49 @@
     <!-- 主內容article -->
     <div id="maskMain"></div>
     <article class="mainCard">
-        <div class="projects">
-            <div class="container">
-                <a href="img/comicIllustration/img019.jpg" data-fancybox="gallery1" data-caption="Caption #1">
-                    <img class="coverImg" src="img/comicIllustration/img019.jpg">
-                </a>
-            </div>
-            <div class="description">
-                <a href="sable.html">
-                    <p class="title">Sable</p>
-                </a>
-                <p class="type">illustration, picture book</p>
-                <p class="media">pencil, charcoal, niddle pen</p>
-                <p class="date">2017/June</p>
-            </div>
-        </div>
+        <section class="content">
+            <!-- 圖片輪播 + fancyBox-->
+            <section>
+                <div id="slider" class="flexslider bio">
+                    <ul class="slides">
+                        <li>
+                            <a href="./img/comicIllustration/img019.jpg" data-fancybox="gallery" data-caption="My caption">
+                                <img class="coverImg" src="./img/comicIllustration/img019.jpg" />
+                            </a>
+                            <p class="flex-caption">the Green, leaves.....</p>
+                        </li>
+                        <li>
+                            <a href="./img/comicIllustration/img020.jpg" data-fancybox="gallery" data-caption="My22 caption">
+                                <img class="coverImg" src="./img/comicIllustration/img020.jpg" />
+                            </a>
+                            <p class="flex-caption">xxxxxx</p>
+                        </li>
+                        <li>
+                            <a href="./img/comicIllustration/img021.jpg" data-fancybox="gallery">
+                                <img class="coverImg" src="./img/comicIllustration/img021.jpg" />
+                            </a>
+                            <p class="flex-caption">xxxxxx</p>
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="projects">
-            <div class="container">
-                <a href="img/comicIllustration/img019.jpg" data-fancybox="gallery2">
-                    <img class="coverImg" src="img/comicIllustration/img019.jpg">
-                </a>
-            </div>
-            <div class="description">
-                <p class="title">King</p>
-                <p class="type">illustration, character</p>
-                <p class="media">watercolor, color pencil</p>
-                <p class="date">2018/December</p>
-            </div>
-        </div>
-
-        <div class="projects">
-            <div class="container">
-                <a href="img/comicIllustration/img019.jpg" data-fancybox="gallery2">
-                    <img class="coverImg" src="img/comicIllustration/img019.jpg">
-                </a>
-            </div>
-            <div class="description">
-                <p class="title">King</p>
-                <p class="type">illustration, character</p>
-                <p class="media">watercolor, color pencil</p>
-                <p class="date">2018/December</p>
-            </div>
-        </div>
-
-        <div class="projects">
-            <div class="container">
-                <a href="img/comicIllustration/img019.jpg" data-fancybox="gallery2">
-                    <img class="coverImg" src="img/comicIllustration/img019.jpg">
-                </a>
-            </div>
-            <div class="description">
-                <p class="title">King</p>
-                <p class="type">illustration, character</p>
-                <p class="media">watercolor, color pencil</p>
-                <p class="date">2018/December</p>
-            </div>
-        </div>
-
-        <div class="projects">
-            <div class="container">
-                <a href="img/comicIllustration/img019.jpg" data-fancybox="gallery2">
-                    <img class="coverImg" src="img/comicIllustration/img019.jpg">
-                </a>
-            </div>
-            <div class="description">
-                <p class="title">King</p>
-                <p class="type">illustration, character</p>
-                <p class="media">watercolor, color pencil</p>
-                <p class="date">2018/December</p>
-            </div>
-        </div>
-
-        <div class="projects">
-            <div class="container">
-                <a href="img/comicIllustration/img019.jpg" data-fancybox="gallery2">
-                    <img class="coverImg" src="img/comicIllustration/img019.jpg">
-                </a>
-            </div>
-            <div class="description">
-                <p class="title">King</p>
-                <p class="type">illustration, character</p>
-                <p class="media">watercolor, color pencil</p>
-                <p class="date">2018/December</p>
-            </div>
-        </div>
-        <!-- 撐開父的高度 -->
-        <div class="clear"></div>
+                <div id="carousel" class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src="./img/comicIllustration/img019.jpg" />
+                        </li>
+                        <li>
+                            <img src="./img/comicIllustration/img020.jpg" />
+                        </li>
+                        <li>
+                            <img src="./img/comicIllustration/img021.jpg" />
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 撐開父的高度 -->
+            <div class="clear"></div>
+        </section>
     </article>
     <!-- goTop -->
     <div id="goTop">TOP</div>
@@ -310,11 +190,41 @@
 
     <!-- fancyBox JS -->
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+    <script>
+        // Thanks to Maaaaark - https://github.com/maaaaark/bcSwipe/blob/master/jquery.bcSwipe.min.js
+        !function (t) { t.fn.bcSwipe = function (e) { var n = { threshold: 50 }; return e && t.extend(n, e), this.each(function () { function e(t) { 1 == t.touches.length && (u = t.touches[0].pageX, c = !0, this.addEventListener("touchmove", o, !1)) } function o(e) { if (c) { var o = e.touches[0].pageX, i = u - o; Math.abs(i) >= n.threshold && (h(), t(this).flexslider(i > 0 ? "next" : "prev")) } } function h() { this.removeEventListener("touchmove", o), u = null, c = !1 } var u, c = !1; "ontouchstart" in document.documentElement && this.addEventListener("touchstart", e, !1) }), this } }(jQuery);
+        // Swipe functions for Bootstrap Flexslider
+        $(".flexslider").bcSwipe({ threshold: 300 });
+    </script>
     <!-- custom JS -->
     <script src="js/menu_drawer_scroll.js"></script>
-    <!-- scrollReveal -->
+
+
     <script>
-        ScrollReveal().reveal('.projects', { interval: 150 }, { easing: 'cubic-bezier(.5,0,0,1)' });
+        $(document).ready(function () {
+            // flieslide interval change
+            $("#slider").flexslider({
+                slideshowSpeed: 3500
+            });
+            
+            // The slider being synced must be initialized first
+            $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: true,
+                slideshow: true,
+                itemWidth: 157.5,
+                itemMargin: 5,
+                asNavFor: '#slider'
+            });
+
+            $('#slider').flexslider({
+                animation: "slide",
+                animationLoop: true,
+                controlNav: false,
+                sync: "#carousel"
+            });
+        });
     </script>
 </body>
 
