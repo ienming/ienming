@@ -63,6 +63,13 @@
 </head>
 
 <body>
+    <!-- loading spinner -->
+    <div id="preload">
+        <object>
+            <embed src="./img/watercolor_preload.svg" id="spinner" style="height: 450px;">
+        </object>
+    </div>
+    <!-- topBar -->
     <header class="topBar">
         <div class="nav" role="navigation">
             <a href="./index.html">
@@ -206,7 +213,7 @@
             $("#slider").flexslider({
                 slideshowSpeed: 3500
             });
-            
+
             // The slider being synced must be initialized first
             $('#carousel').flexslider({
                 animation: "slide",
