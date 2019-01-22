@@ -17,6 +17,7 @@
     <link rel=stylesheet type="text/css" href="../css/mainCard_sideBar.css">
     <!-- fancyBox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="../css/fancyboxCustom.css">
     <!-- JSON-LD 結構化資料-->
     <!-- jQuery -->
     <script src="../js/jquery-3.3.1.min.js"></script>
@@ -30,29 +31,8 @@
         });
     </script>
     <style>
-        body {
-            background-color: rgb(250, 250, 250);
-        }
-
         .heightadjust {
             height: 140px;
-        }
-
-        .flexslider {
-            border: 0;
-        }
-
-        .flex-caption {
-            width: 80%;
-            padding: 5px;
-            position: absolute;
-            left: 0;
-            bottom: -33.13px;
-            color: #333;
-            font-size: 14px;
-            line-height: 18px;
-            margin: 0;
-            border-bottom: #333 3px solid;
         }
     </style>
 </head>
@@ -133,69 +113,54 @@
         <section class="content">
             <!-- 手機作品metadata -->
             <section class="metaMobile">
-                <span>VI design, logo</span><br>
-                <span>client: Secret Base Video Studio</span><br>
-                <span>2018, May</span>
-            </section>
-            <section class="bioText">
-                <p>基地影像設計工作室，致力於透過影像傳達理念，將焦點放在原住民、台灣文化議題。
-                    期望透過影像、設計與藝術等多種形式涉入，將議題轉化為清晰易懂的視覺作品。
-                </p>
-                <p class="engText">Secret Base Video Studio focused on the aboriginal and social issues in Taiwan.
-                    Through video clips, design and visual arts, we try to convey those complex concepts and discourses
-                    to audiences for arousing public conversation.
-                </p>
+                <span>Key visual design, poster etc.</span><br>
+                <span>client: 9th YSF in Taiwan</span><br>
+                <span>2016, June-Aug.</span>
             </section>
             <!-- 圖片輪播 + fancyBox-->
             <section>
-                <div class="flexslider bio">
+                <div class="flexslider">
                     <ul class="slides">
                         <li>
                             <a href="../img/projects/AIESEC YSF/triple_0.jpg" data-fancybox="gallery">
                                 <img class="coverImg" src="../img/projects/AIESEC YSF/triple_0.jpg">
                             </a>
-                            <p class="flex-caption">VI design display demo</p>
+                            <p class="flex-caption">Brochure layout design.</p>
                         </li>
                         <li>
                             <a href="../img/projects/AIESEC YSF/triple_1.jpg" data-fancybox="gallery">
                                 <img class="coverImg" src="../img/projects/AIESEC YSF/triple_1.jpg">
                             </a>
-                            <p class="flex-caption">VI design display demo</p>
                         </li>
                         <li>
                             <a href="../img/projects/AIESEC YSF/triple_2.jpg" data-fancybox="gallery">
                                 <img class="coverImg" src="../img/projects/AIESEC YSF/triple_2.jpg">
                             </a>
-                            <p class="flex-caption">VI design display demo</p>
                         </li>
                         <li>
                             <a href="../img/projects/AIESEC YSF/triple_3.jpg" data-fancybox="gallery">
                                 <img class="coverImg" src="../img/projects/AIESEC YSF/triple_3.jpg">
                             </a>
-                            <p class="flex-caption">VI design display demo</p>
                         </li>
                         <li>
                             <a href="../img/projects/AIESEC YSF/triple_4.jpg" data-fancybox="gallery">
                                 <img class="coverImg" src="../img/projects/AIESEC YSF/triple_4.jpg">
                             </a>
-                            <p class="flex-caption">VI design display demo</p>
                         </li>
                     </ul>
                 </div>
             </section>
             <section class="bioText" style="margin: 50px 0;">
-                <p>工作室「基地」源自創始人位於台北的房子，從狹窄、陡峭的樓梯而上，一個充滿想像力、未來可能的空間出現在眼前。
-                    透過樓梯與膠捲，象徵設計者在「基地」這個空間中的感受：陡峭、顛簸危險，但也充滿用視覺影像創造激情與衝動的可能。
+                <p>第九屆台灣青年影響力論壇，主題「最後世代大哉問」，聚焦於創新科技、智慧城市
+                    與綠色金融，討論工業4.0帶來的社會變革。主視覺以藍色與橘黃對比，呈現科技城市
+                    和社會相輔相成，又富於競逐關係的活力，並以線條、動線等平面視覺元素呈現。
                 </p>
-                <p class="engText">
-                    To convey the idea of "visual video" and the feeling of this secret base, designer combined the
-                    stair,
-                    leading to the secret base in the founder's house in Taipei, and the icon of roll film.
-                </p>
-                <p class="engText">
-                    As the studio hopes thier works have stronglly bound to the feeling of land, the
-                    design of strokes on the text logo reflects this idea through the thick horizontal strokes, like
-                    the steady ground.
+                <p class="engText">9th Youth Speak Forum in Taiwan, the topic focused on the
+                    innovative technologies, smart cities, and green finance. The main theme
+                    "The big issue from the last Generation" discussed the evolution of the society
+                    due to the industrial 4.0. For impling the feeling of the dynamics from the
+                    tense between the society and technological city, I use the contrast color 
+                    and the line, moving direction to emphasize that might. 
                 </p>
             </section>
             <section class="bio">
@@ -204,6 +169,15 @@
                 </a>
                 <a href="../img/projects/AIESEC YSF/ysf2.jpg" data-fancybox="gallery">
                     <img class="coverImg" src="../img/projects/AIESEC YSF/ysf2.jpg">
+                </a>
+                <a href="../img/projects/AIESEC YSF/ysf3.jpg" data-fancybox="gallery">
+                    <img class="coverImg" src="../img/projects/AIESEC YSF/ysf3.jpg">
+                </a>
+                <a href="../img/projects/AIESEC YSF/ysf4.jpg" data-fancybox="gallery">
+                    <img class="coverImg" src="../img/projects/AIESEC YSF/ysf4.jpg">
+                </a>
+                <a href="../img/projects/AIESEC YSF/ysf5.jpg" data-fancybox="gallery">
+                    <img class="coverImg" src="../img/projects/AIESEC YSF/ysf5.jpg">
                 </a>
             </section>
         </section>
@@ -220,12 +194,9 @@
             </nav>
             <!-- 作品metadata -->
             <section class="metadata">
-                <span>Visual Identity, Logo design</span><br>
-                <span>client: Secret Base Video Studio</span><br>
-                <span>2018. May</span>
-                <div class="container" style="margin-top: 25px;">
-                    <img src="../img/projects/基地影像設計/基地影像設計logo-15.png" style="width: 230px;" />
-                </div>
+                <span>Key visual design, poster etc.</span><br>
+                <span>client: 9th YSF in Taiwan</span><br>
+                <span>2016, June-Aug.</span>
             </section>
         </section>
         <!-- 撐開父的高度 -->

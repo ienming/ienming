@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ien ming</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- google search console -->
+    <meta name="google-site-verification" content="6JguI8U151lezHi3D6EgF42fAPQvHmnEaw_6lDXzL3c" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- commonUse CSS -->
+    <link rel=stylesheet type="text/css" href="../css/commonUse_topBar+footer+goTop.css">
+    <!-- mainCard_sideBar CSS -->
+    <link rel=stylesheet type="text/css" href="../css/mainCard_sideBar.css">
+    <!-- fancyBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="../css/fancyboxCustom.css">
+    <!-- JSON-LD 結構化資料-->
+    <!-- jQuery -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <!-- flexSlider -->
+    <link rel="stylesheet" href="../css/flexslider.css" type="text/css">
+    <script src="../js/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(window).on(function () {
+            $('.flexslider').flexslider();
+        });
+    </script>
+    <style>
+        .heightadjust {
+            height: 140px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topBar">
+        <div class="nav" role="navigation">
+            <a href="../index.html">
+                <img id="logo" src="../img/logo.png" alt="ienMing">
+            </a>
+            <!-- deskMenu -->
+            <nav class="menu">
+                <ul>
+                    <a href="../bio.html">
+                        <li class="menuHover">About</li>
+                    </a>
+                    <a href="../projects.html">
+                        <li class="menuHover">Projects</li>
+                    </a>
+                    <li id="fineArt" class="menuHover"> Paintings
+                        <div class="dropdown-content">
+                            <div class="menuHover" onclick="location.href='../comicIllustration.html';">
+                                comic, illustration
+                            </div>
+                            <div class="menuHover" onclick="location.href='../watercolor.html';">
+                                watercolor lifedrawing
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <a href="../words.html">
+                        <li class="menuHover">Words</li>
+                    </a> -->
+                    <!-- <a href="contact.html">
+                                <li class="menuHover"> Contact </li>
+                            </a> -->
+                </ul>
+            </nav>
+            <!-- mobilehamburger -->
+            <nav>
+                <button class="hamburger">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <nav class="drawer">
+        <ul id="drawerItems">
+            <li class="drawerItem">
+                <a href="../bio.html">About</a>
+            </li>
+            <li class="drawerItem">
+                <a href="../projects.html">Projects</a>
+            </li>
+            <li class="drawerItem">
+                <a href="../comicIllustration.html">Illustration</a>
+            </li>
+            <li class="drawerItem">
+                <a href="../watercolor.html">Lifedrawing</a>
+            </li>
+            <!-- <li class="drawerItem">
+                <a href="../words.html">Words</a>
+            </li> -->
+            <!-- <li class="drawerItem">
+                        <a>Contact</a>
+                    </li> -->
+        </ul>
+    </nav>
+
+    <!-- 把主頁從topbar擠下去 -->
+    <div class="heightadjust"></div>
+
+    <!-- 主內容article -->
+    <div id="maskMain"></div>
+    <h1><strong></strong>科技大觀園網站 Sci-Tech Vista Logo</strong></h1>
+    <article class="mainCard">
+        <section class="content">
+            <!-- 手機作品metadata -->
+            <section class="metaMobile">
+                <span>Logo design</span><br>
+                <span>client: Ministry of Science and Technology</span><br>
+                <span>2018</span>
+            </section>
+            <!-- 圖片輪播 + fancyBox-->
+            <section>
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <a href="../img/projects/STV/stv_web2.jpg" data-fancybox="gallery">
+                                <img class="coverImg" src="../img/projects/STV/stv_web2.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../img/projects/STV/stv_logo1.png" data-fancybox="gallery">
+                                <img class="coverImg" src="../img/projects/STV/stv_logo1.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../img/projects/STV/stv_logo2.png" data-fancybox="gallery">
+                                <img class="coverImg" src="../img/projects/STV/stv_logo2.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../img/projects/STV/stv_logo3.png" data-fancybox="gallery">
+                                <img class="coverImg" src="../img/projects/STV/stv_logo3.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../img/projects/STV/stv_logo4.png" data-fancybox="gallery">
+                                <img class="coverImg" src="../img/projects/STV/stv_logo4.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="bioText" style="margin: 50px 0;">
+                <p>第九屆台灣青年影響力論壇，主題「最後世代大哉問」，聚焦於創新科技、智慧城市
+                    與綠色金融，討論工業4.0帶來的社會變革。主視覺以藍色與橘黃對比，呈現科技城市
+                    和社會相輔相成，又富於競逐關係的活力，並以線條、動線等平面視覺元素呈現。
+                </p>
+                <p class="engText">9th Youth Speak Forum in Taiwan, the topic focused on the
+                    innovative technologies, smart cities, and green finance. The main theme
+                    "The big issue from the last Generation" discussed the evolution of the society
+                    due to the industrial 4.0. For impling the feeling of the dynamics from the
+                    tense between the society and technological city, I use the contrast color
+                    and the line, moving direction to emphasize that might.
+                </p>
+            </section>
+            <section class="bio">
+                <a href="../img/projects/AIESEC YSF/ysf1.jpg" data-fancybox="gallery">
+                    <img class="coverImg" src="../img/projects/AIESEC YSF/ysf1.jpg">
+                </a>
+                <a href="../img/projects/AIESEC YSF/ysf2.jpg" data-fancybox="gallery">
+                    <img class="coverImg" src="../img/projects/AIESEC YSF/ysf2.jpg">
+                </a>
+                <a href="../img/projects/AIESEC YSF/ysf3.jpg" data-fancybox="gallery">
+                    <img class="coverImg" src="../img/projects/AIESEC YSF/ysf3.jpg">
+                </a>
+                <a href="../img/projects/AIESEC YSF/ysf4.jpg" data-fancybox="gallery">
+                    <img class="coverImg" src="../img/projects/AIESEC YSF/ysf4.jpg">
+                </a>
+                <a href="../img/projects/AIESEC YSF/ysf5.jpg" data-fancybox="gallery">
+                    <img class="coverImg" src="../img/projects/AIESEC YSF/ysf5.jpg">
+                </a>
+            </section>
+        </section>
+
+        <!-- 邊攔 -->
+        <section class="side">
+            <!-- 麵包屑 -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">ienMing</a></li>
+                    <li class="breadcrumb-item"><a href="../projects.html">projects</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Secret Base Video Studio</li>
+                </ol>
+            </nav>
+            <!-- 作品metadata -->
+            <section class="metadata">
+                <span>Logo design</span><br>
+                <span>client: Ministry of Science and Technology</span><br>
+                <span>2018</span>
+            </section>
+        </section>
+        <!-- 撐開父的高度 -->
+        <div class="clear"></div>
+    </article>
+    <!-- goTop -->
+    <div id="goTop">TOP</div>
+    <div id="goTopMobile">TOP</div>
+
+    <!-- 版權footer -->
+    <footer id="footer">
+        <a href="https://www.instagram.com/ienming/?fbclid=IwAR1_fAR2z_XVRMx0ZeRDLRiOsMj4LFHFdu5LYqo7pnNeQUO2shqbahiaUyQ"><img
+                src="../img/ig logo.png" /></a>
+        <p class="email">hsieh.alan.0726@gmail.com</p>
+        <p>-</p>
+        <p>Copyright © 2019 ienMing. All rights reserved</p>
+    </footer>
+
+
+    <!-- bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- fancyBox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+    <!-- custom JS -->
+    <script src="../js/menu_drawer_scroll.js"></script>
+
+    <!-- flieslide interval change-->
+    <script>
+        $(".flexslider").flexslider({
+            slideshowSpeed: 3500
+        });
+        $(window).on(function () {
+            $('.flexslider').flexslider({
+                animation: "slide"
+            });
+        });
+    </script>
+
+    <!-- swipe this worked-->
+    <script>
+        // Thanks to Maaaaark - https://github.com/maaaaark/bcSwipe/blob/master/jquery.bcSwipe.min.js
+        !function (t) { t.fn.bcSwipe = function (e) { var n = { threshold: 50 }; return e && t.extend(n, e), this.each(function () { function e(t) { 1 == t.touches.length && (u = t.touches[0].pageX, c = !0, this.addEventListener("touchmove", o, !1)) } function o(e) { if (c) { var o = e.touches[0].pageX, i = u - o; Math.abs(i) >= n.threshold && (h(), t(this).flexslider(i > 0 ? "next" : "prev")) } } function h() { this.removeEventListener("touchmove", o), u = null, c = !1 } var u, c = !1; "ontouchstart" in document.documentElement && this.addEventListener("touchstart", e, !1) }), this } }(jQuery);
+
+        // Swipe functions for Bootstrap Flexslider
+        $(".flexslider").bcSwipe({ threshold: 300 });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("h1").animate({
+                opacity: 1,
+                left: 0,
+            }, 800);
+            $(".content").delay(800).animate({ opacity: 1 }, 700);
+            $(".side").delay(900).animate({ opacity: 1 }, 700);
+        })
+
+
+        var bodyWidth = $("body").width();
+        // console.log(bodyWidth);
+        $(document).ready(function () {
+            if (bodyWidth < 768) {
+                $(".side").hide();
+            }
+        })
+
+        $(window).resize(function () {
+            if ($(window).width() < 768) {
+                $(".side").hide();
+            }
+            if ($(window).width() >= 768) {
+                $(".side").show();
+            }
+        })
+    </script>
+</body>
+
+</html>

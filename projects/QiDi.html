@@ -17,6 +17,7 @@
     <link rel=stylesheet type="text/css" href="../css/mainCard_sideBar.css">
     <!-- fancyBox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="../css/fancyboxCustom.css">
     <!-- JSON-LD 結構化資料-->
     <!-- jQuery -->
     <script src="../js/jquery-3.3.1.min.js"></script>
@@ -30,31 +31,9 @@
         });
     </script>
     <style>
-        body {
-            background-color: rgb(250, 250, 250);
-        }
-
         .heightadjust {
             height: 140px;
         }
-
-        .flexslider {
-            border: 0;
-        }
-
-        .flex-caption {
-            width: 80%;
-            padding: 5px;
-            position: absolute;
-            left: 0;
-            bottom: -33.13px;
-            color: #333;
-            font-size: 14px;
-            line-height: 18px;
-            margin: 0;
-            border-bottom: #333 3px solid;
-        }
-
     </style>
 </head>
 
@@ -149,19 +128,23 @@
             </section>
             <!-- 圖片輪播 + fancyBox-->
             <section>
-                <div class="flexslider bio">
+                <div class="flexslider">
                     <ul class="slides">
                         <li>
-                            <a href="../img/projects/基地影像設計/基地_branding_display.jpg" data-fancybox="gallery">
+                            <a class="fancybox" href="../img/projects/基地影像設計/基地_branding_display.jpg" data-fancybox="gallery"
+                                data-caption="This is the caption">
                                 <img class="coverImg" src="../img/projects/基地影像設計/基地_branding_display.jpg">
                             </a>
-                            <p class="flex-caption">VI design display demo</p>
+                            <p class="flex-caption">基地影像設計，視覺識別系統。The visual identity system for Secret Base Video
+                                Studio.</p>
                         </li>
                         <li>
-                            <a href="../img/projects/基地影像設計/基地_branding_display2.jpg" data-fancybox="gallery">
+                            <a class="fancybox" href="../img/projects/基地影像設計/基地_branding_display2.jpg" data-fancybox="gallery"
+                                data-caption="This is the caption2">
                                 <img class="coverImg" src="../img/projects/基地影像設計/基地_branding_display2.jpg">
                             </a>
-                            <p class="flex-caption">VI design display demo</p>
+                            <p class="flex-caption">基地影像設計，視覺識別系統。The visual identity system for Secret Base Video
+                                Studio.</p>
                         </li>
                     </ul>
                 </div>

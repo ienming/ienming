@@ -1,0 +1,32 @@
+        /* fancybox button design */
+        .fancybox-button {
+            background: transparent;
+            color: #333;
+        }
+
+        .fancybox-toolbar .fancybox-button:hover {
+            background: rgba(223, 223, 223, 0.5);
+            color: #c11c95;
+        }
+
+        /* Make close button a bit bigger */
+        .fancybox-button--close {
+            padding: 7px;
+        }
+
+        .fancybox-button--thumbs{
+            display: none;
+        }
+
+
+        /* Change backdrop color */
+        .fancybox-bg {
+            background: #eee;
+        }
+
+        .fancybox-caption {
+            padding: 0;
+            margin-bottom: 20px;
+            background: none;
+            color: #333;
+        }
