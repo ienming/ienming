@@ -301,8 +301,3 @@ html[xmlns] .flexslider .slides {
   margin: 0;
   border-bottom: #333 3px solid;
 }
-
-/* 調整不同長寬比的照片都可以放在一起！ */
-.flexslider li:not(.flex-active-slide) img {
-  height: 0 !important;
-}
