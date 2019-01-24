@@ -36,8 +36,8 @@ a:hover{
 
 /* 反白顏色 */
 ::selection {
-    background-color: #333;
-    color: white;
+    background-color: rgb(8,68,155);
+    color: rgb(241,241,241);
 }
 
 .topBar {
@@ -220,7 +220,7 @@ a:hover{
     height: 5px;
     bottom: 0;
     left: 0;
-    background-color: aqua;
+    background-color: rgb(8,68,155);
     transform-origin: bottom left;
     transition: transform 0.45s ease-in-out;
 }
@@ -285,7 +285,7 @@ a:hover{
 }
 
 #footer .email{
-    font-size: 1.05rem;
+    font-size: 1rem;
     margin-bottom: 0;
 }
 
