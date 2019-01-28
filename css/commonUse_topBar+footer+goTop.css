@@ -2,7 +2,7 @@ body{
     font-family: 'Calibri',
     'Trebuchet MS','Helvetiac', 'Arial', 'LiHei Pro', '微軟正黑體',
     sans-serif;
-    background-color: rgb(241, 241, 241);
+    background-color: white;
 }
 
 #preload{
@@ -12,7 +12,7 @@ body{
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgb(241, 241, 241);
+    background-color: white;
     z-index: 99;
 }
 
@@ -36,29 +36,39 @@ a:hover{
 
 /* 反白顏色 */
 ::selection {
-    background-color: rgb(8,68,155);
-    color: rgb(241,241,241);
+    background-color: #01c6ff;
+    color: white;
 }
 
 .topBar {
     position: fixed;
-    top: 0;
+    /* top: 0;
     left: 0;
     height: 100px;
-    width: 100%;
+    width: 100%; */
     z-index: 12;
-    background-color: rgb(250, 250, 250, 0);
+    top: 0;
+    left: 4vw;
+    height: 100%;
+    width: calc(150px - .5vw);
+    background-color: rgb(255, 255, 255, 0);
 }
 
 .topBarMask{
-    background-color: rgb(241, 241, 241);
+    background-color: white;
 }
 
 #logo {
-    height: 50px;
+    width: 60px;
     cursor: pointer;
-    margin-left: 5vw;
+    margin-left: 1vw;
 }
+
+/* @media only screen and (max-width: 768px) {
+    #logo{
+        margin-left: calc(50vw - 50px);
+    }
+} */
 
 .nav {
     height: 100px;
@@ -70,8 +80,11 @@ a:hover{
     position: absolute;
     top: 25px;
     right: 25px;
+    padding: 0px;
     border: none;
+    outline: none;
     background-color: rgb(0,0,0,0);
+    z-index: 12;
 }
 
 .nav nav {
@@ -81,16 +94,16 @@ a:hover{
 .bar1,
 .bar2,
 .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
+    width: 60px;
+    height: 3px;
+    background-color: #01c6ff;
     margin: 6px 0;
     transition: 0.4s;
 }
 
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+    -webkit-transform: rotate(-30deg) translate(-5px, 15px);
+    transform: rotate(-30deg) translate(-5px, 15px);
 }
 
 .change .bar2 {
@@ -98,8 +111,8 @@ a:hover{
 }
 
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+    -webkit-transform: rotate(30deg) translate(0px, -2.5px);
+    transform: rotate(30deg) translate(0px, -2.5px);
 }
 
 /*drawer*/
@@ -110,7 +123,7 @@ a:hover{
     right: 0;
     z-index: 11;
     color: #333;
-    background-color: rgb(241, 241, 241);
+    background-color: white;
     width: 75vw;
     height: 100vh;
     padding-top: 100px;
@@ -159,14 +172,17 @@ a:hover{
     transition: transform .8s ease-in-out;
 }
 
-/* 電腦版藏hamburger */
+/* 電腦hamburger */
 @media only screen and (min-width: 768px) {
-    .nav .hamburger {
-        display: none;
+    .hamburger {
+        left: 5vw;
+        top: 100px;
+        /* display: none; */
     }
 
     .drawer {
-        display: none;
+        width: 30vw;
+        /* display: none; */
     }
 }
 
@@ -177,15 +193,15 @@ a:hover{
 
 .menu {
     position: absolute;
-    top: 0px;
-    right: 38vh;
+    top:0;
+    left:4vw;
     cursor: pointer;
 }
 
 .menu ul {
     padding-left: 0;
     margin-bottom: 0;
-    background-color: rgb(241, 241, 241);
+    background-color: white;
 }
 
 .menu li {
@@ -224,7 +240,7 @@ a:hover{
     height: 5px;
     bottom: 0;
     left: 0;
-    background-color: rgb(8,68,155);
+    background-color:#01c6ff;
     transform-origin: bottom left;
     transition: transform 0.45s ease-in-out;
 }
@@ -233,34 +249,7 @@ a:hover{
     transform: scaleX(1);
 }
 
-/* menu dropdown */
-.dropdown-content {
-    transform: translateY(-200%);
-    display: block;
-    position: absolute;
-    top: 100px;
-    min-width: 137px;
-    z-index: 1;
-    text-align: center;
-    background-color: rgb(241, 241, 241);
-    opacity: 0;
-}
-
-.dropdown-content div {
-    height: 50px;
-    line-height: 50px;
-    color: black;
-    text-decoration: none;
-}
-
-#fineArt:hover .dropdown-content {
-    transform: translateY(0%);
-    opacity: 1;
-    transition-duration: .5s;
-    transition-timing-function: ease-in-out;
-}
-
-/* 手機藏global navigation */
+/* 手機hamberger修改*/
 @media only screen and (max-width: 768px) {
     .nav .menu {
         display: none;
@@ -268,8 +257,10 @@ a:hover{
     #menuHoverBox {
         display: none;
     }
+    .topBar{
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
-
 
 /* 以下是footer */
 #footer {
@@ -304,7 +295,7 @@ a:hover{
     right: 38vh;
     bottom: 50px;
     display: none;
-    color: #333;
+    color: #01c6ff;
 }
 
 #goTop::before{
@@ -315,7 +306,7 @@ a:hover{
     transform: scaleX(0);
     bottom: -5px;
     left: 0;
-    background-color: #333;
+    background-color: rgb(233, 87, 19);
     transform-origin: bottom left;
     transition: transform 0.45s ease-in;
 }
@@ -333,7 +324,7 @@ a:hover{
     display: none;
     width: 30px;
     height: 30px;
-    color: #333;
+    color: #01c6ff;
     text-decoration: underline;
     margin-left: 5vw;
     margin-bottom: 30px;
