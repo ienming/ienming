@@ -49,7 +49,6 @@ a:hover{
     z-index: 12;
     top: 0;
     left: 4vw;
-    height: 100%;
     width: calc(150px - .5vw);
     background-color: rgb(255, 255, 255, 0);
 }
@@ -77,9 +76,9 @@ a:hover{
 }
 
 .hamburger {
-    position: absolute;
-    top: 25px;
-    right: 25px;
+    position: fixed;
+    left: 5vw;
+    top: 100px;
     padding: 0px;
     border: none;
     outline: none;
@@ -120,7 +119,7 @@ a:hover{
     position: fixed;
     top: 0;
     /* left: 100vw/2-(55.75)/2; */
-    left: 0;
+    right: 0;
     z-index: 11;
     color: #333;
     background-color: white;
@@ -129,7 +128,7 @@ a:hover{
     padding-top: 100px;
     display: flex;
     /* 先推到螢幕右邊 */
-    transform: translateX(-150%);
+    transform: translateX(150%);
     transition: transform .7s ease-in-out;
 }
 
@@ -162,25 +161,17 @@ a:hover{
     display: none;
 }
 
-.articleLeft{
-    transform: translateX(0%);
+.articleOrigin{
+    transform: translateX(0);
     transition: transform .8s ease-in-out;
 }
 
-.articleRight{
-    transform: translateX(25%);
+.articleLeft{
+    transform: translateX(-25%);
     transition: transform .6s ease-in-out;
 }
 
 /* 電腦hamburger */
-@media only screen and (min-width: 768px) {
-    .hamburger {
-        left: 5vw;
-        top: 100px;
-        /* display: none; */
-    }
-}
-
 /* deskMenu */
 .menuHoverOn{
     background-color: rgba(0, 0, 0, 0.45);
@@ -246,17 +237,22 @@ a:hover{
 
 /* 手機hamberger修改*/
 @media only screen and (max-width: 768px) {
-    .nav .menu {
+    /* .nav .menu {
         display: none;
     }
     #menuHoverBox {
         display: none;
-    }
+    } */
     .topBar{
         background-color: rgba(0, 0, 0, 0);
     }
     .drawer{
         width: 75vw;
+    }
+    .hamburger{
+        right: 25px;
+        left: auto;
+        top: 25px;
     }
 }
 

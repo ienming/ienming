@@ -15,16 +15,16 @@ function trigger() {
     if (i % 2 == 0) {
         drawer.classList.add('open');
         hamburgerBtn.classList.toggle('change');
-        $("article, h1").toggleClass("articleRight");
-        $("article, h1").removeClass("articleLeft");
+        $("article, h1").toggleClass("articleLeft");
+        $("article, h1").removeClass("articleOrigin");
         $("#maskMain").fadeTo("fast", 1).show();
     }
 
     if (i % 2 == 1) {
         drawer.classList.remove('open');
         hamburgerBtn.classList.toggle('change');
-        $("article, h1").toggleClass("articleLeft");
-        $("article, h1").removeClass("articleRight");
+        $("article, h1").toggleClass("articleOrigin");
+        $("article, h1").removeClass("articleLeft");
         $("#maskMain").fadeTo("slow", 0).hide("fast");
     }
     i++;
