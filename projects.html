@@ -106,28 +106,6 @@
             margin-bottom: 0;
         }
 
-        .description>a {
-            position: relative;
-            display: inline-block;
-        }
-
-        .description>a::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 5px;
-            bottom: -5px;
-            left: 0;
-            background-color: #333;
-            transform-origin: bottom left;
-            transition: transform 0.45s ease-in-out;
-        }
-
-        .description>a:hover::before {
-            transform: scaleX(1);
-        }
-
         .title {
             font-size: 1.35rem;
             font-weight: bold;
@@ -157,16 +135,16 @@
 
 <body>
     <!-- loading spinner -->
-    <div id="preload">
+    <!-- <div id="preload">
         <object>
             <embed src="./img/project_preload.svg" id="spinner" style="height: 450px;">
         </object>
-    </div>
+    </div> -->
     <!-- topBar -->
     <header class="topBar">
         <div class="nav" role="navigation">
             <a href="./index.html">
-                <img id="logo" src="./img/logo.png" alt="ienMing">
+                <img id="logo" src="./img/ienming_test.gif" alt="ienMing">
             </a>
             <!-- deskMenu -->
             <nav class="menu">
@@ -174,25 +152,18 @@
                     <a href="bio.html">
                         <li class="menuHover">About</li>
                     </a>
-                    <a href="projects.html">
-                        <li class="menuHover">Projects</li>
+                    <a href="comicIllustration.html">
+                        <li class="menuHover">Illustration</li>
                     </a>
-                    <li id="fineArt" class="menuHover"> Paintings
-                        <div class="dropdown-content">
-                            <div class="menuHover" onclick="location.href='comicIllustration.html';">
-                                comic, illustration
-                            </div>
-                            <div class="menuHover" onclick="location.href='watercolor.html';">
-                                watercolor lifedrawing
-                            </div>
-                        </div>
-                    </li>
-                    <!-- <a href="words.html">
-                        <li class="menuHover">Words</li>
-                    </a> -->
+                    <a href="projects.html">
+                        <li class="menuHover">Design Works</li>
+                    </a>
+                    <a href="lifedraw.html">
+                        <li class="menuHover">Lifedrawing</li>
+                    </a>
                     <!-- <a href="contact.html">
-                                <li class="menuHover"> Contact </li>
-                            </a> -->
+                            <li class="menuHover"> Contact </li>
+                        </a> -->
                 </ul>
             </nav>
             <!-- mobilehamburger -->
@@ -207,24 +178,18 @@
     </header>
     <nav class="drawer">
         <ul id="drawerItems">
-            <li class="drawerItem">
-                <a href="bio.html">About</a>
-            </li>
-            <li class="drawerItem">
-                <a href="projects.html">Projects</a>
-            </li>
-            <li class="drawerItem">
-                <a href="comicIllustration.html">Illustration</a>
-            </li>
-            <li class="drawerItem">
-                <a href="watercolor.html">Lifedrawing</a>
-            </li>
-            <!-- <li class="drawerItem">
-                <a href="words.html">Words</a>
-            </li> -->
-            <!-- <li class="drawerItem">
-                        <a>Contact</a>
-                    </li> -->
+            <a href="bio.html">
+                <li class="drawerItem">About</li>
+            </a>
+            <a href="comicIllustration.html">
+                <li class="drawerItem">Illustration</li>
+            </a>
+            <a href="projects.html">
+                <li class="drawerItem">Design Works</li>
+            </a>
+            <a href="lifedraw.html">
+                <li class="drawerItem">Lifedrawing</li>
+            </a>
         </ul>
     </nav>
 

@@ -192,7 +192,7 @@ a:hover{
     list-style-type: none;
     display: inline-block;
     height: 100px;
-    width: 66.66px;
+    width: 80px;
     text-align: center;
     font-size: 14px;
     padding-top: 41.5px;
@@ -200,6 +200,10 @@ a:hover{
     transition-duration: .3;
     transition-timing-function: ease-in-out;
     color: black;
+}
+
+.menu>ul>a:nth-child(3)>li{
+    width: 85px;
 }
 
 .menu a{
@@ -238,7 +242,7 @@ a:hover{
     min-width: 137px;
     z-index: 1;
     text-align: center;
-    background-color: rgb(241, 241, 241));
+    background-color: rgb(241, 241, 241);
     opacity: 0;
 }
 
