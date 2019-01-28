@@ -51,17 +51,16 @@ a:hover{
     right: calc(15vw + 144.5px - 122.787px + 60px - 1vw);
     /* left: 4vw; */
     /* width: calc(150px - .5vw); */
-    background-color: rgb(255, 255, 255, 0);
+    background-color: rgb(233, 87, 19);
 }
 
 .topBarMask{
-    background-color: white;
+    background-color: #01c6ff;
 }
 
 #logo {
     width: 60px;
     cursor: pointer;
-    margin-left: 1vw;
 }
 
 /* @media only screen and (max-width: 768px) {
@@ -86,6 +85,8 @@ a:hover{
     background-color: rgb(0,0,0,0);
     z-index: 12;
 }
+
+button:focus {outline:0;}
 
 .nav nav {
     display: inline-block;
@@ -174,7 +175,7 @@ a:hover{
 
 /* 電腦hamburger */
 /* deskMenu */
-.menuHoverOn{
+/* .menuHoverOn{
     background-color: rgba(0, 0, 0, 0.45);
 }
 
@@ -211,10 +212,10 @@ a:hover{
 
 .menu a{
     text-decoration: none;
-}
+} */
 
 /* menu hover underline animation */
-.menu li{
+/* .menu li{
     position: relative;
     display: inline-block;
 }
@@ -234,7 +235,7 @@ a:hover{
 
 .menu li:hover::before{
     transform: scaleX(1);
-}
+} */
 
 /* 手機hamberger修改*/
 @media only screen and (max-width: 768px) {
@@ -245,8 +246,8 @@ a:hover{
         display: none;
     } */
     .topBar{
-        background-color: rgba(0, 0, 0, 0);
-        left: 4vw;
+        left: 0;
+        width: 100vw;
     }
     .drawer{
         width: 75vw;
