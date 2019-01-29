@@ -29,29 +29,36 @@
             $('.flexslider').flexslider();
         });
     </script>
-    <!-- scrollRebeal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
     <style>
-        .heightadjust {
+        /* .heightadjust {
             height: 64px;
+        } */
+
+        .content {
+            margin-left: 14vw;
         }
 
         .flexslider {
             border: 0;
-            background-color: rgb(241, 241, 241);
+            /* background-color: white; */
+        }
+
+        #slider>.slides {
+            height: 80vh;
+            overflow: hidden;
         }
 
         .flex-caption {
-            width: 80%;
-            padding: 5px;
-            position: absolute;
-            left: 0;
-            bottom: -33.13px;
+            position: fixed;
+            top: 0;
+            left: 65vw;
+            width: 230px;
+            padding: 25vh 1vw 0 1vw;
             color: #333;
             font-size: 14px;
             line-height: 18px;
             margin: 0;
-            border-bottom: #333 3px solid;
+            background-color: greenyellow;
         }
 
         #carousel li:hover {
@@ -62,47 +69,26 @@
 
 <body>
     <!-- loading spinner -->
-    <div id="preload">
+    <!-- <div id="preload">
         <object>
             <embed src="./img/watercolor_preload.svg" id="spinner" style="height: 450px;">
         </object>
-    </div>
+    </div> -->
     <!-- topBar -->
     <header class="topBar">
         <div class="nav" role="navigation">
             <a href="./index.html">
                 <img id="logo" src="./img/ienming_test.gif" alt="ienMing">
             </a>
-            <!-- deskMenu -->
-            <nav class="menu">
-                <ul>
-                    <a href="bio.html">
-                        <li class="menuHover">About</li>
-                    </a>
-                    <a href="comicIllustration.html">
-                        <li class="menuHover">Illustration</li>
-                    </a>
-                    <a href="projects.html">
-                        <li class="menuHover">Design Works</li>
-                    </a>
-                    <a href="lifedraw.html">
-                        <li class="menuHover">Lifedrawing</li>
-                    </a>
-                    <!-- <a href="contact.html">
-                            <li class="menuHover"> Contact </li>
-                        </a> -->
-                </ul>
-            </nav>
-            <!-- mobilehamburger -->
-            <nav>
-                <button class="hamburger">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </button>
-            </nav>
-        </div>
     </header>
+    <!-- hamburger -->
+    <nav>
+        <button class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
+    </nav>
     <nav class="drawer">
         <ul id="drawerItems">
             <a href="bio.html">
@@ -160,6 +146,9 @@
 
                 <div id="carousel" class="flexslider">
                     <ul class="slides">
+                        <li>
+                            <img src="./img/comicIllustration/king001_small.jpg" />
+                        </li>
                         <li>
                             <img src="./img/comicIllustration/img019.jpg" />
                         </li>

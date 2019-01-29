@@ -287,7 +287,7 @@ button:focus {outline:0;}
     text-align: left;
     color: rgb(150, 150, 150);
     font-size: .75rem;
-    padding-left: 5vw;
+    padding-left: 66vw;
 }
 
 #footer img{
@@ -311,10 +311,11 @@ button:focus {outline:0;}
 #goTop {
     height: 30px;
     position: fixed;
-    right: 38vh;
-    bottom: 50px;
+    left: calc(66vw + 240px - 42.4px);
+    bottom: 97px;
     display: none;
     color: #01c6ff;
+    z-index: 99;
 }
 
 #goTop::before{
