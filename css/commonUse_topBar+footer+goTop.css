@@ -134,6 +134,7 @@ button:focus {outline:0;}
     height: 100vh;
     padding-top: 100px;
     display: flex;
+    flex-direction: column;
     /* 先推到螢幕右邊 */
     transform: translateX(150%);
     transition: transform .7s ease-in-out;
@@ -172,6 +173,20 @@ button:focus {outline:0;}
     /* display: flex; */
     /* 再推回來 */
     transform: translateX(0);
+}
+/* contact */
+.contact{
+    margin-left: 5vw;
+    position: relative;
+    bottom: -130px;
+}
+
+.contact img{
+    width: 70px;
+}
+
+.contact img:hover{
+    cursor: pointer;
 }
 
 #maskMain{
@@ -290,13 +305,19 @@ button:focus {outline:0;}
     padding-left: 66vw;
 }
 
-#footer img{
+@media only screen and (max-width: 768px){
+    #footer{
+        padding-left:5vw;
+    }
+}
+
+/* #footer img{
     width: 35px;
 }
 
 #footer img:hover{
     cursor: pointer;
-}
+} */
 
 #footer .email{
     font-size: 1rem;

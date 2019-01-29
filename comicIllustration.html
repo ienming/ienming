@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./css/fancyboxCustom.css">
     <!-- commonUse CSS -->
-    <link rel=stylesheet type="text/css" href="css/commonUse_topBar+footer+goTop.css">
+    <link rel=stylesheet type="text/css" href="./css/commonUse_topBar+footer+goTop.css">
     <!-- mainCard_sideBar CSS -->
     <link rel=stylesheet type="text/css" href="./css/mainCard_sideBar.css">
     <!-- jQuery -->
@@ -29,40 +29,151 @@
             $('.flexslider').flexslider();
         });
     </script>
-    <style>
-        /* .heightadjust {
-            height: 64px;
-        } */
+    <!-- masonry -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
-        .content {
-            margin-left: 14vw;
+    <style>
+        .heightadjust {
+            height: 64px;
         }
 
         .flexslider {
             border: 0;
-            /* background-color: white; */
-        }
-
-        #slider>.slides {
-            height: 80vh;
-            overflow: hidden;
         }
 
         .flex-caption {
-            position: fixed;
-            top: 0;
-            left: 65vw;
-            width: 230px;
-            padding: 25vh 1vw 0 1vw;
+            width: 80%;
+            padding: 5px;
+            position: absolute;
+            left: 0;
+            bottom: -33.13px;
             color: #333;
             font-size: 14px;
             line-height: 18px;
             margin: 0;
-            background-color: greenyellow;
         }
 
         #carousel li:hover {
             cursor: pointer;
+        }
+
+        .slides img {
+            margin-bottom: 0;
+        }
+
+        /* from projects */
+        .mainCard {
+            width: 100%;
+            padding-bottom: 22px;
+            padding-right: 20vw;
+            padding-left: 15vw;
+        }
+
+        .content {
+            margin-left: 0;
+            width: 100%;
+            max-width: 690px;
+        }
+
+        .grid-item {
+            width: 230px;
+        }
+
+        .projects {
+            max-width: 230px;
+            margin-bottom: 30px;
+            margin-right: 1vw;
+            border-top: rgba(233, 87, 19, 0) solid 5px;
+            /* display: inline-block; */
+        }
+
+        .projects:hover {
+            border-top: #01c6ff solid 5px;
+            cursor: pointer;
+        }
+
+        .container {
+            height: 157px;
+            margin-bottom: 10px;
+            padding: 0;
+            overflow: hidden;
+            margin-left: 0;
+            margin-right: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .coverImg {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        /* 手機板 */
+        @media only screen and (max-width: 768px) {
+            .container {
+                height: auto;
+                max-height: 240px;
+            }
+
+            .projects {
+                max-width: 100%;
+            }
+
+            .grid-item {
+                width: 90vw;
+            }
+
+            .projects>img {
+                width: 100%;
+                height: auto;
+            }
+
+            .mainCard {
+                padding: 0 5vw;
+            }
+
+            .title {
+                font-size: 1.35rem;
+            }
+        }
+
+        .description {
+            word-break: break-all;
+            text-align: left;
+        }
+
+        .description p {
+            margin-bottom: 0;
+        }
+
+        .title {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #333;
+            line-height: 26px;
+        }
+
+        .title:hover {
+            color: #01c6ff;
+        }
+
+        .type {
+            font-size: 1rem;
+            font-style: oblique;
+        }
+
+        .media,
+        .date {
+            font-size: .75rem;
+            color: rgb(130, 130, 130);
+            line-height: 15px;
+        }
+
+        .intro {
+            margin-top: 15px;
+            font-size: .9rem;
+            line-height: 20px;
         }
     </style>
 </head>
@@ -100,10 +211,12 @@
             <a href="projects.html">
                 <li class="drawerItem">Design Works</li>
             </a>
-            <a href="lifedraw.html">
-                <li class="drawerItem">Lifedrawing</li>
-            </a>
         </ul>
+        <div class="contact">
+            <a href="https://www.instagram.com/ienming/?fbclid=IwAR1_fAR2z_XVRMx0ZeRDLRiOsMj4LFHFdu5LYqo7pnNeQUO2shqbahiaUyQ"><img
+                    src="./img/ig.gif" /></a>
+            <p class="email">hsieh.alan.0726@gmail.com</p>
+        </div>
     </nav>
 
     <!-- 把主頁從topbar擠下去 -->
@@ -118,26 +231,32 @@
                 <div id="slider" class="flexslider bio">
                     <ul class="slides">
                         <li>
-                            <a href="./img/comicIllustration/king001_small.jpg" data-fancybox="gallery" data-caption="My caption">
-                                <img class="coverImg" src="./img/comicIllustration/king001_small.jpg" />
+                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery" data-caption="My caption">
+                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
                             </a>
                             <p class="flex-caption">the Green, leaves.....</p>
                         </li>
                         <li>
-                            <a href="./img/comicIllustration/img019.jpg" data-fancybox="gallery" data-caption="My caption">
-                                <img class="coverImg" src="./img/comicIllustration/img019.jpg" />
-                            </a>
-                            <p class="flex-caption">the Green, leaves.....</p>
-                        </li>
-                        <li>
-                            <a href="./img/comicIllustration/img020.jpg" data-fancybox="gallery" data-caption="My22 caption">
-                                <img class="coverImg" src="./img/comicIllustration/img020.jpg" />
+                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery" data-caption="My22 caption">
+                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
                             </a>
                             <p class="flex-caption">xxxxxx</p>
                         </li>
                         <li>
-                            <a href="./img/comicIllustration/img021.jpg" data-fancybox="gallery">
-                                <img class="coverImg" src="./img/comicIllustration/img021.jpg" />
+                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery">
+                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
+                            </a>
+                            <p class="flex-caption">xxxxxx</p>
+                        </li>
+                        <li>
+                            <a href="./img/watercolor/oldBarber.jpg" data-fancybox="gallery">
+                                <img class="coverImg" src="./img/watercolor/oldBarber.jpg" />
+                            </a>
+                            <p class="flex-caption">xxxxxx</p>
+                        </li>
+                        <li>
+                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery">
+                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
                             </a>
                             <p class="flex-caption">xxxxxx</p>
                         </li>
@@ -147,18 +266,178 @@
                 <div id="carousel" class="flexslider">
                     <ul class="slides">
                         <li>
-                            <img src="./img/comicIllustration/king001_small.jpg" />
+                            <img src="./img/watercolor/綠.jpg" />
                         </li>
                         <li>
-                            <img src="./img/comicIllustration/img019.jpg" />
+                            <img src="./img/watercolor/綠.jpg" />
                         </li>
                         <li>
-                            <img src="./img/comicIllustration/img020.jpg" />
+                            <img src="./img/watercolor/綠.jpg" />
                         </li>
                         <li>
-                            <img src="./img/comicIllustration/img021.jpg" />
+                            <img src="./img/watercolor/oldBarber.jpg" />
+                        </li>
+                        <li>
+                            <img src="./img/watercolor/綠.jpg" />
                         </li>
                     </ul>
+                </div>
+            </section>
+
+            <!-- 分隔線 -->
+            <div style="width: 100%; height: 100px; margin-bottom: 50px; padding-left: 28%">
+                <img src="./img/loadingFish.gif" / style="height: 100%;">
+                <img src="./img/loadingFish.gif" / style="height: 100%;">
+                <img src="./img/loadingFish.gif" / style="height: 100%;">
+            </div>
+
+            <!-- cascade -->
+            <section class="grid">
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="projects/QiDi.html">
+                                <img class="coverImg" src="img/projects/基地影像設計/基地_branding_display2.jpg">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <a href="projects/QiDi.html">
+                                <p class="title">基地影像設計<br>
+                                    Secret Base Video Studio
+                                </p>
+                            </a>
+                            <p class="type">visual Identity, logo</p>
+                            <p class="date">2018/ May</p>
+                            <p class="intro">基地影像設計工作室主要關懷台灣原住民族、文化議題，
+                                透過影像、平面視覺與聲音創作，
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/9thysf.html"><img class="coverImg" src="img/projects/AIESEC YSF/ysf1.jpg" /></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/9thysf.html">
+                                <p class="title">青年影響力論壇<br>
+                                    9th Youth Speak Forum
+                                </p>
+                            </a>
+                            <p class="type">poster, brochure, ad, illustration</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/STV.html"><img class="coverImg" src="img/projects/STV/stv_logo1.png"></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/STV.html">
+                                <p class="title">科技大觀園<br>
+                                    Sci-Tech Vista
+                                </p>
+                            </a>
+                            <p class="type">Logo design</p>
+                            <p class="date">2018</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/cutSugar.html"><img class="coverImg" src="img/projects/cutDownSugar/cutdownsugar1.jpg"></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/cutSugar.html">
+                                <p class="title">減糖大作戰<br>
+                                    Cut Down Sugar!
+                                </p>
+                            </a>
+                            <p class="type">UI design</p>
+                            <p class="date">2019/ January</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/f-OOL-ish.html"><img class="coverImg" src="img/projects/f-OOL-ish/foolish6.png"></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/f-OOL-ish.html">
+                                <p class="title">漁蠢仨<br>
+                                    f-OOL-ish
+                                </p>
+                            </a>
+                            <p class="type">VI, logo design</p>
+                            <p class="date">2018/ July</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/existem.html"><img class="coverImg" src="img/projects/Existem/existem0.png"></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/existem.html">
+                                <p class="title">超公制<br>
+                                    Existem
+                                </p>
+                            </a>
+                            <p class="type">Visual design</p>
+                            <p class="date">2018</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/gladiolus.html"><img class="coverImg" src="img/projects/gladiolus/gla_present_frontBack.jpg"></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/gladiolus.html">
+                                <p class="title">《唐菖蒲》<br>
+                                    <I>Gladiolus</I>
+                                </p>
+                            </a>
+                            <p class="type">Magazine design, illustration</p>
+                            <p class="date">2017/ December</p>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- 撐開父的高度 -->
@@ -211,6 +490,15 @@
                 controlNav: false,
                 sync: "#carousel"
             });
+        });
+    </script>
+    <!-- masonry -->
+    <script>
+        $('.grid').masonry({
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: 230,
+            percentPosition: true
         });
     </script>
 </body>
