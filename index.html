@@ -85,7 +85,7 @@
             .carousel-indicators {
                 /* right: calc(15vw + 144.5px - 122.787px);
                 left: auto; */
-                width: calc(230px - 2vw);
+                /* width: calc(230px - 2vw); */
                 left: 66vw;
                 right: auto;
                 bottom: 5%;
@@ -97,12 +97,16 @@
             .carousel-indicators>li {
                 width: 17px;
                 height: 17px;
-                background-color: #333;
+                background-color: rgba(0,0,0,.45);
+            }
+
+            .carousel-indicators>li.active {
+                background-color: #01c6ff;
             }
 
             .carousel-indicators>li:hover {
                 cursor: pointer;
-                background-color: rgb(151, 151, 151);
+                background-color:white;
             }
 
             .carousel-control {
@@ -111,8 +115,8 @@
                 height: 20px;
                 left: 66vw;
                 /* right: calc(15vw + 144.5px - 122.787px); */
-                /* width: 115px; */
-                width: calc(230px - 2vw);
+                width: 115px;
+                /* width: calc(230px - 2vw); */
                 display: flex;
                 justify-content: space-between;
                 align-items: center;

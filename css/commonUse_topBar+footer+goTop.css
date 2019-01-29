@@ -151,6 +151,23 @@ button:focus {outline:0;}
     margin-bottom: 10px;
 }
 
+.drawer li::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color:#01c6ff;
+    transform-origin: bottom left;
+    transition: transform 0.45s ease-in-out;
+}
+
+.drawer li:hover::before{
+    transform: scaleX(1);
+}
+
 .open {
     /* display: flex; */
     /* 再推回來 */

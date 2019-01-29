@@ -18,7 +18,7 @@
     <script src="./js/jquery-ui.js"></script>
     <!-- masonry -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <!-- scrollRebeal -->
+    <!-- scrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <style>
         .heightadjust {
@@ -27,29 +27,13 @@
 
         .mainCard {
             width: 100%;
-            /* display: flex;
-            flex-direction: column; */
-            /* justify-content: center;
-            align-items: center; */
             padding-bottom: 22px;
-            /* padding-top: 64px; */
             padding-right: 20vw;
             padding-left: 15vw;
         }
 
         .grid-item {
             width: 230px;
-        }
-
-        /* 電腦版橫著排 */
-        @media only screen and (min-width: 768px) {
-            .mainCard {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                /* padding-right: calc(40vh + 280.3px); */
-                /* padding-right: 35vw; */
-            }
         }
 
         .clear {
@@ -60,7 +44,13 @@
             max-width: 230px;
             margin-bottom: 30px;
             margin-right: 1vw;
+            border-top: rgba(233, 87, 19, 0) solid 5px;
             /* display: inline-block; */
+        }
+
+        .projects:hover {
+            border-top: #01c6ff solid 5px;
+            cursor: pointer;
         }
 
         .container {
@@ -78,15 +68,6 @@
             width: 100%;
             overflow: hidden;
             margin-bottom: 10px;
-            transition: ease-in-out;
-            transition-duration: .5s;
-        }
-
-        .coverImg:hover {
-            cursor: pointer;
-            transform: scale(1.5);
-            transition: ease-in-out;
-            transition-duration: .5s;
         }
 
         /* 手機板 */
@@ -112,6 +93,10 @@
             .mainCard {
                 padding: 0 5vw;
             }
+
+            .title {
+                font-size: 1.35rem;
+            }
         }
 
         .description {
@@ -132,7 +117,6 @@
 
         .title:hover {
             color: #01c6ff;
-            cursor: pointer;
         }
 
         .type {

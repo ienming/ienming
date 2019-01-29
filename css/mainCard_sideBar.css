@@ -109,12 +109,18 @@ figcaption>a{
     }
 
     h1 {
+        margin-left: 0;
         margin-bottom: 20px;
-        padding-left: 5vw;
+        width: 100vw;
+        padding: 0 5vw;
     }
 
     .mainCard{
         padding-top: 32px;
+    }
+
+    .content{
+        margin-left: 0;
     }
 }
 
@@ -133,11 +139,21 @@ figcaption>a{
     line-height: 15px;
 }
 
+.metaMobile>p{
+    margin-top: 15px;
+    word-break: break-all;
+    text-align: justify;
+    font-style: normal;
+    line-height: 25px;
+}
+
 .metaMobile {
     border-left: 4px solid #333;
     background-color: rgb(240, 240, 240);
     margin-top: -15px;
     margin-bottom: 35px;
     padding-left: 8px;
+    padding-right: 15px;
     font-style: italic;
+    max-width: 90vw;
 }
