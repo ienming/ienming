@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("#preload").delay(1000).fadeOut("slow");
 });
 
-// menu animated
+// hamburger animated
 var hamburgerBtn = document.querySelector('.hamburger');
 var drawer = document.querySelector('.drawer');
 var i = 0;
@@ -31,15 +31,15 @@ function trigger() {
 }
 
 
-$(".menuHover").hover(
-    function () {
-        $(this).addClass("menuHoverOn", "swing");
-        $(this).css("color", "white");
-    }, function () {
-        $(this).removeClass("menuHoverOn", 200, "swing");
-        $(this).css("color", "black");
-    }
-);
+// $(".menuHover").hover(
+//     function () {
+//         $(this).addClass("menuHoverOn", "swing");
+//         $(this).css("color", "white");
+//     }, function () {
+//         $(this).removeClass("menuHoverOn", 200, "swing");
+//         $(this).css("color", "black");
+//     }
+// );
 
 
 //scroll偵測

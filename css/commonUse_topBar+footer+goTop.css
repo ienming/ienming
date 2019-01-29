@@ -54,11 +54,11 @@ a:hover{
     /* right: calc(15vw + 144.5px - 122.787px + 60px - 1vw); */
     /* left: 4vw; */
     /* width: calc(150px - .5vw); */
-    background-color: rgb(233, 87, 19);
+    /* background-color: rgb(233, 87, 19); */
 }
 
 .topBarMask{
-    background-color: #01c6ff;
+    background-color: white;
 }
 
 #logo {
@@ -66,11 +66,11 @@ a:hover{
     cursor: pointer;
 }
 
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     #logo{
-        margin-left: calc(50vw - 50px);
+        margin-left: 5vw;
     }
-} */
+}
 
 .nav {
     height: 100px;
