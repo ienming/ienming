@@ -10,7 +10,9 @@ h1 {
     font-family: '微軟正黑體',
         sans-serif;
     margin-top: 45px;
-    padding-left: 5vw;
+    width: 40vw;
+    margin-left: 20vw;
+    /* padding-left: 5vw; */
     opacity: 0;
     position: relative;
     left: -200px;
@@ -18,6 +20,7 @@ h1 {
 
 .content{
     opacity: 1;
+    margin-left: 15vw;
 }
 
 /* 電腦版mainCard左padding調整 */
@@ -48,7 +51,8 @@ h1 {
     text-align: justify;
     text-indent: 1em;
     font-size: 1.1rem;
-    padding-right: 20vw;
+    /* padding-right: 5vw;
+    padding-left: 5vw; */
     margin:50px 0;
 }
 
@@ -85,7 +89,8 @@ figcaption>a{
 /* 電腦版content寬度和breadcrumb */
 @media only screen and (min-width: 768px) {
     .content {
-        width: calc(100vw - (5vw + 280.3px + 42vh));
+        /* width: calc(100vw - (5vw + 280.3px + 42vh)); */
+        width: 45vw;
     }
 
     .metaMobile {
