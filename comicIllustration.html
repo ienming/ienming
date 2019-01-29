@@ -37,12 +37,14 @@
             height: 64px;
         }
 
-        .flexslider {
-            border: 0;
+        @media only screen and (max-width: 768px) {
+            .flexslider {
+                margin-bottom: 30px;
+            }
         }
 
         .flex-caption {
-            width: 80%;
+            width: 60%;
             padding: 5px;
             position: absolute;
             left: 0;
@@ -53,12 +55,40 @@
             margin: 0;
         }
 
-        #carousel li:hover {
-            cursor: pointer;
+        @media only screen and (max-width: 768px) {
+            .flex-caption {
+                width: 100%;
+            }
         }
 
         .slides img {
             margin-bottom: 0;
+        }
+
+        /* 限制輪播的圖片高度 */
+        #slider img {
+            max-height: 400px;
+            width: 100%;
+            max-width: 690px;
+            object-fit: cover;
+        }
+
+        @media only screen and (max-width: 768px) {
+            #slider img {
+                max-height: 231px;
+                width: -webkit-fill-available;
+                object-fit: cover;
+            }
+        }
+
+        #carousel img {
+            max-height: 80px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        #carousel li:hover {
+            cursor: pointer;
         }
 
         /* from projects */
@@ -175,6 +205,23 @@
             font-size: .9rem;
             line-height: 20px;
         }
+
+        .division {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 50px;
+            padding-left: 28%
+        }
+
+        @media only screen and (max-width: 768px) {
+            .division {
+                padding-left: 0;
+            }
+        }
+
+        .division img {
+            height: 100%;
+        }
     </style>
 </head>
 
@@ -231,32 +278,33 @@
                 <div id="slider" class="flexslider bio">
                     <ul class="slides">
                         <li>
-                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery" data-caption="My caption">
-                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
+                            <a href="./img/comicIllustration/swimmingPool1.jpg" data-fancybox="gallery" data-caption="My caption">
+                                <img class="coverImg" src="./img/comicIllustration/swimmingPool1.jpg" />
                             </a>
                             <p class="flex-caption">the Green, leaves.....</p>
                         </li>
                         <li>
-                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery" data-caption="My22 caption">
-                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
+                            <a href="./img/comicIllustration/swimmingPool2.jpg" data-fancybox="gallery" data-caption="My22 caption">
+                                <img class="coverImg" src="./img/comicIllustration/swimmingPool2.jpg"" />
+                            </a>
+                            <p class="
+                                    flex-caption">xxxxxx</p>
+                        </li>
+                        <li>
+                            <a href="./img/comicIllustration/swimmingPool3.jpg"" data-fancybox=" gallery">
+                                <img class="coverImg" src="./img/comicIllustration/swimmingPool3.jpg" />
                             </a>
                             <p class="flex-caption">xxxxxx</p>
                         </li>
                         <li>
-                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery">
-                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
+                            <a href="./img/comicIllustration/king001_small.jpg" data-fancybox="gallery">
+                                <img class="coverImg" src="./img/comicIllustration/king001_small.jpg" />
                             </a>
                             <p class="flex-caption">xxxxxx</p>
                         </li>
                         <li>
-                            <a href="./img/watercolor/oldBarber.jpg" data-fancybox="gallery">
-                                <img class="coverImg" src="./img/watercolor/oldBarber.jpg" />
-                            </a>
-                            <p class="flex-caption">xxxxxx</p>
-                        </li>
-                        <li>
-                            <a href="./img/watercolor/綠.jpg" data-fancybox="gallery">
-                                <img class="coverImg" src="./img/watercolor/綠.jpg" />
+                            <a href="./img/comicIllustration/img019.jpg" data-fancybox="gallery">
+                                <img class="coverImg" src="./img/comicIllustration/img019.jpg" />
                             </a>
                             <p class="flex-caption">xxxxxx</p>
                         </li>
@@ -266,26 +314,26 @@
                 <div id="carousel" class="flexslider">
                     <ul class="slides">
                         <li>
-                            <img src="./img/watercolor/綠.jpg" />
+                            <img src="./img/comicIllustration/swimmingPool1.jpg" />
                         </li>
                         <li>
-                            <img src="./img/watercolor/綠.jpg" />
+                            <img src="./img/comicIllustration/swimmingPool2.jpg" />
                         </li>
                         <li>
-                            <img src="./img/watercolor/綠.jpg" />
+                            <img src="./img/comicIllustration/swimmingPool3.jpg" />
                         </li>
                         <li>
-                            <img src="./img/watercolor/oldBarber.jpg" />
+                            <img src="./img/comicIllustration/king001_small.jpg" />
                         </li>
                         <li>
-                            <img src="./img/watercolor/綠.jpg" />
+                            <img src="./img/comicIllustration/img019.jpg" />
                         </li>
                     </ul>
                 </div>
             </section>
 
             <!-- 分隔線 -->
-            <div style="width: 100%; height: 100px; margin-bottom: 50px; padding-left: 28%">
+            <div class="division">
                 <img src="./img/loadingFish.gif" / style="height: 100%;">
                 <img src="./img/loadingFish.gif" / style="height: 100%;">
                 <img src="./img/loadingFish.gif" / style="height: 100%;">
