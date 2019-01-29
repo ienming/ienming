@@ -18,6 +18,8 @@
     <link rel=stylesheet type="text/css" href="./css/commonUse_topBar+footer+goTop.css">
     <!-- mainCard_sideBar CSS -->
     <link rel=stylesheet type="text/css" href="./css/mainCard_sideBar.css">
+    <!-- mainCard_cascade CSS -->
+    <link rel=stylesheet type="text/css" href="./css/projectCascade.css" />
     <!-- jQuery -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
@@ -37,12 +39,6 @@
             height: 64px;
         }
 
-        @media only screen and (max-width: 768px) {
-            .flexslider {
-                margin-bottom: 30px;
-            }
-        }
-
         .flex-caption {
             width: 60%;
             padding: 5px;
@@ -53,12 +49,6 @@
             font-size: 14px;
             line-height: 18px;
             margin: 0;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .flex-caption {
-                width: 100%;
-            }
         }
 
         .slides img {
@@ -73,14 +63,6 @@
             object-fit: cover;
         }
 
-        @media only screen and (max-width: 768px) {
-            #slider img {
-                max-height: 231px;
-                width: -webkit-fill-available;
-                object-fit: cover;
-            }
-        }
-
         #carousel img {
             max-height: 80px;
             width: 100%;
@@ -91,119 +73,10 @@
             cursor: pointer;
         }
 
-        /* from projects */
-        .mainCard {
-            width: 100%;
-            padding-bottom: 22px;
-            padding-right: 20vw;
-            padding-left: 15vw;
-        }
-
         .content {
             margin-left: 0;
             width: 100%;
             max-width: 690px;
-        }
-
-        .grid-item {
-            width: 230px;
-        }
-
-        .projects {
-            max-width: 230px;
-            margin-bottom: 30px;
-            margin-right: 1vw;
-            border-top: rgba(233, 87, 19, 0) solid 5px;
-            /* display: inline-block; */
-        }
-
-        .projects:hover {
-            border-top: #01c6ff solid 5px;
-            cursor: pointer;
-        }
-
-        .container {
-            height: 157px;
-            margin-bottom: 10px;
-            padding: 0;
-            overflow: hidden;
-            margin-left: 0;
-            margin-right: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .coverImg {
-            width: 100%;
-            overflow: hidden;
-            margin-bottom: 10px;
-        }
-
-        /* 手機板 */
-        @media only screen and (max-width: 768px) {
-            .container {
-                height: auto;
-                max-height: 240px;
-            }
-
-            .projects {
-                max-width: 100%;
-            }
-
-            .grid-item {
-                width: 90vw;
-            }
-
-            .projects>img {
-                width: 100%;
-                height: auto;
-            }
-
-            .mainCard {
-                padding: 0 5vw;
-            }
-
-            .title {
-                font-size: 1.35rem;
-            }
-        }
-
-        .description {
-            word-break: break-all;
-            text-align: left;
-        }
-
-        .description p {
-            margin-bottom: 0;
-        }
-
-        .title {
-            font-size: 1.15rem;
-            font-weight: bold;
-            color: #333;
-            line-height: 26px;
-        }
-
-        .title:hover {
-            color: #01c6ff;
-        }
-
-        .type {
-            font-size: 1rem;
-            font-style: oblique;
-        }
-
-        .media,
-        .date {
-            font-size: .75rem;
-            color: rgb(130, 130, 130);
-            line-height: 15px;
-        }
-
-        .intro {
-            margin-top: 15px;
-            font-size: .9rem;
-            line-height: 20px;
         }
 
         .division {
@@ -213,14 +86,28 @@
             padding-left: 28%
         }
 
+        .division img {
+            height: 100%;
+        }
+
         @media only screen and (max-width: 768px) {
+            .flex-caption {
+                width: 100%;
+            }
+
+            .flexslider {
+                margin-bottom: 30px;
+            }
+
             .division {
                 padding-left: 0;
             }
-        }
 
-        .division img {
-            height: 100%;
+            #slider img {
+                max-height: 231px;
+                width: -webkit-fill-available;
+                object-fit: cover;
+            }
         }
     </style>
 </head>
