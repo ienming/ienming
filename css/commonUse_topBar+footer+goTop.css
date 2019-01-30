@@ -18,11 +18,12 @@ body{
 
 #spinner{
     padding-top: calc((100vh - 450px)/2);
+    height: 450px;
 }
 
 @media only screen and (max-width: 768px) {
     #spinner{
-        width: 35vw;
+        height: 40vh;
     }
 }
 
@@ -43,18 +44,10 @@ a:hover{
 
 .topBar {
     position: fixed;
-    /* top: 0;
-    left: 0;
-    height: 100px;
-    width: 100%; */
     z-index: 12;
     top: 0;
     right: auto;
     left: 66vw;
-    /* right: calc(15vw + 144.5px - 122.787px + 60px - 1vw); */
-    /* left: 4vw; */
-    /* width: calc(150px - .5vw); */
-    /* background-color: rgb(233, 87, 19); */
 }
 
 .topBarMask{
@@ -82,13 +75,16 @@ a:hover{
     position: fixed;
     right: auto;
     left: 66vw;
-    /* right: calc(15vw + 144.5px - 122.787px + 60px - 1vw); */
     top: 100px;
     padding: 0px;
     border: none;
     outline: none;
     background-color: rgb(0,0,0,0);
     z-index: 12;
+}
+
+.hamburger:hover{
+    cursor: pointer;
 }
 
 button:focus {outline:0;}
@@ -125,7 +121,6 @@ button:focus {outline:0;}
 .drawer {
     position: fixed;
     top: 0;
-    /* left: 100vw/2-(55.75)/2; */
     right: 0;
     z-index: 11;
     color: #333;
@@ -170,7 +165,6 @@ button:focus {outline:0;}
 }
 
 .open {
-    /* display: flex; */
     /* 再推回來 */
     transform: translateX(0);
 }
@@ -310,14 +304,6 @@ button:focus {outline:0;}
         padding-left:5vw;
     }
 }
-
-/* #footer img{
-    width: 35px;
-}
-
-#footer img:hover{
-    cursor: pointer;
-} */
 
 #footer .email{
     font-size: 1rem;
