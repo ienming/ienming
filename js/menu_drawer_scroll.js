@@ -18,6 +18,7 @@ function trigger() {
         $("article, h1").toggleClass("articleLeft");
         $("article, h1").removeClass("articleOrigin");
         $("#maskMain").fadeTo("fast", 1).show();
+        $("header").removeClass("topBarMask", 500, "easeInBack");
     }
 
     if (i % 2 == 1) {
@@ -44,7 +45,10 @@ function trigger() {
 
 //scroll偵測
 $(window).scroll(function () {
-    if ($(window).scrollTop() >= 120) {
+    if ($(".drawer").is('.open')) {
+        // remove topBarMask
+        $("header").removeClass("topBarMask", 500, "swing");
+    } else if ($(window).scrollTop() >= 120) {
         // topBarMask
         $("header").addClass("topBarMask", 500, "swing");
         //goTop
