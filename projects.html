@@ -18,6 +18,14 @@
     <!-- jQuery -->
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery-ui.js"></script>
+    <!-- flexSlider -->
+    <link rel="stylesheet" href="./css/flexslider.css" type="text/css">
+    <script src="./js/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(window).on(function () {
+            $('.flexslider').flexslider();
+        });
+    </script>
     <!-- masonry -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <style>
@@ -28,12 +36,6 @@
 </head>
 
 <body>
-    <!-- loading spinner -->
-    <div id="preload">
-        <object>
-            <embed src="./img/loadingFish.gif" id="spinner">
-        </object>
-    </div>
     <!-- topBar -->
     <header class="topBar">
         <div class="nav" role="navigation">
@@ -73,149 +75,186 @@
 
     <!-- 主內容article -->
     <div id="maskMain"></div>
-    <article class="mainCard grid">
-        <div class="grid-item">
-            <div class="projects">
-                <div class="container">
-                    <a href="projects/QiDi.html">
-                        <img class="coverImg" src="img/projects/基地影像設計/基地_branding_display2.jpg">
-                    </a>
+    <article class="mainCard">
+        <section class="content">
+            <!-- 圖片輪播 + fancyBox-->
+            <section>
+                <div id="slider" class="flexslider bio">
+                    <ul class="slides">
+                        <li>
+                            <a href="./img/projects/f-OOL-ish/foolish4.png" data-fancybox="gallery" data-caption="My caption">
+                                <img class="coverImg" src="./img/projects/f-OOL-ish/foolish4.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./img/projects/gladiolus/gla_present_frontBack.jpg" data-fancybox="gallery" data-caption="My caption">
+                                <img class="coverImg" src="./img/projects/gladiolus/gla_present_frontBack.jpg" />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="description">
-                    <a href="projects/QiDi.html">
-                        <p class="title">基地影像設計<br>
-                            Secret Base Video Studio
-                        </p>
-                    </a>
-                    <p class="type">visual Identity, logo</p>
-                    <p class="date">2018/ May</p>
-                    <p class="intro">主要關懷台灣原住民族、文化議題的影像工作室，
-                        工作室視覺識別與圖標設計。
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        <div class="grid-item">
-            <div class="projects">
-                <div class="container">
-                    <a href="./projects/9thysf.html"><img class="coverImg" src="img/projects/AIESEC YSF/ysf1.jpg" /></a>
+                <div id="carousel" class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src="./img/projects/f-OOL-ish/foolish4.png" />
+                        </li>
+                    </ul>
                 </div>
-                <div class="description">
-                    <a href="./projects/9thysf.html">
-                        <p class="title">青年影響力論壇<br>
-                            9th Youth Speak Forum
-                        </p>
-                    </a>
-                    <p class="type">poster, brochure, ad illustration</p>
-                    <p class="date">2016/ Aug</p>
-                    <p class="intro">2016年台灣青年影響力論壇主題
-                        「最後世代大哉問」的海報主視覺、手冊、廣告設計。
-                    </p>
-                </div>
-            </div>
-        </div>
+            </section>
 
-        <div class="grid-item">
-            <div class="projects">
-                <div class="container">
-                    <a href="./projects/STV.html"><img class="coverImg" src="img/projects/STV/stv_logo1.png"></a>
-                </div>
-                <div class="description">
-                    <a href="./projects/STV.html">
-                        <p class="title">科技大觀園<br>
-                            Sci-Tech Vista
-                        </p>
-                    </a>
-                    <p class="type">Logo design</p>
-                    <p class="date">2018</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                </div>
+            <!-- 分隔線 -->
+            <div class="division" style="font-weight: bold; color: black;">
+                ////
             </div>
-        </div>
 
-        <div class="grid-item">
-            <div class="projects">
-                <div class="container">
-                    <a href="./projects/cutSugar.html"><img class="coverImg" src="img/projects/cutDownSugar/cutdownsugar1.jpg"></a>
-                </div>
-                <div class="description">
-                    <a href="./projects/cutSugar.html">
-                        <p class="title">減糖大作戰<br>
-                            Cut Down Sugar!
-                        </p>
-                    </a>
-                    <p class="type">UI design</p>
-                    <p class="date">2019/ January</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="grid-item">
-            <div class="projects">
-                <div class="container">
-                    <a href="./projects/f-OOL-ish.html"><img class="coverImg" src="img/projects/f-OOL-ish/foolish6.png"></a>
+            <!-- cascade projects -->
+            <section class="grid">
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="projects/QiDi.html">
+                                <img class="coverImg" src="img/projects/基地影像設計/基地_branding_display2.jpg">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <a href="projects/QiDi.html">
+                                <p class="title">基地影像設計<br>
+                                    Secret Base Video Studio
+                                </p>
+                            </a>
+                            <p class="type">visual Identity, logo</p>
+                            <p class="date">2018/ May</p>
+                            <p class="intro">主要關懷台灣原住民族、文化議題的影像工作室，
+                                工作室視覺識別與圖標設計。
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="description">
-                    <a href="./projects/f-OOL-ish.html">
-                        <p class="title">漁蠢仨<br>
-                            f-OOL-ish
-                        </p>
-                    </a>
-                    <p class="type">VI, logo design</p>
-                    <p class="date">2018/ July</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                    <p class="date">2016/ August</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="grid-item">
-            <div class="projects">
-                <div class="container">
-                    <a href="./projects/existem.html"><img class="coverImg" src="img/projects/Existem/existem0.png"></a>
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/9thysf.html"><img class="coverImg" src="img/projects/AIESEC YSF/ysf1.jpg" /></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/9thysf.html">
+                                <p class="title">青年影響力論壇<br>
+                                    9th Youth Speak Forum
+                                </p>
+                            </a>
+                            <p class="type">poster, brochure, ad illustration</p>
+                            <p class="date">2016/ Aug</p>
+                            <p class="intro">2016年台灣青年影響力論壇主題
+                                「最後世代大哉問」的海報主視覺、手冊、廣告設計。
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="description">
-                    <a href="./projects/existem.html">
-                        <p class="title">超公制<br>
-                            Existem
-                        </p>
-                    </a>
-                    <p class="type">Visual design</p>
-                    <p class="date">2018</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="grid-item">
-            <div class="projects">
-                <div class="container">
-                    <a href="./projects/gladiolus.html"><img class="coverImg" src="img/projects/gladiolus/gla_present_frontBack.jpg"></a>
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/STV.html"><img class="coverImg" src="img/projects/STV/stv_logo1.png"></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/STV.html">
+                                <p class="title">科技大觀園<br>
+                                    Sci-Tech Vista
+                                </p>
+                            </a>
+                            <p class="type">Logo design</p>
+                            <p class="date">2018</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="description">
-                    <a href="./projects/gladiolus.html">
-                        <p class="title">《唐菖蒲》<br>
-                            <I>Gladiolus</I>
-                        </p>
-                    </a>
-                    <p class="type">Magazine design, illustration</p>
-                    <p class="date">2017/ December</p>
+
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/cutSugar.html"><img class="coverImg" src="img/projects/cutDownSugar/cutdownsugar1.jpg"></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/cutSugar.html">
+                                <p class="title">減糖大作戰<br>
+                                    Cut Down Sugar!
+                                </p>
+                            </a>
+                            <p class="type">UI design</p>
+                            <p class="date">2019/ January</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <!-- 撐開父的高度 -->
-        <div class="clear"></div>
+
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/f-OOL-ish.html"><img class="coverImg" src="img/projects/f-OOL-ish/foolish6.png"></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/f-OOL-ish.html">
+                                <p class="title">漁蠢仨<br>
+                                    f-OOL-ish
+                                </p>
+                            </a>
+                            <p class="type">VI, logo design</p>
+                            <p class="date">2018/ July</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                            <p class="date">2016/ August</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/existem.html"><img class="coverImg" src="img/projects/Existem/existem0.png"></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/existem.html">
+                                <p class="title">超公制<br>
+                                    Existem
+                                </p>
+                            </a>
+                            <p class="type">Visual design</p>
+                            <p class="date">2018</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="projects">
+                        <div class="container">
+                            <a href="./projects/gladiolus.html"><img class="coverImg" src="img/projects/gladiolus/gla_present_frontBack.jpg"></a>
+                        </div>
+                        <div class="description">
+                            <a href="./projects/gladiolus.html">
+                                <p class="title">《唐菖蒲》<br>
+                                    <I>Gladiolus</I>
+                                </p>
+                            </a>
+                            <p class="type">Magazine design, illustration</p>
+                            <p class="date">2017/ December</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 撐開父的高度 -->
+            <div class="clear"></div>
+        </section>
     </article>
     <!-- goTop -->
     <div id="goTop">TOP</div>
@@ -230,12 +269,40 @@
     <!-- custom JS -->
     <script src="js/menu_drawer_scroll.js"></script>
     <!-- scrollReveal -->
-    <!-- preload snipper -->
+
+    <!-- flexslider -->
     <script>
+        $(document).ready(function () {
+            // flieslide interval change
+            $("#slider").flexslider({
+                slideshowSpeed: 3500
+            });
+
+            // The slider being synced must be initialized first
+            $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: true,
+                slideshow: true,
+                itemWidth: 157.5,
+                itemMargin: 5,
+                asNavFor: '#slider'
+            });
+
+            $('#slider').flexslider({
+                animation: "slide",
+                animationLoop: true,
+                controlNav: false,
+                sync: "#carousel"
+            });
+        });
+    </script>
+    <!-- preload snipper -->
+    <!-- <script>
         $(document).ready(function () {
             $("#preload").fadeOut("slow");
         });
-    </script>
+    </script> -->
     <!-- masonry -->
     <script>
         $('.grid').masonry({

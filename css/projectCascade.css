@@ -16,25 +16,25 @@
 
 .projects {
     max-width: 230px;
-    margin-bottom: 30px;
-    margin-right: 1vw;
+    /* margin-bottom: 30px;
+    margin-right: 1vw; */
     padding: 5px;
     border: rgba(233, 87, 19, 0) solid 1px;
     /* display: inline-block; */
 }
 
 .projects:hover {
-    border: #58ee00 solid 1px;
+    border: #bcbcbc solid 1px;
     cursor: pointer;
 }
 
-.projects::before{
+/* .projects::before{
     content: "";
     position: absolute;
     width: 100%;
-    height: 5px;
+    height: 2px;
     transform: scaleX(0);
-    top: 0;
+    top: 5px;
     left: 0;
     background-color: #3a0bd6;
     transform-origin: bottom left;
@@ -43,7 +43,7 @@
 
 .projects:hover::before{
     transform: scaleX(1);
-}
+} */
 
 .container {
     height: 157px;
@@ -107,10 +107,6 @@
     line-height: 18.5px;
 }
 
-/* .title:hover {
-    color: #d6330b;
-} */
-
 .type {
     font-size: 1rem;
     font-style: oblique;
@@ -127,4 +123,69 @@
     margin-top: 7px;
     font-size: .9rem;
     line-height: 20px;
+}
+
+.flex-caption {
+    width: 60%;
+    padding: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -33.13px;
+    color: #333;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+}
+
+.slides img {
+    margin-bottom: 0;
+}
+
+/* 限制輪播的圖片高度 */
+#slider img {
+    max-height: 400px;
+    width: 100%;
+    max-width: 690px;
+    object-fit: cover;
+}
+
+#carousel img {
+    max-height: 80px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#carousel li:hover {
+    cursor: pointer;
+}
+
+.content {
+    margin-left: 0;
+    width: 100%;
+    max-width: 690px;
+}
+
+.division {
+    width: 100%;
+    margin: 50px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .flex-caption {
+        width: 100%;
+    }
+
+    .flexslider {
+        margin-bottom: 30px;
+    }
+
+    .division {
+        padding-left: 0;
+    }
+
+    #slider img {
+        max-height: 231px;
+        width: -webkit-fill-available;
+        object-fit: cover;
+    }
 }

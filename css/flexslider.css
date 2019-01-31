@@ -73,7 +73,7 @@ html[xmlns] .flexslider .slides {
  * DEFAULT THEME
  * ====================================================================================================================*/
 .flexslider {
-  margin: 0 0 60px;
+  margin: 0 0 15px;
   background: #fff;
   border: 4px solid #fff;
   position: relative;
@@ -299,5 +299,4 @@ html[xmlns] .flexslider .slides {
   font-size: 14px;
   line-height: 18px;
   margin: 0;
-  border-bottom: #333 3px solid;
 }

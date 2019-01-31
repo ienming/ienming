@@ -2,29 +2,8 @@ body{
     font-family: 'Calibri',
     'Trebuchet MS','Helvetiac', 'Arial', 'LiHei Pro', '微軟正黑體',
     sans-serif;
+    color: #333;
     background-color: white;
-}
-
-#preload{
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: white;
-    z-index: 99;
-}
-
-#spinner{
-    padding-top: calc((100vh - 450px)/2);
-    height: 450px;
-}
-
-@media only screen and (max-width: 768px) {
-    #spinner{
-        height: 40vh;
-    }
 }
 
 a {
@@ -33,12 +12,12 @@ a {
 
 a:hover{
     text-decoration: none;
-    color: #58ee00;
+    color: #ef6000;
 }
 
 /* 反白顏色 */
 ::selection {
-    background-color: #58ee00;
+    background-color: #ef6000;
     color: white;
 }
 
@@ -98,7 +77,7 @@ button:focus {outline:0;}
 .bar3 {
     width: 60px;
     height: 3px;
-    background-color: #3a0bd6;
+    background-color: #1f9ff5;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -147,7 +126,7 @@ button:focus {outline:0;}
     margin-bottom: 10px;
 }
 
-.drawer li::before{
+.drawerItem::before{
     content: "";
     position: absolute;
     width: 100%;
@@ -155,12 +134,12 @@ button:focus {outline:0;}
     height: 5px;
     bottom: 0;
     left: 0;
-    background-color:#58ee00;
+    background-color:#ef6000;
     transform-origin: bottom left;
     transition: transform 0.45s ease-in-out;
 }
 
-.drawer li:hover::before{
+.drawerItem:hover::before{
     transform: scaleX(1);
 }
 
@@ -168,6 +147,7 @@ button:focus {outline:0;}
     /* 再推回來 */
     transform: translateX(0);
 }
+
 /* contact */
 .contact{
     margin-left: 5vw;
@@ -204,78 +184,8 @@ button:focus {outline:0;}
     transition: transform .6s ease-in-out;
 }
 
-/* 電腦hamburger */
-/* deskMenu */
-/* .menuHoverOn{
-    background-color: rgba(0, 0, 0, 0.45);
-}
-
-.menu {
-    position: absolute;
-    top:0;
-    left:4vw;
-    cursor: pointer;
-}
-
-.menu ul {
-    padding-left: 0;
-    margin-bottom: 0;
-    background-color: white;
-}
-
-.menu li {
-    list-style-type: none;
-    display: inline-block;
-    height: 100px;
-    width: 80px;
-    text-align: center;
-    font-size: 14px;
-    padding-top: 41.5px;
-    margin: 0 auto;
-    transition-duration: .3;
-    transition-timing-function: ease-in-out;
-    color: black;
-}
-
-.menu>ul>a:nth-child(3)>li{
-    width: 85px;
-}
-
-.menu a{
-    text-decoration: none;
-} */
-
-/* menu hover underline animation */
-/* .menu li{
-    position: relative;
-    display: inline-block;
-}
-
-.menu li::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 5px;
-    bottom: 0;
-    left: 0;
-    background-color:#01c6ff;
-    transform-origin: bottom left;
-    transition: transform 0.45s ease-in-out;
-}
-
-.menu li:hover::before{
-    transform: scaleX(1);
-} */
-
 /* 手機hamberger修改*/
 @media only screen and (max-width: 768px) {
-    /* .nav .menu {
-        display: none;
-    }
-    #menuHoverBox {
-        display: none;
-    } */
     .topBar{
         left: 0;
         width: 100vw;
@@ -318,10 +228,10 @@ button:focus {outline:0;}
 #goTop {
     height: 30px;
     position: fixed;
-    left: calc(66vw + 240px - 42.4px);
+    left: calc(66vw + 60px);
     bottom: 97px;
     display: none;
-    color: #58ee00;
+    color: #ef6000;
     z-index: 99;
 }
 
@@ -333,7 +243,7 @@ button:focus {outline:0;}
     transform: scaleX(0);
     bottom: -5px;
     left: 0;
-    background-color: #3a0bd6;
+    background-color: #1f9ff5;
     transform-origin: bottom left;
     transition: transform 0.45s ease-in;
 }
@@ -351,7 +261,7 @@ button:focus {outline:0;}
     display: none;
     width: 30px;
     height: 30px;
-    color: #58ee00;
+    color: #ef6000;
     text-decoration: underline;
     margin-left: 5vw;
     margin-bottom: 30px;
