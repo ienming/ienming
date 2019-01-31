@@ -12,8 +12,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <!-- fancyBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./css/fancyboxCustom.css">
     <!-- commonUse CSS -->
     <link rel=stylesheet type="text/css" href="./css/commonUse_topBar+footer+goTop.css">
+    <link rel=stylesheet type="text/css" href="./css/projectCascade.css" />
+    <!-- mainCard_sideBar CSS -->
+    <link rel=stylesheet type="text/css" href="./css/mainCard_sideBar.css">
+    <!-- mainCard_cascade CSS -->
     <link rel=stylesheet type="text/css" href="./css/projectCascade.css" />
     <!-- jQuery -->
     <script src="./js/jquery-3.3.1.min.js"></script>
@@ -28,11 +35,6 @@
     </script>
     <!-- masonry -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <style>
-        .heightadjust {
-            height: 128px;
-        }
-    </style>
 </head>
 
 <body>
@@ -87,7 +89,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./img/projects/gladiolus/gla_present_frontBack.jpg" data-fancybox="gallery" data-caption="My caption">
+                            <a href="./img/projects/gladiolus/gla_present_frontBack.jpg" data-fancybox="gallery"
+                                data-caption="My caption">
                                 <img class="coverImg" src="./img/projects/gladiolus/gla_present_frontBack.jpg" />
                             </a>
                         </li>
@@ -265,10 +268,16 @@
         <p>Copyright © 2019 ienMing. All rights reserved</p>
     </footer>
 
-
+    <!-- fancyBox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+    <script>
+        // Thanks to Maaaaark - https://github.com/maaaaark/bcSwipe/blob/master/jquery.bcSwipe.min.js
+        !function (t) { t.fn.bcSwipe = function (e) { var n = { threshold: 50 }; return e && t.extend(n, e), this.each(function () { function e(t) { 1 == t.touches.length && (u = t.touches[0].pageX, c = !0, this.addEventListener("touchmove", o, !1)) } function o(e) { if (c) { var o = e.touches[0].pageX, i = u - o; Math.abs(i) >= n.threshold && (h(), t(this).flexslider(i > 0 ? "next" : "prev")) } } function h() { this.removeEventListener("touchmove", o), u = null, c = !1 } var u, c = !1; "ontouchstart" in document.documentElement && this.addEventListener("touchstart", e, !1) }), this } }(jQuery);
+        // Swipe functions for Bootstrap Flexslider
+        $(".flexslider").bcSwipe({ threshold: 300 });
+    </script>
     <!-- custom JS -->
     <script src="js/menu_drawer_scroll.js"></script>
-    <!-- scrollReveal -->
 
     <!-- flexslider -->
     <script>
@@ -297,13 +306,6 @@
             });
         });
     </script>
-    <!-- preload snipper -->
-    <!-- <script>
-        $(document).ready(function () {
-            $("#preload").fadeOut("slow");
-        });
-    </script> -->
-    <!-- masonry -->
     <script>
         $('.grid').masonry({
             // options
