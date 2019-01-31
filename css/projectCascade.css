@@ -8,6 +8,26 @@
     padding-left: 15vw;
 }
 
+.hoverImgIntro {
+    background-color: rgba(0,0,0, 0.5);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    padding: 0 250px 10px 25px;
+    text-align: justify;
+}
+
+.hoverImgIntro:hover {
+    opacity: 1;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+}
+
 .grid-item {
     width: 230px;
     padding: 7px;

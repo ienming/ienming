@@ -12,9 +12,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <!-- fancyBox CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="./css/fancyboxCustom.css">
     <!-- commonUse CSS -->
     <link rel=stylesheet type="text/css" href="./css/commonUse_topBar+footer+goTop.css">
     <!-- mainCard_sideBar CSS -->
@@ -93,8 +90,16 @@
                 <div id="slider" class="flexslider bio">
                     <ul class="slides">
                         <li>
-                            <a href="./img/comicIllustration/swimmingpool/swimmingPool1.jpg" data-fancybox="gallery"
-                                data-caption="My caption">
+                            <a href="./comicIllustration/">
+                                <div class="hoverImgIntro">
+                                    <h2>
+                                        漁蠢仨 f-OOL-ish
+                                    </h2>
+                                    <p>
+                                        2018年，參與教育部舉辦的「尋找感動地圖」計畫，進行台灣漁村文化考察，
+                                        以漁村意象、三人行、海浪為創作發想，進行視覺識別設計。
+                                    </p>
+                                </div>
                                 <img class="coverImg" src="./img/comicIllustration/swimmingpool/swimmingPool1.jpg" />
                             </a>
                         </li>
@@ -186,8 +191,7 @@
     </footer>
 
 
-    <!-- fancyBox JS -->
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+    <!-- swipte images -->
     <script>
         // Thanks to Maaaaark - https://github.com/maaaaark/bcSwipe/blob/master/jquery.bcSwipe.min.js
         !function (t) { t.fn.bcSwipe = function (e) { var n = { threshold: 50 }; return e && t.extend(n, e), this.each(function () { function e(t) { 1 == t.touches.length && (u = t.touches[0].pageX, c = !0, this.addEventListener("touchmove", o, !1)) } function o(e) { if (c) { var o = e.touches[0].pageX, i = u - o; Math.abs(i) >= n.threshold && (h(), t(this).flexslider(i > 0 ? "next" : "prev")) } } function h() { this.removeEventListener("touchmove", o), u = null, c = !1 } var u, c = !1; "ontouchstart" in document.documentElement && this.addEventListener("touchstart", e, !1) }), this } }(jQuery);
