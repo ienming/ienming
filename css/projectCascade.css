@@ -18,13 +18,31 @@
     max-width: 230px;
     margin-bottom: 30px;
     margin-right: 1vw;
-    border-top: rgba(233, 87, 19, 0) solid 5px;
+    padding: 5px;
+    border: rgba(233, 87, 19, 0) solid 1px;
     /* display: inline-block; */
 }
 
 .projects:hover {
-    border-top: #01c6ff solid 5px;
+    border: #58ee00 solid 1px;
     cursor: pointer;
+}
+
+.projects::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    transform: scaleX(0);
+    top: 0;
+    left: 0;
+    background-color: #3a0bd6;
+    transform-origin: bottom left;
+    transition: transform 0.45s ease-in;
+}
+
+.projects:hover::before{
+    transform: scaleX(1);
 }
 
 .container {
@@ -89,9 +107,9 @@
     line-height: 18.5px;
 }
 
-.title:hover {
-    color: #01c6ff;
-}
+/* .title:hover {
+    color: #d6330b;
+} */
 
 .type {
     font-size: 1rem;

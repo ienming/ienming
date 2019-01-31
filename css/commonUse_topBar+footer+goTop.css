@@ -33,12 +33,12 @@ a {
 
 a:hover{
     text-decoration: none;
-    color: #01c6ff;
+    color: #58ee00;
 }
 
 /* 反白顏色 */
 ::selection {
-    background-color: #01c6ff;
+    background-color: #58ee00;
     color: white;
 }
 
@@ -98,7 +98,7 @@ button:focus {outline:0;}
 .bar3 {
     width: 60px;
     height: 3px;
-    background-color: #01c6ff;
+    background-color: #3a0bd6;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -155,7 +155,7 @@ button:focus {outline:0;}
     height: 5px;
     bottom: 0;
     left: 0;
-    background-color:#01c6ff;
+    background-color:#58ee00;
     transform-origin: bottom left;
     transition: transform 0.45s ease-in-out;
 }
@@ -321,7 +321,7 @@ button:focus {outline:0;}
     left: calc(66vw + 240px - 42.4px);
     bottom: 97px;
     display: none;
-    color: #01c6ff;
+    color: #58ee00;
     z-index: 99;
 }
 
@@ -333,7 +333,7 @@ button:focus {outline:0;}
     transform: scaleX(0);
     bottom: -5px;
     left: 0;
-    background-color: rgb(233, 87, 19);
+    background-color: #3a0bd6;
     transform-origin: bottom left;
     transition: transform 0.45s ease-in;
 }
@@ -351,7 +351,7 @@ button:focus {outline:0;}
     display: none;
     width: 30px;
     height: 30px;
-    color: #01c6ff;
+    color: #58ee00;
     text-decoration: underline;
     margin-left: 5vw;
     margin-bottom: 30px;
