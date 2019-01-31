@@ -4,6 +4,7 @@ body{
     sans-serif;
     color: #333;
     background-color: white;
+    cursor: default;
 }
 
 a {

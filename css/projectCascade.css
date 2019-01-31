@@ -166,7 +166,7 @@
     }
 
     #slider img {
-        max-height: 231px;
+        max-height: 188px;
         width: -webkit-fill-available;
         object-fit: cover;
     }
