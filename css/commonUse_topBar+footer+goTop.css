@@ -178,6 +178,12 @@ button:focus {outline:0;}
     cursor: pointer;
 }
 
+@media only screen and (max-width: 768px){
+    #drawerItems, .contact{
+        margin-left: 13vw;
+    }
+}
+
 #maskMain{
     width: 100vw;
     height: 100vh;
