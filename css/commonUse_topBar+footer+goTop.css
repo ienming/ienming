@@ -103,7 +103,7 @@ button:focus {outline:0;}
 }
 
 .bar2{
-    background-color: #3927d6;
+    background-color: rgb(99, 56, 255);
 }
 
 .bar3{
@@ -272,7 +272,6 @@ button:focus {outline:0;}
     left: calc(65vw + 230px - 70px);
     bottom: 97px;
     display: none;
-    color: #ff7157;
     z-index: 99;
 }
 
@@ -287,7 +286,6 @@ button:focus {outline:0;}
 #goTopMobile{
     display: none;
     width: 80px;
-    color: #ff7157;
     text-decoration: underline;
     margin: 50px 0 20px 5vw;
     font-size: 13pt;
