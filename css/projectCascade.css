@@ -60,12 +60,6 @@
     margin-bottom: 10px;
 }
 
-.coverImg:hover{
-    transition-duration: .3s;
-    transition-timing-function: ease-in-out;
-    transform: scale(1.1);
-}
-
 /* 手機板 */
 @media only screen and (max-width: 768px) {
     .container {
