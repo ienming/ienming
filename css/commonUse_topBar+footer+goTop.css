@@ -167,8 +167,7 @@ button:focus {outline:0;}
 /* contact */
 .contact{
     margin-left: 5vw;
-    position: relative;
-    bottom: -130px;
+    margin-top: 7.5vw;
 }
 
 .contact img{
