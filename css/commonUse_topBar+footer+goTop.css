@@ -263,7 +263,7 @@ button:focus {outline:0;}
 
 /* goTop */
 #goTop {
-    height: 30px;
+    width: 70px;
     position: fixed;
     left: calc(66vw + 60px);
     bottom: 97px;
@@ -272,32 +272,17 @@ button:focus {outline:0;}
     z-index: 99;
 }
 
-#goTop::before{
-    content: "";
-    position: absolute;
+#goTop img, #goTopMobile img{
     width: 100%;
-    height: 5px;
-    transform: scaleX(0);
-    bottom: -5px;
-    left: 0;
-    background-color: #50ccfd;
-    transform-origin: bottom left;
-    transition: transform 0.45s ease-in;
 }
 
 #goTop:hover{
     cursor: pointer;
-    font-weight: 700;
-}
-
-#goTop:hover::before{
-    transform: scaleX(1);
 }
 
 #goTopMobile{
     display: none;
-    width: 30px;
-    height: 30px;
+    width: 80px;
     color: #09bc33;
     text-decoration: underline;
     margin: 50px 0 20px 5vw;
