@@ -43,7 +43,7 @@ h1 {
 
 .bio img, .bio video {
     width: 100%;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 .bioText {
@@ -159,7 +159,7 @@ figcaption>a{
     border-top: 4px solid #09bc33;
     background-color: rgb(240, 240, 240);
     margin-top: -15px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     padding: 15px;
 }
 
