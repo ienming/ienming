@@ -30,6 +30,8 @@
             $('.flexslider').flexslider();
         });
     </script>
+    <!-- imageLoaded -->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <!-- masonry -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
@@ -343,6 +345,7 @@
 
     <!-- 版權footer -->
     <footer id="footer">
+        <p>Layout thanks to <a href="https://desandro.mit-license.org/">Mansory by David DeSandro</a></p>
         <p>Copyright © 2019 ienMing. All rights reserved</p>
     </footer>
 
@@ -384,12 +387,18 @@
             });
         });
     </script>
+
+    <!-- masonry -->
     <script>
         $('.grid').masonry({
             // options
             itemSelector: '.grid-item',
             columnWidth: 230,
             percentPosition: true
+        });
+
+        $('grid').imagesLoaded().progress(function () {
+            $('grid').masonry('layout');
         });
     </script>
 </body>
