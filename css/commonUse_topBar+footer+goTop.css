@@ -13,7 +13,7 @@ a {
 
 a:hover{
     text-decoration: none;
-    color: #09bc33;
+    color: #ff7157;
 }
 
 /* preload spinner*/
@@ -34,7 +34,7 @@ a:hover{
 
 /* 反白顏色 */
 ::selection {
-    background-color: #09bc33;
+    background-color: #ff7157;
     color: white;
 }
 
@@ -103,11 +103,11 @@ button:focus {outline:0;}
 }
 
 .bar2{
-    background-color: #ffe459;
+    background-color: #3927d6;
 }
 
 .bar3{
-    background-color: #09bc33;
+    background-color: #ff7157;
 }
 
 .change .bar1 {
@@ -272,7 +272,7 @@ button:focus {outline:0;}
     left: calc(65vw + 230px - 70px);
     bottom: 97px;
     display: none;
-    color: #09bc33;
+    color: #ff7157;
     z-index: 99;
 }
 
@@ -287,7 +287,7 @@ button:focus {outline:0;}
 #goTopMobile{
     display: none;
     width: 80px;
-    color: #09bc33;
+    color: #ff7157;
     text-decoration: underline;
     margin: 50px 0 20px 5vw;
     font-size: 13pt;
