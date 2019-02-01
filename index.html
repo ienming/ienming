@@ -65,11 +65,8 @@
                 top: 0;
                 left: 65vw;
                 right: auto;
-                /* right: 15vw;
-                left: auto; */
                 opacity: 0;
                 width: 250px;
-                /* width: calc(150px - .5vw); */
                 height: 100vh;
                 text-align: left;
                 background-color: rgb(0, 0, 0, .5);
@@ -84,9 +81,6 @@
             }
 
             .carousel-indicators {
-                /* right: calc(15vw + 144.5px - 122.787px);
-                left: auto; */
-                /* width: calc(230px - 2vw); */
                 left: 66vw;
                 right: auto;
                 bottom: 5%;
@@ -101,13 +95,13 @@
                 background-color: rgba(0, 0, 0, .45);
             }
 
-            .carousel-indicators>li.active {
-                background-color: #09bc33;
-            }
-
             .carousel-indicators>li:hover {
                 cursor: pointer;
                 background-color: white;
+            }
+
+            .carousel-indicators>li.active:hover {
+                cursor: default;
             }
 
             .carousel-control {
@@ -115,9 +109,7 @@
                 bottom: 90px;
                 height: 20px;
                 left: 66vw;
-                /* right: calc(15vw + 144.5px - 122.787px); */
                 width: 115px;
-                /* width: calc(230px - 2vw); */
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -180,6 +172,10 @@
             .carousel-caption>p {
                 margin-bottom: 8px;
             }
+        }
+
+        .carousel-indicators>li.active {
+            background-color: #09bc33;
         }
 
         #footer {

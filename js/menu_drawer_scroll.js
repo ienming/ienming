@@ -1,7 +1,7 @@
 // spinner animated and window load
 $(document).ready(function () {
-    $("#spinner").delay(800).fadeOut("slow");
-    $("#preload").delay(1000).fadeOut("slow");
+    // $(".spinner").delay(800).fadeOut("slow");
+    $(".preload").delay(300).fadeOut("slow");
 });
 
 // hamburger animated

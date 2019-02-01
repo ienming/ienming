@@ -22,15 +22,10 @@
     text-align: justify;
 }
 
-/* .hoverImgIntro:hover {
-    opacity: 1;
-    transition-timing-function: ease-in-out;
-    transition-duration: .3s;
-} */
-
 .grid-item {
     width: 230px;
     padding: 7px;
+    margin-bottom: 25px;
 }
 
 .clear {
@@ -63,6 +58,12 @@
     width: 100%;
     overflow: hidden;
     margin-bottom: 10px;
+}
+
+.coverImg:hover{
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    transform: scale(1.1);
 }
 
 /* 手機板 */
@@ -113,19 +114,26 @@
 .type {
     font-size: 1rem;
     font-style: oblique;
+    color: #333;
 }
 
 .media,
-.date {
+.date,
+.intro {
     font-size: .75rem;
     color: rgb(130, 130, 130);
     line-height: 15px;
 }
 
+.date{
+    margin-top: 5.5px;
+}
+
 .intro {
-    margin-top: 7px;
+    margin-top: 3.5px;
     font-size: .9rem;
     line-height: 20px;
+    text-align: justify;
 }
 
 .flex-caption {

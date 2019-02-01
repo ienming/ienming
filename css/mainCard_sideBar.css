@@ -150,20 +150,19 @@ figcaption>a{
     line-height: 15px;
 }
 
-.metaMobile>p{
-    margin:0;
-    word-break: break-all;
-    text-align: justify;
-    font-style: normal;
-    line-height: 25px;
-}
-
 .metaMobile {
     border-top: 4px solid #09bc33;
     background-color: rgb(240, 240, 240);
     margin-top: -15px;
     margin-bottom: 35px;
     padding: 15px 8px;
-    font-style: italic;
     max-width: 90vw;
+}
+
+.metaMobile>p{
+    margin:0;
+    word-break: break-all;
+    text-align: justify;
+    font-style: normal;
+    line-height: 25px;
 }
