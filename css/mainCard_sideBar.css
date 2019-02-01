@@ -73,6 +73,7 @@ h1 {
 
 figcaption{
     color: rgb(150, 150, 150);
+    font-size: .75rem;
 }
 
 figcaption>a{
