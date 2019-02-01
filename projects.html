@@ -390,15 +390,28 @@
 
     <!-- masonry -->
     <script>
-        $('.grid').masonry({
-            // options
+        // $('.grid').masonry({
+        //     // options
+        //     itemSelector: '.grid-item',
+        //     columnWidth: 230,
+        //     percentPosition: true
+        // });
+
+        // $('grid').imagesLoaded().progress(function () {
+        //     $('grid').masonry('layout');
+        // });
+
+
+        // init Masonry
+        var $grid = $('.grid').masonry({
+            // options...
             itemSelector: '.grid-item',
             columnWidth: 230,
             percentPosition: true
         });
-
-        $('grid').imagesLoaded().progress(function () {
-            $('grid').masonry('layout');
+        // layout Masonry after each image loads
+        $grid.imagesLoaded().progress(function () {
+            $grid.masonry('layout');
         });
     </script>
 </body>
