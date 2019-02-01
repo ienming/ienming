@@ -265,7 +265,7 @@ button:focus {outline:0;}
 #goTop {
     width: 70px;
     position: fixed;
-    left: calc(66vw + 60px);
+    left: calc(65vw + 230px - 70px);
     bottom: 97px;
     display: none;
     color: #09bc33;
