@@ -356,8 +356,6 @@
         // Swipe functions for Bootstrap Flexslider
         $(".flexslider").bcSwipe({ threshold: 300 });
     </script>
-    <!-- custom JS -->
-    <script src="js/menu_drawer_scroll.js"></script>
 
     <!-- flexslider -->
     <script>
@@ -390,18 +388,6 @@
 
     <!-- masonry -->
     <script>
-        // $('.grid').masonry({
-        //     // options
-        //     itemSelector: '.grid-item',
-        //     columnWidth: 230,
-        //     percentPosition: true
-        // });
-
-        // $('grid').imagesLoaded().progress(function () {
-        //     $('grid').masonry('layout');
-        // });
-
-
         // init Masonry
         var $grid = $('.grid').masonry({
             // options...
@@ -413,6 +399,17 @@
         $grid.imagesLoaded().progress(function () {
             $grid.masonry('layout');
         });
+    </script>
+
+    <!-- custom JS -->
+    <script src="js/menu_drawer_scroll.js"></script>
+    <script>
+        $(".hoverImgIntro").mouseenter(function () {
+            $(".hoverImgIntro").fadeTo(300, 1, 'swing');
+        })
+        $(".hoverImgIntro").mouseleave(function () {
+            $(".hoverImgIntro").fadeTo(300, 0, 'swing');
+        })
     </script>
 </body>
 

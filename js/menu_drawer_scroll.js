@@ -31,18 +31,6 @@ function trigger() {
     i++;
 }
 
-
-// $(".menuHover").hover(
-//     function () {
-//         $(this).addClass("menuHoverOn", "swing");
-//         $(this).css("color", "white");
-//     }, function () {
-//         $(this).removeClass("menuHoverOn", 200, "swing");
-//         $(this).css("color", "black");
-//     }
-// );
-
-
 //scroll偵測
 $(window).scroll(function () {
     if ($(".drawer").is('.open')) {
