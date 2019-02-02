@@ -157,7 +157,7 @@ figcaption>a{
 }
 
 .metaMobile {
-    border-top: 4px solid #ff7157;
+    border-top: 4px solid #ff9237;
     background-color: rgb(240, 240, 240);
     margin-top: -15px;
     margin-bottom: 20px;
@@ -168,7 +168,7 @@ figcaption>a{
     margin:0;
     padding-bottom: 9px;
     margin-bottom: 10px;
-    border-bottom: 1px dashed #0DD6FF;
+    border-bottom: 1px dashed #19aeb1;
     word-break: break-all;
     text-align: justify;
     font-style: normal;

@@ -13,7 +13,7 @@ a {
 
 a:hover{
     text-decoration: none;
-    color: #ff7157;
+    color: #ff9237;
 }
 
 /* preload spinner*/
@@ -34,7 +34,7 @@ a:hover{
 
 /* 反白顏色 */
 ::selection {
-    background-color: #ff7157;
+    background-color: #19aeb1;
     color: white;
 }
 
@@ -65,6 +65,17 @@ a:hover{
     height: 100px;
     display: flex;
     align-items: center;
+}
+
+/* 電腦版topbarMask後看不出來 */
+@media only screen and (min-width: 768px){
+    .nav{
+        height: 60px;
+    }
+
+    .topBar{
+        margin: 20px 0;
+    }
 }
 
 .hamburger {
@@ -99,15 +110,15 @@ button:focus {outline:0;}
 }
 
 .bar1{
-    background-color: #0DD6FF;
+    background-color: #19aeb1;
 }
 
 .bar2{
-    background-color: rgb(99, 56, 255);
+    background-color: goldenrod;
 }
 
 .bar3{
-    background-color: #ff7157;
+    background-color: #ff9237;
 }
 
 .change .bar1 {
@@ -166,7 +177,7 @@ button:focus {outline:0;}
     height: 5px;
     bottom: -6px;
     left: 0;
-    background-color:#0DD6FF;
+    background-color:#19aeb1;
     transform-origin: bottom left;
     transition: transform 0.45s ease-in-out;
 }
