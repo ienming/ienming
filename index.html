@@ -59,6 +59,10 @@
             transform: translate3d(0, 0, 0);
         }
 
+        .carousel-caption>a {
+            color: white;
+        }
+
         /* 電腦版調整indicator、caption */
         @media only screen and (min-width: 768px) {
             .carousel-caption {
@@ -229,7 +233,7 @@
         </ul>
         <div class="contact">
             <a href="https://www.instagram.com/ienming/?fbclid=IwAR1_fAR2z_XVRMx0ZeRDLRiOsMj4LFHFdu5LYqo7pnNeQUO2shqbahiaUyQ"><img
-                    src="./img/ig_icon.png" /></a>
+                    src="./img/ig_icon.png" target="_blank" /></a>
             <p class="email">hsieh.alan.0726@gmail.com</p>
         </div>
     </nav>
@@ -250,7 +254,9 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 style="font-size: 18px;">基地影像設計</h5>
+                        <a href="./projects/QiDi.html">
+                            <h5 style="font-size: 18px;">基地影像設計</h5>
+                        </a>
                         <p style="font-size: 16px;">Secret Base Video Studio</p>
                         <span style="font-size: 16px;">Visual Identity, Logo Design</span>
                     </div>
@@ -261,22 +267,22 @@
                     </div>
                     <div id="2" class="carousel-item">
                         <a herf="">
-                            <img class="d-block w-100" src="img/comicIllustration/characterIllustration/king.jpg" alt="Second slide">
+                            <img class="d-block w-100" src="img/projects/coc00.jpg" alt="Second slide">
                         </a>
                     </div>
                     <div id="3" class="carousel-item">
                         <a herf="">
-                            <img class="d-block w-100" src="img/comicIllustration/sable/10-color.jpg" alt="Third slide">
+                            <img class="d-block w-100" src="img/projects/cutDownSugar/cutdownsugar1.jpg" alt="Third slide">
                         </a>
                     </div>
                     <div id="4" class="carousel-item">
                         <a herf="">
-                            <img class="d-block w-100" src="img/comicIllustration/2018lifedraw/img001.jpg" alt="Fourth slide">
+                            <img class="d-block w-100" src="img/comicIllustration/characterIllustration/king.jpg" alt="Fourth slide">
                         </a>
                     </div>
                     <div id="5" class="carousel-item">
                         <a herf="">
-                            <img class="d-block w-100" src="img/projects/cutDownSugar/cutdownsugar3.jpg" alt="Fifth slide">
+                            <img class="d-block w-100" src="img/comicIllustration/2018lifedraw/img001.jpg" alt="Fifth slide">
                         </a>
                     </div>
 
@@ -376,6 +382,7 @@
                     $(".carousel-caption span").fadeOut(function () {
                         $(this).delay(50).text("Visual Identity, Logo Design").fadeIn();
                     });
+                    $(".carousel-caption a").attr("href", "./projects/QiDi.html");
                 } else if (sho2 == "block") {
                     $(".carousel-caption h5").fadeOut(function () {
                         $(this).text("PIC2").fadeIn();
@@ -386,6 +393,7 @@
                     $(".carousel-caption span").fadeOut(function () {
                         $(this).delay(50).text("pic2Descrip").fadeIn();
                     });
+                    $(".carousel-caption a").attr("href", "./comicillustration/2018character.html");
                 } else if (sho3 == "block") {
                     $(".carousel-caption h5").fadeOut(function () {
                         $(this).text("PIC3").fadeIn();
