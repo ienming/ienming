@@ -80,6 +80,11 @@ figcaption>a{
     color: rgb(150, 150, 150);
 }
 
+/* illustration的微圖說 */
+.caption{
+    font-size: .9rem;
+}
+
 .engText {
     word-break: keep-all;
     text-indent: 0em;
