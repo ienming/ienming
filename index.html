@@ -73,7 +73,7 @@
                 width: 250px;
                 height: 100vh;
                 text-align: left;
-                background-color: rgb(0, 0, 0, .5);
+                background-color: rgba(3, 26, 18, 0.75);
                 padding: 1vw;
                 padding-top: 180px;
                 margin-bottom: 20px;
@@ -166,7 +166,7 @@
                 padding-top: 5px;
                 padding-bottom: 5px;
                 text-align: left;
-                background-color: rgb(0, 0, 0, .5);
+                background-color: rgba(3, 26, 18, 0.75);
             }
 
             .carousel-caption>h5 {
@@ -174,7 +174,12 @@
             }
 
             .carousel-caption>p {
-                margin-bottom: 8px;
+                margin-bottom: 0;
+            }
+
+            /* 說明隱藏 */
+            .carousel-caption span {
+                display: none;
             }
         }
 
@@ -258,7 +263,8 @@
                             <h5 style="font-size: 18px;">基地影像設計</h5>
                         </a>
                         <p style="font-size: 16px;">Secret Base Video Studio</p>
-                        <span style="font-size: 16px;">Visual Identity, Logo Design</span>
+                        <p style="font-size: 16px;" id="typeIntro">Visual Identity, Logo design</p>
+                        <span style="font-size: 16px;">主要關懷台灣原住民族、文化議題的影像設計工作室，2018年製作工作室視覺識別與圖標設計。</span>
                     </div>
                     <div id="1" class="carousel-item active">
                         <a herf="">
@@ -370,6 +376,8 @@
                 console.log("slide4 display: " + sho4);
                 console.log("slide5 display: " + sho5);
 
+                // 取得螢幕寬度 手機板隱藏說明
+                var www = $(window).width();
                 // 偵測目前是誰顯示
                 if (sho1 == "block") {
                     // 先fadeOut現在的文字，然後把新的fadeIn進去
@@ -379,51 +387,89 @@
                     $(".carousel-caption p").fadeOut(function () {
                         $(this).text("Secret Base Video Studio").fadeIn();
                     });
-                    $(".carousel-caption span").fadeOut(function () {
-                        $(this).delay(50).text("Visual Identity, Logo Design").fadeIn();
+                    $(".carousel-caption #typeIntro").fadeOut(function () {
+                        $(this).text("Visual Identity, Logo design").fadeIn();
                     });
+                    if (www >= 768) {
+                        $(".carousel-caption span").fadeOut(function () {
+                            $(this).delay(50).text("主要關懷台灣原住民族、文化議題的影像設計工作室，2018年製作工作室視覺識別與圖標設計。").fadeIn();
+                        });
+                    } else if (www < 768) {
+                        $(".carousel-caption span").hide();
+                    }
                     $(".carousel-caption a").attr("href", "./projects/QiDi.html");
                 } else if (sho2 == "block") {
                     $(".carousel-caption h5").fadeOut(function () {
-                        $(this).text("PIC2").fadeIn();
+                        $(this).text("政大商學院職涯探索月").fadeIn();
                     });
                     $(".carousel-caption p").fadeOut(function () {
-                        $(this).text("2ENG").fadeIn();
+                        $(this).text("Career Exploration").fadeIn();
                     });
-                    $(".carousel-caption span").fadeOut(function () {
-                        $(this).delay(50).text("pic2Descrip").fadeIn();
+                    $(".carousel-caption #typeIntro").fadeOut(function () {
+                        $(this).text("Poster design").fadeIn();
                     });
-                    $(".carousel-caption a").attr("href", "./comicillustration/2018character.html");
+                    if (www >= 768) {
+                        $(".carousel-caption span").fadeOut(function () {
+                            $(this).delay(50).text("政治大學商學院2017年底「職涯探索月」數場講座的活動海報設計。").fadeIn();
+                        });
+                    } else if (www < 768) {
+                        $(".carousel-caption span").hide();
+                    }
+                    $(".carousel-caption a").attr("href", "./projects/cocCareerExplore.html");
                 } else if (sho3 == "block") {
                     $(".carousel-caption h5").fadeOut(function () {
-                        $(this).text("PIC3").fadeIn();
+                        $(this).text("減糖大作戰！").fadeIn();
                     });
                     $(".carousel-caption p").fadeOut(function () {
-                        $(this).text("3ENG").fadeIn();
+                        $(this).text("Cut Down Sugar!").fadeIn();
                     });
-                    $(".carousel-caption span").fadeOut(function () {
-                        $(this).delay(50).text("pic3Descrip").fadeIn();
+                    $(".carousel-caption #typeIntro").fadeOut(function () {
+                        $(this).text("User Interface design").fadeIn();
                     });
+                    if (www >= 768) {
+                        $(".carousel-caption span").fadeOut(function () {
+                            $(this).delay(50).text("2019年，減糖大作戰試著以手機介面參與生活，從養成習慣開始改變。").fadeIn();
+                        });
+                    } else if (www < 768) {
+                        $(".carousel-caption span").hide();
+                    }
+                    $(".carousel-caption a").attr("href", "./projects/cutSugar.html");
                 } else if (sho4 == "block") {
                     $(".carousel-caption h5").fadeOut(function () {
-                        $(this).text("Sable").fadeIn();
+                        $(this).text("插畫角色設計").fadeIn();
                     });
                     $(".carousel-caption p").fadeOut(function () {
-                        $(this).text("4ENG").fadeIn();
+                        $(this).text("Character illustration design").fadeIn();
                     });
-                    $(".carousel-caption span").fadeOut(function () {
-                        $(this).delay(50).text("the story in Paris, in fiction").fadeIn();
+                    $(".carousel-caption #typeIntro").fadeOut(function () {
+                        $(this).text("Watercolor illustration").fadeIn();
                     });
+                    if (www >= 768) {
+                        $(".carousel-caption span").fadeOut(function () {
+                            $(this).delay(50).text("xxxxxxxxxxx").fadeIn();
+                        });
+                    } else if (www < 768) {
+                        $(".carousel-caption span").hide();
+                    }
+                    $(".carousel-caption a").attr("href", "./comicIllustration/2018character.html");
                 } else if (sho5 == "block") {
                     $(".carousel-caption h5").fadeOut(function () {
-                        $(this).text("PIC5").fadeIn();
+                        $(this).text("日常水彩紀錄").fadeIn();
                     });
                     $(".carousel-caption p").fadeOut(function () {
-                        $(this).text("5ENG").fadeIn();
+                        $(this).text("Watercolor Life Drawing").fadeIn();
                     });
-                    $(".carousel-caption span").fadeOut(function () {
-                        $(this).delay(50).text("pic5Descrip").fadeIn();
+                    $(".carousel-caption #typeIntro").fadeOut(function () {
+                        $(this).text("Painting").fadeIn();
                     });
+                    if (www >= 768) {
+                        $(".carousel-caption span").fadeOut(function () {
+                            $(this).delay(50).text("sssssssssssssssss").fadeIn();
+                        });
+                    } else if (www < 768) {
+                        $(".carousel-caption span").hide();
+                    }
+                    $(".carousel-caption a").attr("href", "./comicIllustration/2018lifedraw.html");
                 }
             });
         })
