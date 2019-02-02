@@ -218,6 +218,7 @@
                                 <p class="type">illustration collection</p>
                                 <p class="media">digital</p>
                                 <p class="date">2017</p>
+                                <p class="intro">泳池雜想：把自己想像成魚，或許會游得快一點。慢慢浮出水面的時候像鯨魚露出背鰭，划水鑽入水中的瞬間，用手掌擺動出魚的樣子。</p>
                             </div>
                         </a>
                     </div>
@@ -233,6 +234,22 @@
                                 <p class="title">2018 life drawing<br></p>
                                 <p class="type">life drawing collection</p>
                                 <p class="media">watercolor</p>
+                                <p class="date">2018</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="projects">
+                        <a href="./comicIllustration/wanderingDaily.html">
+                            <div class="container">
+                                <img class="coverImg" src="img/comicIllustration/wanderingDaily/02.png">
+                            </div>
+                            <div class="description">
+                                <p class="title">Wandering Daily<br></p>
+                                <p class="type">illustration collection</p>
+                                <p class="media">digital</p>
                                 <p class="date">2018</p>
                             </div>
                         </a>
@@ -300,7 +317,8 @@
             // options...
             itemSelector: '.grid-item',
             columnWidth: 230,
-            percentPosition: true
+            percentPosition: true,
+            horizontalOrder: true
         });
         // layout Masonry after each image loads
         $grid.imagesLoaded().progress(function () {
