@@ -313,3 +313,23 @@ button:focus {outline:0;}
         transform: translateX(200%);
     }
 }
+
+/* fb share link */
+.btn{
+    margin-top: 30px;
+    width: 70px;
+    border: none;
+    padding: 0;
+}
+
+.btn>img{
+    width: 100%;
+}
+
+.btn-success{
+    background-color: white;
+}
+
+.btn-success:hover, .btn-success:not(:disabled):not(.disabled):active{
+    background-color: white;
+}
