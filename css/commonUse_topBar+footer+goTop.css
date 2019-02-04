@@ -192,16 +192,11 @@ button:focus {outline:0;}
 }
 
 /* contact */
-.contact{
-    margin-left: 5vw;
-    margin-top: 7.5vw;
-}
-
 .contact img{
-    width: 70px;
+    width: 80px;
 }
 
-.contact img:hover{
+.contact a:hover{
     cursor: pointer;
 }
 
