@@ -262,10 +262,10 @@ button:focus {outline:0;}
     }
 }
 
-#footer .email{
+/* #footer .email{
     font-size: 1rem;
     margin-bottom: 0;
-}
+} */
 
 #footer span{
     margin-bottom: 50px;
