@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#">
+<html>
 
 <head>
     <title>ien ming｜Career Exploration in College of Commerce, NCCU</title>
@@ -7,12 +7,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- open graph -->
-    <meta property="og:title" content="ien ming｜Career Exploration in College of Commerce, NCCU" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="2017年底政大商學院舉辦「職涯探索月」，邀請數家企業舉行講座，依據各場次活動設計海報宣傳，以及商學院「職涯諮詢顧問計畫」活動申請海報。" />
-    <meta property="og:url" content="https://ienming.github.io/ienming/projects/cocCareerExplore.html" />
-    <meta property="og:image" content="https://ienming.github.io/ienming/img/projects/cocPoster/coc05.jpg" />
     <!-- google search console -->
     <meta name="google-site-verification" content="6JguI8U151lezHi3D6EgF42fAPQvHmnEaw_6lDXzL3c" />
     <!-- Bootstrap CSS -->
@@ -45,25 +39,6 @@
 </head>
 
 <body>
-    <!-- facebook SDK init -->
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '405617263518270',
-                autoLogAppEvents: true,
-                xfbml: true,
-                version: 'v3.2'
-            });
-        };
-
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
     <!-- topBar -->
     <header class="topBar">
         <div class="nav" role="navigation">
@@ -170,9 +145,6 @@
                 <span>poster design</span><br>
                 <span>client: college of commerce, NCCU</span><br>
                 <span>2017, December</span><br>
-                <div id="shareBtn" class="btn btn-success clearfix">
-                    <img src="../img/share.png" />
-                </div>
             </section>
         </section>
         <!-- 撐開父的高度 -->
@@ -248,17 +220,6 @@
                 $(".side").show();
             }
         })
-    </script>
-
-    <!-- facebook share link -->
-    <script>
-        document.getElementById('shareBtn').onclick = function () {
-            FB.ui({
-                method: 'share',
-                display: 'popup',
-                href: 'https://ienming.github.io/ienming/projects/cocCareerExplore.html',
-            }, function (response) { });
-        }
     </script>
 </body>
 
