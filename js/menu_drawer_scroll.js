@@ -41,9 +41,13 @@ $(window).scroll(function () {
         $("header").addClass("topBarMask", 500, "swing");
         //goTop
         $("#goTop").show("slow");
+        if ($(window).width() <= 768){
+            $("#goTopMobile").show("slow");
+            console.log("hi");
+        }
     } else {
         $("header").removeClass("topBarMask", 500, "easeInBack");
-        $("#goTop").hide("slow");
+        $("#goTop, #goTopMobile").hide("slow");
     }
     console.log($(window).scrollTop());
 })
