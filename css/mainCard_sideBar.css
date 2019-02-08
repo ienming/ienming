@@ -16,7 +16,7 @@ h1 {
     opacity: 0;
     position: relative;
     left: -200px;
-    line-height: 52px;
+    letter-spacing: .05rem;
 }
 
 .content{

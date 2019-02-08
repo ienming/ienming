@@ -2,6 +2,12 @@
     height: 64px;
 }
 
+@media only screen and (min-width: 768px) {
+    .heightadjust {
+        height: 0;
+    }
+}
+
 .mainCard {
     padding-bottom: 22px;
     padding-right: 20vw;
@@ -182,6 +188,7 @@
     padding-left: 12px;
     font-weight: bold;
     font-size: 1rem;
+    letter-spacing: .05rem;
     color: #333;
 }
 
