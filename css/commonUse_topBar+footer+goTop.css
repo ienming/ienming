@@ -47,7 +47,7 @@ a:hover{
 }
 
 .topBarMask{
-    background-color: #e7e7e7;
+    background-color: white;
 }
 
 #logo {
@@ -159,6 +159,12 @@ button:focus {outline:0;}
     margin-left: 5vw;
     margin-top: 75px;
     font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 768px){
+    #drawerItems{
+        margin-top: 35px;
+    }
 }
 
 #drawerItems li{
