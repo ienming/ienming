@@ -14,6 +14,23 @@
     padding-left: 15vw;
 }
 
+/* 最上面的圖片輪播 */
+#fancy{
+    padding: 0 12px;
+}
+
+.slides img {
+    margin-bottom: 0;
+}
+
+/* 限制輪播的圖片高度 */
+#slider img {
+    max-height: 400px;
+    width: 100%;
+    max-width: 690px;
+    object-fit: cover;
+}
+
 .hoverImgIntro {
     background-color: rgba(0, 0, 0, 0.75);
     opacity: 0;
@@ -154,27 +171,6 @@
     margin: 0;
 }
 
-.slides img {
-    margin-bottom: 0;
-}
-
-/* 限制輪播的圖片高度 */
-#slider img {
-    max-height: 400px;
-    width: 100%;
-    max-width: 690px;
-    object-fit: cover;
-}
-
-#carousel img {
-    height: 80px;
-    object-fit: cover;
-}
-
-#carousel li:hover {
-    cursor: pointer;
-}
-
 .content {
     margin-left: 0;
     width: 100%;
@@ -201,9 +197,16 @@
         margin-bottom: 30px;
     }
 
+    #fancy{
+        position: relative;
+        left: -5vw;
+        padding: 0;
+    }
+
     #slider img {
-        max-height: 188px;
-        width: -webkit-fill-available;
-        object-fit: cover;
+        max-height: 245px;
+        /* width: -webkit-fill-available; */
+        width: 100vw;
+        /* object-fit: cover; */
     }
 }
