@@ -188,6 +188,10 @@
     color: #333;
 }
 
+.division>span{
+    font-size: .9rem;
+}
+
 @media only screen and (max-width: 768px) {
     .flex-caption {
         width: 100%;
