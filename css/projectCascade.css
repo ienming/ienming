@@ -192,6 +192,21 @@
     font-size: .9rem;
 }
 
+.fotoContainer{
+    position: relative;
+    width: 96%;
+    background-color: white;
+    padding: 70px;
+}
+
+.fotoContainer img{
+    width: 100%;
+}
+
+.fotoContainer span{
+    word-break: keep-all;
+}
+
 @media only screen and (max-width: 768px) {
     .flex-caption {
         width: 100%;
@@ -212,5 +227,14 @@
         /* width: -webkit-fill-available; */
         width: 100vw;
         /* object-fit: cover; */
+    }
+
+    .fotoContainer, .division{
+        width: 100%;
+    }
+
+    .fotoContainer{
+        margin: 0;
+        padding: 30px;
     }
 }
