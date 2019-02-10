@@ -35,6 +35,18 @@
             margin-left: 0;
         }
 
+        /* .engText {
+            word-break: unset;
+        }
+
+        #bioEng{
+            word-break: keep-all;
+        } */
+
+        .liText {
+            word-break: break-all;
+        }
+
         @media only screen and (min-width: 768px) {
             #mailto {
                 width: 265px;
@@ -97,7 +109,7 @@
             <img src="./img/self.jpg" style="width: 200px;" alt="ienming" />
             <section class="bioText">
                 <p style="text-indent: 0;">1996年出生在台灣新竹市，</p>
-                <p class="engText">
+                <p id="bioEng" class="engText">
                     ...
                     Ien Ming is a ... who also interest in travel and watercolor painting
                     majored in media and culture studies in College of Communication, NCCU(2014-2019)
@@ -119,13 +131,13 @@
                     <li>基礎攝影 photography</li>
                 </ul>
                 <h2 class="engText">Education</h2>
-                <ul class="engText">
+                <ul class="engText liText">
                     <li>國立政治大學第78屆新聞學系<br>Bachelor of Arts, Media and Culture Studies, Department of Journalism,<br>
                         NCCU, 2019</li>
                     <li>國立政治大學第6屆數位內容與科技學士學位學程<br>Bachelor of Science, Digital Content and Technologies, NCCU, 2019</li>
                 </ul>
                 <h2 class="engText">Awards</h2>
-                <ul class="engText">
+                <ul class="engText liText">
                     <li>放視大賞 Vision Get Wild Award，跨領域組入圍，2018</li>
                     <li>道南文學獎，散文組入圍，2015</li>
                     <li>竹塹文學獎，青春散文三獎，2014</li>
