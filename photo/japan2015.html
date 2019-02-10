@@ -16,6 +16,8 @@
     <link rel=stylesheet type="text/css" href="../css/commonUse_topBar+footer+goTop.css">
     <!-- mainCard_sideBar CSS -->
     <link rel=stylesheet type="text/css" href="../css/mainCard_sideBar.css">
+    <!-- photo CSS -->
+    <link rel=stylesheet type="text/css" href="../css/photo.css">
     <!-- fancyBox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="../css/fancyboxCustom.css">
@@ -36,88 +38,14 @@
             height: 140px;
         }
 
-        h1 {
-            color: white;
-        }
-
-        .photos div {
-            padding: 50px;
-            background-color: white;
-        }
-
-        .photos img {
-            width: 100%;
-        }
-
-        .photointro {
-            color: white;
-            display: none;
-        }
-
-        #otherPhotoMobile {
-            display: none;
-            margin: 0 50px 0 20px;
-            border-top: 1px solid rgb(130, 130, 130);
-        }
-
         body {
-            background-image: url("../img/foto/J5.jpg");
-            background-repeat: no-repeat;
-            background-size: 100vw auto;
-        }
-
-        @media only screen and (max-width: 768px) {
-            body {
-                background-size: auto 100vh;
-            }
-
-            #otherPhotoMobile {
-                display: block;
-            }
-
-            .photos div {
-                padding: 20px;
-                padding-bottom: 35px;
-            }
-
-            .photointro{
-                display: block;
-            }
-        }
-
-        .side,
-        .breadcrumb,
-        .breadcrumb-item,
-        .side>nav>ol {
-            background-color: unset;
-        }
-
-        .side,
-        .side a,
-        .breadcrumb-item+.breadcrumb-item::before {
-            color: white;
-        }
-
-        .breadcrumb-item.active {
-            color: #ff9237;
-        }
-
-        .otherPhoto {
-            margin-top: 50px;
-            padding: 0;
-        }
-
-        .otherPhoto li {
-            list-style: none;
-        }
-
-        a:hover {
-            color: #ff9237;
+            background-image: url("../img/foto/J_bg.jpg");
         }
     </style>
 </head>
 
 <body>
+    <div class="preload"></div>
     <!-- topBar -->
     <header class="topBar">
         <div class="nav" role="navigation">
@@ -170,10 +98,6 @@
                     intro intro
                 </p>
             </section>
-            <!-- 手機作品metadata -->
-            <!-- <section class="metaMobile">
-                <span>2015, July</span>
-            </section> -->
             <!-- 照片們 -->
             <section class="photos">
                 <div>
