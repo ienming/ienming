@@ -20,7 +20,7 @@
 
         /* Change background color */
         .fancybox-bg {
-            background: #333;
+            background: #eee;
         }
 
         .fancybox-caption {
@@ -29,9 +29,8 @@
             bottom: 0;
             left: 0;
             padding: 15px 80px 60px 80px;
-            color: white;
-            box-shadow: 0px 60px 30px 30px rgba(0,0,0,.8);
+            color: #333;
+            box-shadow: 0px 60px 30px 30px blue;
             font-size: 16px;
             text-align: left;
-            border-top: 1px solid rgba(223, 223, 223, 0.5);
         }
