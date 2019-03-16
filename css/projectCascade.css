@@ -132,6 +132,7 @@
     font-weight: bold;
     color: #333;
     line-height: 21.5px;
+    margin: 7px 0;
 }
 
 .type {
@@ -153,7 +154,7 @@
 }
 
 .intro {
-    margin-top: 3.5px;
+    margin-top: 10px;
     font-size: .9rem;
     line-height: 20px;
     text-align: justify;
