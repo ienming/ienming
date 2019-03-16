@@ -24,15 +24,14 @@
         }
 
         .fancybox-caption {
+            width: 100%;
             position: absolute;
-            bottom: 60px;
-            left: 80px;
-            padding: 15px 0 0 0;
-            background: none;
+            bottom: 0;
+            left: 0;
+            padding: 15px 80px 60px 80px;
             color: white;
+            box-shadow: 0px 60px 30px 30px rgba(0,0,0,.8);
             font-size: 16px;
-            width: 250px;
-            word-wrap: normal;
             text-align: left;
             border-top: 1px solid rgba(223, 223, 223, 0.5);
         }
