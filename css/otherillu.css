@@ -1,0 +1,40 @@
+.bracket{
+    color: #333;
+    margin: 15px 0 70px 0;
+    padding-left: 12px;
+}
+
+.bracketTitle{
+    font-size: 20px;
+}
+
+.bracketFlex{
+    display: flex; 
+    width: 96%; 
+    justify-content: space-between;
+}
+
+.bracketItem{
+    margin: 10px 0;
+}
+
+.bracketItem img{
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+}
+
+h3{
+    margin-bottom: 1.3rem;
+}
+
+@media only screen and (max-width: 768px){
+    .bracketFlex{
+        flex-wrap: wrap;
+    }
+
+    .bracketItem img{
+        width: 140px;
+        height: 140px;
+    }
+}

@@ -18,6 +18,11 @@
     <link rel=stylesheet type="text/css" href="./css/mainCard_sideBar.css">
     <!-- mainCard_cascade CSS -->
     <link rel=stylesheet type="text/css" href="./css/projectCascade.css" />
+    <!-- other illustration CSS -->
+    <link rel=stylesheet type="text/css" href="./css/otherillu.css" />
+    <!-- fancyBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./css/fancyboxCustom.css">
     <!-- jQuery -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
@@ -100,41 +105,70 @@
                 </span>
             </div>
 
-            <!-- cascade -->
-            <section class="grid">
-                <div class="grid-item">
-                    <div class="projects">
-                        <a href="./comicIllustration/2018lifedraw.html">
-                            <div class="container">
-                                <img class="coverImg" src="img/comicIllustration/2018lifedraw/img001.jpg" alt="2018Watercolor">
-                            </div>
-                            <div class="description">
-                                <p class="title">2018 life drawing<br></p>
-                                <p class="type">life drawing collection</p>
-                                <p class="media">watercolor</p>
-                                <p class="date">2018</p>
-                            </div>
+            <!-- 按照類型分類 -->
+            <div class="bracket">
+                <h3 class="bracketTitle">
+                    Life Drawing (TITLE)
+                </h3>
+                <div class="bracketFlex">
+                    <div class="bracketItem">
+                        <a href="./img/otherillu/2018lifedraw/img001.jpg" data-fancybox="gallery_photo" title="In Vietnam"
+                            data-caption="In VietnamIn VietnamIn VietnamIn VietnamIn VietnamIn VietnamIn Vietnam">
+                            <img class="coverImg" src="./img/otherillu/2018lifedraw/img001.jpg">
                         </a>
+                        <div class="description">
+                            <p class="date">2018 Aug.</p>
+                            <p class="title">In Vietnam<br></p>
+                        </div>
+                    </div>
+                    <div class="bracketItem">
+                        <a href="./img/otherillu/2018lifedraw/img001.jpg" data-fancybox="gallery_photo" title="In Vietnam"
+                            data-caption="Vietnam">
+                            <img class="coverImg" src="./img/otherillu/2018lifedraw/img001.jpg">
+                        </a>
+                        <div class="description">
+                            <p class="date">2018 Aug.</p>
+                            <p class="title">In Vietnam<br></p>
+                        </div>
+                    </div>
+                    <div class="bracketItem">
+                        <img src="./img/otherillu/2018lifedraw/img001.jpg" />
+                        <div class="description">
+                            <p class="date">2018 Aug.</p>
+                            <p class="title">In Vietnam<br></p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="grid-item">
-                    <div class="projects">
-                        <a href="./comicIllustration/2018character.html">
-                            <div class="container">
-                                <img class="coverImg" src="img/comicIllustration/characterIllustration/king.jpg" alt="characterIllustration">
-                            </div>
-                            <div class="description">
-                                <p class="title">Character illustration</p>
-                                <p class="type">illustratin collection</p>
-                                <p class="media">watercolor, pencil</p>
-                                <p class="intro">整理2018年起創作的角色插畫。</p>
-                                <p class="date">2018 - now</p>
-                            </div>
-                        </a>
+            <div class="bracket">
+                <h3 class="bracketTitle">
+                    Personal One Shot (TITLE)
+                </h3>
+                <div class="bracketFlex">
+                    <div class="bracketItem">
+                        <img src="./img/otherillu/characterIllustration/birdman.jpg" />
+                        <div class="description">
+                            <p class="date">2018 Aug.</p>
+                            <p class="title">Black Bird Man<br></p>
+                        </div>
+                    </div>
+                    <div class="bracketItem">
+                        <img src="./img/otherillu/characterIllustration/king.jpg" />
+                        <div class="description">
+                            <p class="date">2019 Jan.</p>
+                            <p class="title">The King<br></p>
+                        </div>
+                    </div>
+                    <div class="bracketItem">
+                        <img src="./img/otherillu/characterIllustration/man.jpg" />
+                        <div class="description">
+                            <p class="date">2019 Jan.</p>
+                            <p class="title">Man in North<br></p>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
             <!-- 撐開父的高度 -->
             <div class="clear"></div>
         </section>
@@ -154,7 +188,7 @@
     </footer>
 
 
-    <!-- swipte images -->
+    <!-- swipe images -->
     <script>
         // Thanks to Maaaaark - https://github.com/maaaaark/bcSwipe/blob/master/jquery.bcSwipe.min.js
         !function (t) { t.fn.bcSwipe = function (e) { var n = { threshold: 50 }; return e && t.extend(n, e), this.each(function () { function e(t) { 1 == t.touches.length && (u = t.touches[0].pageX, c = !0, this.addEventListener("touchmove", o, !1)) } function o(e) { if (c) { var o = e.touches[0].pageX, i = u - o; Math.abs(i) >= n.threshold && (h(), t(this).flexslider(i > 0 ? "next" : "prev")) } } function h() { this.removeEventListener("touchmove", o), u = null, c = !1 } var u, c = !1; "ontouchstart" in document.documentElement && this.addEventListener("touchstart", e, !1) }), this } }(jQuery);
@@ -189,21 +223,19 @@
             });
         });
     </script>
-    <!-- masonry -->
+
+    <!-- fancyBox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
     <script>
-        // init Masonry
-        var $grid = $('.grid').masonry({
-            // options...
-            itemSelector: '.grid-item',
-            columnWidth: 230,
-            percentPosition: true,
-            horizontalOrder: true
-        });
-        // layout Masonry after each image loads
-        $grid.imagesLoaded().progress(function () {
-            $grid.masonry('layout');
+        $(document).ready(function () {
+            $('.fancybox').fancybox({
+                beforeShow: function () {
+                    this.title = this.title + " - " + $(this.element).data("caption");
+                }
+            });
         });
     </script>
+
     <!-- custom JS -->
     <script src="js/menu_drawer_scroll.js"></script>
     <script>
