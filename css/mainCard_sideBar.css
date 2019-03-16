@@ -92,7 +92,7 @@ figcaption>a{
     margin-left: 5vh;
     padding-left: 0;
     padding-top: 0;
-    background-color: white;
+    background-color: rgb(243,243,236);
     /* 先隱藏 */
     opacity: 0;
 }
@@ -100,7 +100,7 @@ figcaption>a{
 .side>nav>ol {
     padding: 0;
     font-size: .75rem;
-    background-color: white;
+    background-color: rgb(243,243,236);
 }
 
 /* 電腦版content寬度和breadcrumb */

@@ -9,13 +9,15 @@
 }
 
 .bracketFlex{
-    display: flex; 
+    display: flex;
+    flex-wrap: wrap;
     width: 96%; 
     justify-content: space-between;
 }
 
 .bracketItem{
     margin: 10px 0;
+    margin-bottom: 15px;
 }
 
 .bracketItem img{
