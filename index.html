@@ -74,7 +74,7 @@
                 height: 100vh;
                 text-align: left;
                 background-color: rgba(0, 0, 0, 0.75);
-                color: rgb(230,230,230);
+                color: rgb(230, 230, 230);
                 padding: 180px 3vw 1vw 1vw;
                 margin-bottom: 20px;
                 z-index: 1;
@@ -101,7 +101,7 @@
 
             .carousel-indicators>li:hover {
                 cursor: pointer;
-                background-color: rgb(230,230,230);
+                background-color: rgb(230, 230, 230);
             }
 
             .carousel-indicators>li.active:hover {
@@ -128,7 +128,7 @@
             }
 
             .carousel-control-pause {
-                color: rgb(230,230,230);
+                color: rgb(230, 230, 230);
             }
 
             .carousel-control-pause:hover {
@@ -192,7 +192,7 @@
             margin-top: -25px;
             word-break: keep-all;
             text-align: left;
-            color: rgb(230,230,230);
+            color: rgb(230, 230, 230);
             font-size: .75rem;
         }
 
@@ -234,8 +234,9 @@
         </ul>
         <div class="contact">
             <a href="https://www.instagram.com/ienming/?fbclid=IwAR1_fAR2z_XVRMx0ZeRDLRiOsMj4LFHFdu5LYqo7pnNeQUO2shqbahiaUyQ"><img
-                    src="./img/ig_icon.png" target="_blank" alt="ienming_instagram" /></a>
-            <a href="mailto:hsieh.alan.0726@gmail.com"><img src="./img/email_icon.png" target="_blank" alt="ienming_email" /></a>
+                    src="./img/ig_icon.png" target="_blank" alt="ienming_instagram" title="instagram" /></a>
+            <a href="mailto:hsieh.alan.0726@gmail.com"><img src="./img/email_icon.png" target="_blank" alt="ienming_email"
+                    title="email me!" /></a>
         </div>
     </nav>
 
@@ -255,36 +256,40 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-caption d-none d-md-block">
-                        <a href="./projects/QiDi.html">
-                            <h5 style="font-size: 18px;">基地影像設計</h5>
+                        <a href="./otherillustration.html">
+                            <h5 style="font-size: 18px;">日常插畫設計</h5>
                         </a>
-                        <p style="font-size: 16px;">Secret Base Video Studio</p>
-                        <p style="font-size: 16px;" id="typeIntro">Visual Identity, Logo design</p>
-                        <span style="font-size: 16px;">主要關懷台灣原住民族、文化議題的影像設計工作室，2018年製作工作室視覺識別與圖標設計。</span>
+                        <p style="font-size: 16px;">Life Drawing</p>
+                        <p style="font-size: 16px;" id="typeIntro">Personal other illustration</p>
+                        <span style="font-size: 16px;">日常速寫練習與概念發想，包含日常生活景物、旅遊速寫、個人概念設計等。</span>
                     </div>
                     <div id="1" class="carousel-item active">
                         <a herf="">
-                            <img class="d-block w-100" src="img/projects/基地影像設計/基地_branding_display.jpg" alt="基地影像設計">
+                            <img class="d-block w-100" src="img/otherillu/digital/Escape from Time.jpg" alt="Escape from Time"
+                                title="Escape from Time">
                         </a>
                     </div>
                     <div id="2" class="carousel-item">
                         <a herf="">
-                            <img class="d-block w-100" src="img/projects/cocPoster/coc05.jpg" alt="商院職涯探索海報">
+                            <img class="d-block w-100" src="img/projects/cocPoster/coc05.jpg" alt="商院職涯探索海報" title="商院職涯探索海報">
                         </a>
                     </div>
                     <div id="3" class="carousel-item">
                         <a herf="">
-                            <img class="d-block w-100" src="img/projects/cutDownSugar/cutdownsugar1.jpg" alt="減糖大作戰">
+                            <img class="d-block w-100" src="img/projects/cutDownSugar/cutdownsugar1.jpg" alt="減糖大作戰"
+                                title="減糖大作戰 cutSugar">
                         </a>
                     </div>
                     <div id="4" class="carousel-item">
                         <a herf="">
-                            <img class="d-block w-100" src="img/comicIllustration/characterIllustration/king.jpg" alt="國王">
+                            <img class="d-block w-100" src="img/otherillu/characterIllustration/king.jpg" alt="國王"
+                                title="The King">
                         </a>
                     </div>
                     <div id="5" class="carousel-item">
                         <a herf="">
-                            <img class="d-block w-100" src="img/comicIllustration/2018lifedraw/img001.jpg" alt="踩船">
+                            <img class="d-block w-100" src="img/projects/基地影像設計/基地_branding_display.jpg" alt="基地影像設計"
+                                title="基地影像設計">
                         </a>
                     </div>
 
@@ -378,22 +383,22 @@
                 if (sho1 == "block") {
                     // 先fadeOut現在的文字，然後把新的fadeIn進去
                     $(".carousel-caption h5").fadeOut(function () {
-                        $(this).text("基地影像設計").fadeIn();
+                        $(this).text("日常插畫設計").fadeIn();
                     });
                     $(".carousel-caption p").fadeOut(function () {
-                        $(this).text("Secret Base Video Studio").fadeIn();
+                        $(this).text("Life Drawing").fadeIn();
                     });
                     $(".carousel-caption #typeIntro").fadeOut(function () {
-                        $(this).text("Visual Identity, Logo design").fadeIn();
+                        $(this).text("Personal other illustration").fadeIn();
                     });
                     if (www >= 768) {
                         $(".carousel-caption span").fadeOut(function () {
-                            $(this).delay(50).text("主要關懷台灣原住民族、文化議題的影像設計工作室，2018年製作工作室視覺識別與圖標設計。").fadeIn();
+                            $(this).delay(50).text("日常速寫練習與概念發想，包含日常生活景物、旅遊速寫、個人概念設計等。").fadeIn();
                         });
                     } else if (www < 768) {
                         $(".carousel-caption span").hide();
                     }
-                    $(".carousel-caption a").attr("href", "./projects/QiDi.html");
+                    $(".carousel-caption a").attr("href", "./otherillustration.html");
                 } else if (sho2 == "block") {
                     $(".carousel-caption h5").fadeOut(function () {
                         $(this).text("政大商學院職涯探索月").fadeIn();
@@ -447,25 +452,25 @@
                     } else if (www < 768) {
                         $(".carousel-caption span").hide();
                     }
-                    $(".carousel-caption a").attr("href", "./comicIllustration/2018character.html");
+                    $(".carousel-caption a").attr("href", "./otherillustration.html");
                 } else if (sho5 == "block") {
                     $(".carousel-caption h5").fadeOut(function () {
-                        $(this).text("日常繪畫").fadeIn();
+                        $(this).text("基地影像設計").fadeIn();
                     });
                     $(".carousel-caption p").fadeOut(function () {
-                        $(this).text("Life Drawing").fadeIn();
+                        $(this).text("Secret Base Video Studio").fadeIn();
                     });
                     $(".carousel-caption #typeIntro").fadeOut(function () {
-                        $(this).text("Personal other illustration").fadeIn();
+                        $(this).text("Visual Identity, Logo design").fadeIn();
                     });
                     if (www >= 768) {
                         $(".carousel-caption span").fadeOut(function () {
-                            $(this).delay(50).text("日常速寫練習與概念發想，包含日常生活景物、旅遊速寫、個人概念設計等。").fadeIn();
+                            $(this).delay(50).text("主要關懷台灣原住民族、文化議題的影像設計工作室，2018年製作工作室視覺識別與圖標設計。").fadeIn();
                         });
                     } else if (www < 768) {
                         $(".carousel-caption span").hide();
                     }
-                    $(".carousel-caption a").attr("href", "./comicIllustration/2018lifedraw.html");
+                    $(".carousel-caption a").attr("href", "./projects/QiDi.html");
                 }
             });
         })

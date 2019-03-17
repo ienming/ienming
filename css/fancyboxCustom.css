@@ -1,7 +1,7 @@
         /* fancybox button design */
         .fancybox-button {
             background: transparent;
-            color: #19aeb1;
+            color: #3796ff;
         }
 
         .fancybox-toolbar .fancybox-button:hover {
@@ -20,7 +20,7 @@
 
         /* Change background color */
         .fancybox-bg {
-            background: rgb(59, 59, 59);
+            background: rgb(32, 32, 32);
         }
 
         .fancybox-caption {
