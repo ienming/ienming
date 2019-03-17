@@ -218,7 +218,7 @@ html[xmlns] .flexslider .slides {
   width: 11px;
   height: 11px;
   display: block;
-  background: rgb(179, 179, 179);
+  background: rgb(255, 255, 255);
   cursor: pointer;
   font-size: 0px;
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
@@ -232,7 +232,7 @@ html[xmlns] .flexslider .slides {
 }
 .flex-control-paging li a.flex-active {
   background: #000;
-  background: #19aeb1;
+  background: #3796ff;
   cursor: default;
 }
 .flex-control-thumbs {

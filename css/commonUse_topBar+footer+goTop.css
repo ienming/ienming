@@ -17,8 +17,8 @@ a:hover{
 
 /* 反白顏色 */
 ::selection {
-    background-color: #ffffff;
-    color: rgb(51, 51, 51);
+    background-color: #3796ff;
+    color: rgb(255, 255, 255);
 }
 
 .topBar {
@@ -97,11 +97,11 @@ button:focus {outline:0;}
 }
 
 .bar2{
-    background-color: #3796ff;
+    background-color: rgb(255, 255, 255);
 }
 
 .bar3{
-    background-color: #3796ff;
+    background-color: #ff9837;
 }
 
 .change .bar1 {
@@ -139,7 +139,7 @@ button:focus {outline:0;}
 #drawerItems {
     list-style: none;
     padding: 0;
-    margin-left: 11vw;
+    padding-left: 10.5vw;
     margin-top: 75px;
     font-size: 1.3rem;
 }
@@ -211,9 +211,6 @@ button:focus {outline:0;}
 }
 
 @media only screen and (max-width: 768px){
-    #drawerItems{
-        margin-left: 13vw;
-    }
     .contact{
         margin-left: 8vw;
     }
@@ -274,11 +271,6 @@ button:focus {outline:0;}
         padding-left:5vw;
     }
 }
-
-/* #footer .email{
-    font-size: 1rem;
-    margin-bottom: 0;
-} */
 
 #footer span{
     margin-bottom: 50px;
