@@ -82,9 +82,13 @@ figcaption>a{
 
 .engText {
     word-break: keep-all;
-    text-indent: 0em;
+    text-indent: 1em;
     text-align: left;
     color: rgb(100, 100, 100);
+}
+
+.liText>li{
+    text-indent: 0em;
 }
 
 .side {
