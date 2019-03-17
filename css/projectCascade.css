@@ -14,43 +14,6 @@
     padding-left: 15vw;
 }
 
-/* 最上面的圖片輪播 */
-#fancy{
-    padding: 0 12px;
-}
-
-.slides img {
-    margin-bottom: 0;
-}
-
-/* 限制輪播的圖片高度 */
-#slider img {
-    max-height: 400px;
-    width: 100%;
-    max-width: 690px;
-    object-fit: cover;
-}
-
-.hoverImgIntro {
-    background-color: rgba(0, 0, 0, 0.75);
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    color: white;
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
-    padding: 0 250px 10px 25px;
-    text-align: justify;
-}
-
-@media only screen and (max-width: 768){
-    .hoverImgIntro{
-        display: none;
-    }
-}
-
 .grid-item {
     width: 230px;
     padding: 7px;
@@ -205,21 +168,6 @@
     color: rgb(130, 130, 130);
 }
 
-.fotoContainer{
-    position: relative;
-    width: 96%;
-    background-color: white;
-    padding: 70px;
-}
-
-.fotoContainer img{
-    width: 100%;
-}
-
-.fotoContainer span{
-    word-break: keep-all;
-}
-
 @media only screen and (max-width: 768px) {
     .flex-caption {
         width: 100%;
@@ -229,12 +177,6 @@
         margin-bottom: 30px;
     }
 
-    #fancy{
-        position: relative;
-        left: -5vw;
-        padding: 0;
-    }
-
     #slider img {
         max-height: 245px;
         /* width: -webkit-fill-available; */
@@ -242,12 +184,7 @@
         /* object-fit: cover; */
     }
 
-    .fotoContainer, .division{
+    .division{
         width: 100%;
-    }
-
-    .fotoContainer{
-        margin: 0;
-        padding: 30px;
     }
 }

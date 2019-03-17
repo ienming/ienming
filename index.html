@@ -74,6 +74,7 @@
                 height: 100vh;
                 text-align: left;
                 background-color: rgba(0, 0, 0, 0.75);
+                color: rgb(230,230,230);
                 padding: 180px 3vw 1vw 1vw;
                 margin-bottom: 20px;
                 z-index: 1;
@@ -100,7 +101,7 @@
 
             .carousel-indicators>li:hover {
                 cursor: pointer;
-                background-color: white;
+                background-color: rgb(230,230,230);
             }
 
             .carousel-indicators>li.active:hover {
@@ -127,7 +128,7 @@
             }
 
             .carousel-control-pause {
-                color: white;
+                color: rgb(230,230,230);
             }
 
             .carousel-control-pause:hover {
@@ -191,7 +192,7 @@
             margin-top: -25px;
             word-break: keep-all;
             text-align: left;
-            color: white;
+            color: rgb(230,230,230);
             font-size: .75rem;
         }
 
@@ -437,7 +438,7 @@
                         $(this).text("Character illustration design").fadeIn();
                     });
                     $(".carousel-caption #typeIntro").fadeOut(function () {
-                        $(this).text("Watercolor illustration").fadeIn();
+                        $(this).text("Personal other watercolor illustration").fadeIn();
                     });
                     if (www >= 768) {
                         $(".carousel-caption span").fadeOut(function () {
@@ -449,17 +450,17 @@
                     $(".carousel-caption a").attr("href", "./comicIllustration/2018character.html");
                 } else if (sho5 == "block") {
                     $(".carousel-caption h5").fadeOut(function () {
-                        $(this).text("日常水彩紀錄").fadeIn();
+                        $(this).text("日常繪畫").fadeIn();
                     });
                     $(".carousel-caption p").fadeOut(function () {
-                        $(this).text("Watercolor Life Drawing").fadeIn();
+                        $(this).text("Life Drawing").fadeIn();
                     });
                     $(".carousel-caption #typeIntro").fadeOut(function () {
-                        $(this).text("Painting").fadeIn();
+                        $(this).text("Personal other illustration").fadeIn();
                     });
                     if (www >= 768) {
                         $(".carousel-caption span").fadeOut(function () {
-                            $(this).delay(50).text("").fadeIn();
+                            $(this).delay(50).text("日常速寫練習與概念發想，包含日常生活景物、旅遊速寫、個人概念設計等。").fadeIn();
                         });
                     } else if (www < 768) {
                         $(".carousel-caption span").hide();

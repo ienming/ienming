@@ -20,7 +20,7 @@
 
         /* Change background color */
         .fancybox-bg {
-            background: #eee;
+            background: rgb(59, 59, 59);
         }
 
         .fancybox-caption {
@@ -29,15 +29,15 @@
             bottom: 0;
             left: 0;
             padding: 15px 80px 60px 80px;
-            color: #333;
+            color: rgb(230, 230, 230);
             background: none;
-            font-size: 16px;
+            font-size: 1.2rem;
             text-align: left;
         }
 
         @media only screen and (max-width: 768px){
             .fancybox-caption{
-                padding-left: 30px;
-                padding-bottom: 100px;
+                padding: 15px 80px 5px 30px;
+                text-align: left;
             }
         }
