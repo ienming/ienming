@@ -1,9 +1,3 @@
-// spinner animated and window load
-$(document).ready(function () {
-    // $(".spinner").delay(800).fadeOut("slow");
-    $(".preload").delay(300).fadeOut("slow");
-});
-
 // hamburger animated
 var hamburgerBtn = document.querySelector('.hamburger');
 var drawer = document.querySelector('.drawer');
@@ -41,10 +35,6 @@ $(window).scroll(function () {
         $("header").addClass("topBarMask", 500, "swing");
         //goTop
         $("#goTop").show("slow");
-        // if ($(window).width() <= 768){
-        //     $("#goTopMobile").show("slow");
-        //     console.log("hi");
-        // }
     } else {
         $("header").removeClass("topBarMask", 500, "easeInBack");
         $("#goTop").hide("slow");

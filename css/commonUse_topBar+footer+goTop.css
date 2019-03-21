@@ -33,6 +33,12 @@ a:hover{
     background-color: rgb(230, 230, 230);
 }
 
+@media only screen and (min-width: 768px){
+    .topBarMask{
+        background-color: rgba(230,230,230,0);
+    }
+}
+
 #logo {
     width: 60px;
     cursor: pointer;
