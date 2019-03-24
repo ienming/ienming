@@ -17,7 +17,7 @@ a:hover{
 
 /* 反白顏色 */
 ::selection {
-    background-color: #3796ff;
+    background-color: #ff9837;
     color: rgb(255, 255, 255);
 }
 
