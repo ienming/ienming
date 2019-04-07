@@ -42,6 +42,14 @@
                 height: auto;
             }
         }
+
+        .grid-item{
+            width: 800px;
+        }
+
+        .projects{
+            max-width: 850px;
+        }
     </style>
 </head>
 
@@ -93,7 +101,7 @@
     <article class="mainCard">
         <section class="content">
                         <!-- 分隔線 -->
-                        <div class="division">
+                        <!-- <div class="division">
                                 <h2 class="contentTitle">插畫系列 Illustration Series
                                 </h2>
                                 <span>
@@ -105,7 +113,7 @@
                                     I will make some into bigger illustration series which are more focusing
                                     on the composition and feeling to convey ideas.
                                 </span>
-                            </div>
+                            </div> -->
             <!-- cascade -->
             <section class="grid">
                 <div class="grid-item">
@@ -220,7 +228,7 @@
         var $grid = $('.grid').masonry({
             // options...
             itemSelector: '.grid-item',
-            columnWidth: 230,
+            columnWidth: 800,
             percentPosition: true,
             horizontalOrder: true
         });
