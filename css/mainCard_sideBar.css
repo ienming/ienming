@@ -7,21 +7,21 @@
 
 h1 {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-family: '微軟正黑體',
         sans-serif;
-    margin-top: 45px;
     width: 40vw;
-    margin-left: 20vw;
     opacity: 0;
-    position: relative;
-    left: -200px;
+    position: absolute;
+    right: -100px;
+    bottom: 200px;
     letter-spacing: .05rem;
+    z-index: 1;
 }
 
 .content{
     opacity: 1;
-    margin-left: 15vw;
+    /* margin-left: 15vw; */
 }
 
 /* 電腦版mainCard左padding調整 */
@@ -93,10 +93,10 @@ figcaption>a{
 
 .side {
     max-width: 230px;
-    margin-left: 5vh;
+    margin-left: 50px;
     padding-left: 0;
     padding-top: 0;
-    background-color: white;
+    background-color: #f3f3f3;
     /* 先隱藏 */
     opacity: 0;
 }
@@ -104,14 +104,14 @@ figcaption>a{
 .side>nav>ol {
     padding: 0;
     font-size: .75rem;
-    background-color: white;
+    background-color: #f3f3f3;
 }
 
 /* 電腦版content寬度和breadcrumb */
 @media only screen and (min-width: 768px) {
     .content {
         /* width: calc(100vw - (5vw + 280.3px + 42vh)); */
-        width: 45vw;
+        width: 38vw;
     }
 
     .metaMobile {
@@ -131,9 +131,14 @@ figcaption>a{
 
     h1 {
         margin-left: 0;
-        margin-bottom: 20px;
+        margin-bottom: 35px;
+        margin-top: 120px;
         width: 100vw;
         padding: 0 5vw;
+        font-size: 2rem;
+        position: relative;
+        right: 0;
+        bottom: 0;
     }
 
     .mainCard{
@@ -162,11 +167,9 @@ figcaption>a{
 
 .metaMobile {
     border-top: 4px solid #ff9237;
-    background-color: rgb(230, 230, 230);
     margin-top: -15px;
     margin-bottom: 20px;
     padding: 15px;
-    box-shadow: 0px 3px 9px rgba(51,51,51,.35);
 }
 
 .metaMobile>p{

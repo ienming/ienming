@@ -10,8 +10,8 @@
     <!-- google search console -->
     <meta name="google-site-verification" content="6JguI8U151lezHi3D6EgF42fAPQvHmnEaw_6lDXzL3c" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- commonUse CSS -->
     <link rel=stylesheet type="text/css" href="../css/commonUse_topBar+footer+goTop.css">
     <!-- mainCard_sideBar CSS -->
@@ -31,11 +31,6 @@
             $('.flexslider').flexslider();
         });
     </script>
-    <style>
-        .heightadjust {
-            height: 140px;
-        }
-    </style>
 </head>
 
 <body>
@@ -70,14 +65,13 @@
             </a>
         </ul>
         <div class="contact">
-            <a href="https://www.instagram.com/ienming/?fbclid=IwAR1_fAR2z_XVRMx0ZeRDLRiOsMj4LFHFdu5LYqo7pnNeQUO2shqbahiaUyQ"><img
+            <a
+                href="https://www.instagram.com/ienming/?fbclid=IwAR1_fAR2z_XVRMx0ZeRDLRiOsMj4LFHFdu5LYqo7pnNeQUO2shqbahiaUyQ"><img
                     src="../img/ig_icon.png" target="_blank" alt="ienming_instagram" /></a>
-            <a href="mailto:hsieh.alan.0726@gmail.com"><img src="../img/email_icon.png" target="_blank" alt="ienming_email" /></a>
+            <a href="mailto:hsieh.alan.0726@gmail.com"><img src="../img/email_icon.png" target="_blank"
+                    alt="ienming_email" /></a>
         </div>
     </nav>
-
-    <!-- 把主頁從topbar擠下去 -->
-    <div class="heightadjust"></div>
 
     <!-- 主內容article -->
     <div id="maskMain"></div>
@@ -94,7 +88,7 @@
             <section class="bioText" style="margin-top: 0;">
                 <p>游泳時的雜想：把自己想像成魚，或許會游得快一點。慢慢浮出水面的時候像鯨魚露出背鰭，划水鑽入水中的瞬間，用手掌擺動出魚的樣子。</p>
                 </p>
-                <p class="engText"> In thie series, I draw the illusion while swimming. Everytime when I 
+                <p class="engText"> In thie series, I draw the illusion while swimming. Everytime when I
                     feel exhasted while swimming, the imagination of being a fish or a whale could make
                     my mind calm down. Thus, I put some fishes that swim with me.
                 </p>
@@ -122,7 +116,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../index.html">ienMing</a></li>
-                    <li class="breadcrumb-item"><a href="../comicIllustration.html">illustration</a></li>
+                    <li class="breadcrumb-item"><a href="../illustration_series.html">illustration</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Swimming Pool</li>
                 </ol>
             </nav>
@@ -151,7 +145,8 @@
 
 
     <!-- bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <!-- fancyBox JS -->
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
@@ -182,12 +177,19 @@
     <script>
         // 內頁浮現動畫 
         $(document).ready(function () {
-            $("h1").animate({
-                opacity: 1,
-                left: 0,
-            }, 800);
             $(".content").delay(800).animate({ opacity: 1 }, 700);
             $(".side").delay(900).animate({ opacity: 1 }, 700);
+            if (bodyWidth < 768) {
+                $("h1").animate({
+                    opacity: 1,
+                    right: 0,
+                }, 800);
+            } else if (bodyWidth >= 768) {
+                $("h1").animate({
+                    opacity: 1,
+                    right: 200,
+                }, 800);
+            }
         })
 
         var bodyWidth = $("body").width();

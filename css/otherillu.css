@@ -1,17 +1,12 @@
 .bracket{
     color: #333;
-    margin: 15px 0 70px 0;
     padding-left: 12px;
-}
-
-.bracketTitle{
-    font-size: 1.4rem;
 }
 
 .bracketFlex{
     display: flex;
     flex-wrap: wrap;
-    width: 96%; 
+    width: 100%; 
     justify-content: space-between;
 }
 
@@ -21,8 +16,8 @@
 }
 
 .bracketItem img{
-    width: 200px; 
-    height: 200px; 
+    width: 480px; 
+    height: 320px; 
     object-fit: cover;
 }
 
@@ -33,21 +28,30 @@
     word-break: keep-all;
 }
 
-h3{
-    margin-bottom: 1.3rem;
+@media only screen and (max-width: 768px){
+.mainCard{
+    padding: 0;
 }
 
-@media only screen and (max-width: 768px){
     .bracketFlex{
         flex-wrap: wrap;
     }
 
+.bracket{
+    padding: 0;
+}
+
     .bracketItem img{
-        width: 140px;
-        height: 140px;
+        width: 100%;
+        height: 345px;
     }
 
     .title {
         max-width: 140px;
+    }
+
+    .description{
+        padding-left: 5vw;
+        margin-bottom: 40px;
     }
 }

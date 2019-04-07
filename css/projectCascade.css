@@ -10,12 +10,11 @@
 
 .mainCard {
     padding-bottom: 22px;
-    padding-right: 20vw;
-    padding-left: 15vw;
+    padding-left: 5vw;
 }
 
 .grid-item {
-    width: 230px;
+    width: 300px;
     padding: 7px;
     margin-bottom: 25px;
 }
@@ -25,7 +24,6 @@
 }
 
 .projects {
-    max-width: 230px;
     padding: 5px;
     border: rgba(233, 87, 19, 0) solid 1px;
 }
@@ -36,7 +34,6 @@
 }
 
 .container {
-    height: 157px;
     margin-bottom: 10px;
     padding: 0;
     overflow: hidden;
@@ -138,7 +135,7 @@
 .content {
     margin-left: 0;
     width: 100%;
-    max-width: 690px;
+    max-width: 1000px;
 }
 
 .division {

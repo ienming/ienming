@@ -10,8 +10,8 @@
     <!-- google search console -->
     <meta name="google-site-verification" content="6JguI8U151lezHi3D6EgF42fAPQvHmnEaw_6lDXzL3c" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- commonUse CSS -->
     <link rel=stylesheet type="text/css" href="../css/commonUse_topBar+footer+goTop.css">
     <!-- mainCard_sideBar CSS -->
@@ -32,10 +32,6 @@
         });
     </script>
     <style>
-        .heightadjust {
-            height: 140px;
-        }
-
         /* 調整不同長寬比的照片都可以放在一起！ */
         .flexslider li:not(.flex-active-slide) img {
             height: 0 !important;
@@ -75,14 +71,13 @@
             </a>
         </ul>
         <div class="contact">
-            <a href="https://www.instagram.com/ienming/?fbclid=IwAR1_fAR2z_XVRMx0ZeRDLRiOsMj4LFHFdu5LYqo7pnNeQUO2shqbahiaUyQ"><img
+            <a
+                href="https://www.instagram.com/ienming/?fbclid=IwAR1_fAR2z_XVRMx0ZeRDLRiOsMj4LFHFdu5LYqo7pnNeQUO2shqbahiaUyQ"><img
                     src="../img/ig_icon.png" target="_blank" alt="ienming_instagram" /></a>
-            <a href="mailto:hsieh.alan.0726@gmail.com"><img src="../img/email_icon.png" target="_blank" alt="ienming_email" /></a>
+            <a href="mailto:hsieh.alan.0726@gmail.com"><img src="../img/email_icon.png" target="_blank"
+                    alt="ienming_email" /></a>
         </div>
     </nav>
-
-    <!-- 把主頁從topbar擠下去 -->
-    <div class="heightadjust"></div>
 
     <!-- 主內容article -->
     <div id="maskMain"></div>
@@ -179,8 +174,11 @@
                     </ul>
                 </div>
             </section>
-            <figcaption>Mockup used Free Customizable Magazine Ad PSD Mockup from <a href="http://zippypixels.com">ZippyPixels.com</a></figcaption>
-            <figcaption>and the Psd Magazine Mockup Vol9 from <a href="http://www.pixeden.com/psd-mock-up-templates/psd-magazine-mockup-vol9">pixeden.com</a></figcaption>
+            <figcaption>Mockup used Free Customizable Magazine Ad PSD Mockup from <a
+                    href="http://zippypixels.com">ZippyPixels.com</a></figcaption>
+            <figcaption>and the Psd Magazine Mockup Vol9 from <a
+                    href="http://www.pixeden.com/psd-mock-up-templates/psd-magazine-mockup-vol9">pixeden.com</a>
+            </figcaption>
         </section>
 
         <!-- 邊攔 -->
@@ -220,7 +218,8 @@
 
 
     <!-- bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <!-- fancyBox JS -->
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
@@ -250,12 +249,19 @@
 
     <script>
         $(document).ready(function () {
-            $("h1").animate({
-                opacity: 1,
-                left: 0,
-            }, 800);
             $(".content").delay(800).animate({ opacity: 1 }, 700);
             $(".side").delay(900).animate({ opacity: 1 }, 700);
+            if (bodyWidth < 768) {
+                $("h1").animate({
+                    opacity: 1,
+                    right: 0,
+                }, 800);
+            } else if (bodyWidth >= 768) {
+                $("h1").animate({
+                    opacity: 1,
+                    right: 200,
+                }, 800);
+            }
         })
 
 
