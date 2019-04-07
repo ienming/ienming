@@ -131,7 +131,7 @@ button:focus {outline:0;}
     right: 0;
     z-index: 11;
     color: #333;
-    background-color: rgb(230,230,230);
+    background-color: white;
     width: 43.5vw;
     height: 100vh;
     padding-top: 100px;
