@@ -3,7 +3,7 @@ body{
     'Trebuchet MS','Helvetiac', 'Arial', 'LiHei Pro', '微軟正黑體',
     sans-serif;
     color: #333;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(255, 255, 255);
 }
 
 a {
@@ -103,7 +103,7 @@ button:focus {outline:0;}
 }
 
 .bar2{
-    background-color: rgb(255, 255, 255);
+    background-color: #333;
 }
 
 .bar3{

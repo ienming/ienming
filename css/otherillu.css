@@ -21,8 +21,8 @@
 }
 
 .bracketItem img{
-    width: 200px; 
-    height: 200px; 
+    width: 100%; 
+    height: 450px; 
     object-fit: cover;
 }
 
