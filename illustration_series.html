@@ -99,10 +99,11 @@
 
     <!-- 主內容article -->
     <div id="maskMain"></div>
-    <article class="mainCard">
-        <section class="content">
-            <!-- 分隔線 -->
-            <!-- <div class="division">
+    <main>
+        <article class="mainCard">
+            <section class="content">
+                <!-- 分隔線 -->
+                <!-- <div class="division">
                                 <h2 class="contentTitle">插畫系列 Illustration Series
                                 </h2>
                                 <span>
@@ -115,65 +116,67 @@
                                     on the composition and feeling to convey ideas.
                                 </span>
                             </div> -->
-            <!-- cascade -->
-            <section class="grid">
-                <div class="grid-item">
-                    <div class="projects">
-                        <a href="./illuseries/swimmingpool.html">
-                            <div class="container">
-                                <img class="coverImg" src="img/illuseries/swimmingpool/swimmingPool1.jpg"
-                                    alt="SwimmingPool">
-                            </div>
-                            <div class="description">
-                                <p class="type">#illustration collection</p>
-                                <h3 class="title">Swimming Pool<br></h3>
-                                <p class="media">digital</p>
-                                <p class="intro">泳池雜想：把自己想像成魚，或許會游得快一點。慢慢浮出水面的時候像鯨魚露出背鰭，划水鑽入水中的瞬間，用手掌擺動出魚的樣子。</p>
-                                <p class="date">2017</p>
-                            </div>
-                        </a>
+                <!-- cascade -->
+                <section class="grid">
+                    <div class="grid-item">
+                        <div class="projects">
+                            <a href="./illuseries/swimmingpool.html">
+                                <div class="container">
+                                    <img class="coverImg" src="img/illuseries/swimmingpool/swimmingPool1.jpg"
+                                        alt="SwimmingPool">
+                                </div>
+                                <div class="description">
+                                    <p class="type">#illustration collection</p>
+                                    <h3 class="title">Swimming Pool<br></h3>
+                                    <p class="media">digital</p>
+                                    <p class="intro">泳池雜想：把自己想像成魚，或許會游得快一點。慢慢浮出水面的時候像鯨魚露出背鰭，划水鑽入水中的瞬間，用手掌擺動出魚的樣子。</p>
+                                    <p class="date">2017</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="grid-item">
-                    <div class="projects">
-                        <a href="./illuseries/sable.html">
-                            <div class="container">
-                                <img class="coverImg" src="img/illuseries/sable/10-color.jpg" alt="Sable">
-                            </div>
-                            <div class="description">
-                                <p class="type">#picture book #illustration</p>
-                                <h3 class="title">Sable<br></h3>
-                                <p class="media">pencil, charcoal, digital media</p>
-                                <p class="intro"><I>Sable</I> 是一本以巴黎為背景的繪本，從小兔子的視角講述因故而離開家鄉
-                                    ，在異鄉顛沛所面對的困境。
-                                </p>
-                                <p class="date">2017</p>
-                            </div>
-                        </a>
+                    <div class="grid-item">
+                        <div class="projects">
+                            <a href="./illuseries/sable.html">
+                                <div class="container">
+                                    <img class="coverImg" src="img/illuseries/sable/10-color.jpg" alt="Sable">
+                                </div>
+                                <div class="description">
+                                    <p class="type">#picture book #illustration</p>
+                                    <h3 class="title">Sable<br></h3>
+                                    <p class="media">pencil, charcoal, digital media</p>
+                                    <p class="intro"><I>Sable</I> 是一本以巴黎為背景的繪本，從小兔子的視角講述因故而離開家鄉
+                                        ，在異鄉顛沛所面對的困境。
+                                    </p>
+                                    <p class="date">2017</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="grid-item">
-                    <div class="projects">
-                        <a href="./illuseries/wanderingDaily.html">
-                            <div class="container">
-                                <img class="coverImg" src="img/illuseries/wanderingDaily/06.png" alt="Wandering Daily">
-                            </div>
-                            <div class="description">
-                                <p class="type">#illustration collection</p>
-                                <h3 class="title">Wandering Daily<br></h3>
-                                <p class="media">digital</p>
-                                <p class="date">2017</p>
-                            </div>
-                        </a>
+                    <div class="grid-item">
+                        <div class="projects">
+                            <a href="./illuseries/wanderingDaily.html">
+                                <div class="container">
+                                    <img class="coverImg" src="img/illuseries/wanderingDaily/06.png"
+                                        alt="Wandering Daily">
+                                </div>
+                                <div class="description">
+                                    <p class="type">#illustration collection</p>
+                                    <h3 class="title">Wandering Daily<br></h3>
+                                    <p class="media">digital</p>
+                                    <p class="date">2017</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </section>
+                <!-- 撐開父的高度 -->
+                <div class="clear"></div>
             </section>
-            <!-- 撐開父的高度 -->
-            <div class="clear"></div>
-        </section>
-    </article>
+        </article>
+    </main>
     <!-- goTop -->
     <div id="goTop">
         <img src="img/goTop.png" alt="goTop" />
@@ -192,9 +195,37 @@
     <!-- swipte images -->
     <script>
         // Thanks to Maaaaark - https://github.com/maaaaark/bcSwipe/blob/master/jquery.bcSwipe.min.js
-        !function (t) { t.fn.bcSwipe = function (e) { var n = { threshold: 50 }; return e && t.extend(n, e), this.each(function () { function e(t) { 1 == t.touches.length && (u = t.touches[0].pageX, c = !0, this.addEventListener("touchmove", o, !1)) } function o(e) { if (c) { var o = e.touches[0].pageX, i = u - o; Math.abs(i) >= n.threshold && (h(), t(this).flexslider(i > 0 ? "next" : "prev")) } } function h() { this.removeEventListener("touchmove", o), u = null, c = !1 } var u, c = !1; "ontouchstart" in document.documentElement && this.addEventListener("touchstart", e, !1) }), this } }(jQuery);
+        ! function (t) {
+            t.fn.bcSwipe = function (e) {
+                var n = {
+                    threshold: 50
+                };
+                return e && t.extend(n, e), this.each(function () {
+                    function e(t) {
+                        1 == t.touches.length && (u = t.touches[0].pageX, c = !0, this.addEventListener(
+                            "touchmove", o, !1))
+                    }
+
+                    function o(e) {
+                        if (c) {
+                            var o = e.touches[0].pageX,
+                                i = u - o;
+                            Math.abs(i) >= n.threshold && (h(), t(this).flexslider(i > 0 ? "next" : "prev"))
+                        }
+                    }
+
+                    function h() {
+                        this.removeEventListener("touchmove", o), u = null, c = !1
+                    }
+                    var u, c = !1;
+                    "ontouchstart" in document.documentElement && this.addEventListener("touchstart", e, !1)
+                }), this
+            }
+        }(jQuery);
         // Swipe functions for Bootstrap Flexslider
-        $(".flexslider").bcSwipe({ threshold: 300 });
+        $(".flexslider").bcSwipe({
+            threshold: 300
+        });
     </script>
 
     <script>
